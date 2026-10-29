@@ -31,6 +31,7 @@ jobs:
       RELEASE_TAG: ${{ inputs.tag }}
       TARGET_COMMIT: ${{ inputs.target_commit }}
       APK_SHA256: ${{ inputs.apk_sha256 }}
+      BUILD_TOOLS_VERSION: '36.0.0'
     steps:
       - name: Validate dispatch inputs
         shell: bash
@@ -62,15 +63,23 @@ jobs:
           ref: ${{ inputs.artifact_ref }}
           path: incoming
           persist-credentials: false
+      - name: Prepare stable Android verification tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -x "$ANDROID_HOME/build-tools/$BUILD_TOOLS_VERSION/apksigner" ]; then
+            "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "build-tools;$BUILD_TOOLS_VERSION"
+          fi
       - name: Verify APK checksum, signature, package and ARM64 contents
         working-directory: incoming
         shell: bash
         run: |
-          set -euo pipefail
+          set -Eeuo pipefail
+          trap 'echo "::error::APK verification failed at line $LINENO: $BASH_COMMAND"' ERR
           apk=app-arm64-v8a-release.apk
           test -s "$apk"
           printf '%s  %s\n' "$APK_SHA256" "$apk" | sha256sum --check --strict
-          tools=$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)
+          tools="$ANDROID_HOME/build-tools/$BUILD_TOOLS_VERSION"
           "$tools/apksigner" verify --verbose --print-certs "$apk" > signature.txt
           grep -F 'Signer #1 certificate SHA-256 digest: b3b492ae085124fc19025a6ed6e46655a1915b28bbdb01ef47a8b95ebbb2fd07' signature.txt
           "$tools/aapt" dump badging "$apk" > badging.txt
