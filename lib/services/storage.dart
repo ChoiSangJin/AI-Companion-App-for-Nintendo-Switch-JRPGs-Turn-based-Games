@@ -9,6 +9,15 @@ class LocalStore {
   List<GuideData> guides = [];
   String? selectedId;
   String model = 'gemini-2.5-flash';
+  GuideData? cachedGuide(String contextKey) =>
+      guides.where((g) => g.contextKey == contextKey).firstOrNull;
+  void putGuide(GuideData guide) {
+    if (guide.contextKey.isNotEmpty) {
+      guides.removeWhere((g) => g.contextKey == guide.contextKey);
+    }
+    guides.insert(0, guide);
+  }
+
   void load() {
     final raw = preferences.getString('companion.v1');
     if (raw == null) return;

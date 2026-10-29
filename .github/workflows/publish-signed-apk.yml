@@ -105,7 +105,7 @@ jobs:
         with:
           tag_name: ${{ inputs.tag }}
           target_commitish: ${{ inputs.target_commit }}
-          name: '${{ inputs.tag }} · 앱 아이콘 업데이트'
+          name: '${{ inputs.tag }} · Switch 공략 컴패니언'
           draft: false
           make_latest: true
           fail_on_unmatched_files: true
