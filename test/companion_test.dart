@@ -233,14 +233,16 @@ void main() {
       service.close();
     }
   });
-  testWidgets('no preset games; add game, switch tabs and restore context', (
+  testWidgets('manual game fallback, switch tabs and restore context', (
     tester,
   ) async {
     SharedPreferences.setMockInitialValues({});
     final store = LocalStore(await SharedPreferences.getInstance());
     await tester.pumpWidget(CompanionApp(store: store));
-    expect(find.text('첫 게임 추가'), findsOneWidget);
-    await tester.tap(find.text('첫 게임 추가'));
+    expect(store.games, isEmpty);
+    await tester.tap(find.text('게임 찾기'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('목록에 없는 게임 직접 추가'));
     await tester.pumpAndSettle();
     await tester.enterText(find.byType(TextField).first, '페르소나 4 골든');
     await tester.tap(find.text('저장'));
