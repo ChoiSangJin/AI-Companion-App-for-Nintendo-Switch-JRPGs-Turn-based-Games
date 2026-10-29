@@ -28,6 +28,14 @@ AI 호출을 제외한 공략집은 네트워크가 필요하지 않습니다. G
 
 ## Android APK 배포
 
+앱 아이콘 원본은 `assets/branding/launcher_icon.png`입니다. Android의 밀도별 아이콘과 적응형 아이콘은 다음 명령으로 다시 생성할 수 있습니다.
+
+```sh
+dart run flutter_launcher_icons
+```
+
+`flutter_launcher_icons.yaml`의 배경색과 안전 영역을 유지하세요. 앱 아이콘은 직접 생성한 공략집·체크리스트 디자인이며 Nintendo 공식 로고를 사용하지 않습니다.
+
 `.github/workflows/ci.yml`은 PR과 main/기능 브랜치에서 분석·테스트·ARM64 디버그 빌드를 실행합니다. `.github/workflows/release.yml`은 `v*` 태그 또는 수동 실행으로 **릴리즈 키로 서명한 ARM64 APK**와 SHA-256 체크섬을 GitHub Releases에 게시합니다. Play Store 배포는 포함하지 않습니다.
 
 동일한 키를 계속 보관해야 기존 앱을 업데이트할 수 있습니다. 다음 GitHub Actions repository secrets가 필요합니다. 비밀 값은 채팅이나 저장소에 올리지 마세요.
@@ -50,11 +58,11 @@ keytool -genkeypair -keystore release.jks -alias switch-companion \
 # Linux: base64 -w 0 release.jks (출력을 공개 로그에 남기지 마세요)
 ```
 
-`pubspec.yaml`의 버전과 태그를 일치시켜 배포합니다. 첫 릴리즈는 `v1.0.0`입니다. 수동 실행 시에도 main에 포함된 커밋을 대상으로 선택하세요.
+`pubspec.yaml`의 버전과 태그를 일치시켜 배포합니다. 현재 버전은 `v1.0.1`입니다. 수동 실행 시에도 main에 포함된 커밋을 대상으로 선택하세요.
 
 ```sh
-git tag v1.0.0
-git push origin v1.0.0
+git tag v1.0.1
+git push origin v1.0.1
 ```
 
 빌드 명령은 `flutter build apk --release --target-platform android-arm64 --split-per-abi`이며 산출물은 `build/app/outputs/flutter-apk/app-arm64-v8a-release.apk`입니다. 로컬 릴리즈 빌드에는 `ANDROID_KEYSTORE_PATH` (절대 경로), `ANDROID_STORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`가 필요합니다. 서명 설정 없이 릴리즈 배포를 진행하지 않습니다.
@@ -62,3 +70,5 @@ git push origin v1.0.0
 ## 데이터와 제한
 
 게임·규칙·검색어·붙여넣은 공략은 요청 시 Google Gemini에 전송되며 사용료가 발생할 수 있습니다. 로컬 API 키는 보안 저장소에 있지만 기기를 완전히 신뢰할 수 없는 환경에서는 노출될 수 있습니다. AI 답변의 정확성이나 스포일러 차단은 보장되지 않습니다. 원문의 스포일러는 직접 제거하고 출처를 확인하세요. `shared_preferences`는 개인용 소규모 공략집 용도이며 대용량 DB나 클라우드 백업을 제공하지 않습니다. 앱 삭제 시 데이터가 사라집니다. 기기 성능에 따른 0.1초 조회 보장은 측정 전에는 주장하지 않습니다.
+
+GitHub Actions 비밀값을 관리할 수 없는 환경에서 이미 서명한 APK를 게시하려면 `Publish verified signed APK` 워크플로우를 사용합니다. `deploy-artifacts/vX.Y.Z` 임시 브랜치 루트에 APK를 전달한 뒤 태그, main의 정확한 커밋 SHA, APK SHA-256을 지정해 수동 실행합니다. 워크플로우는 현재 앱 서명 인증서, 패키지·버전·아이콘·ARM64 구성과 체크섬을 검증하고 게시합니다. 완료 후 임시 브랜치를 삭제하세요. 서명 키를 교체하는 경우 워크플로우의 공개 인증서 지문도 검토·수정해야 합니다.
