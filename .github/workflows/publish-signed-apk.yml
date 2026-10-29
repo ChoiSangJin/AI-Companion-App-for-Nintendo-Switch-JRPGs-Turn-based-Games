@@ -1,0 +1,105 @@
+name: Publish verified signed APK
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_ref:
+        description: 'Temporary branch containing the already signed APK'
+        required: true
+        type: string
+      tag:
+        description: 'Version tag matching pubspec.yaml, e.g. v1.0.1'
+        required: true
+        type: string
+      target_commit:
+        description: 'Full main commit SHA that produced this app'
+        required: true
+        type: string
+      apk_sha256:
+        description: 'Expected SHA-256 of the signed APK'
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: android-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      ARTIFACT_REF: ${{ inputs.artifact_ref }}
+      RELEASE_TAG: ${{ inputs.tag }}
+      TARGET_COMMIT: ${{ inputs.target_commit }}
+      APK_SHA256: ${{ inputs.apk_sha256 }}
+    steps:
+      - name: Validate dispatch inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          [[ "$ARTIFACT_REF" = "deploy-artifacts/$RELEASE_TAG" ]]
+          [[ "$TARGET_COMMIT" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$APK_SHA256" =~ ^[0-9a-f]{64}$ ]]
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.target_commit }}
+          fetch-depth: 0
+          path: source
+      - name: Validate release source
+        working-directory: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$TARGET_COMMIT"
+          git merge-base --is-ancestor HEAD origin/main
+          version=$(sed -n 's/^version: \([^+]*\).*/\1/p' pubspec.yaml)
+          test "$RELEASE_TAG" = "v$version"
+          if git rev-parse "$RELEASE_TAG" >/dev/null 2>&1; then
+            test "$(git rev-list -n 1 "$RELEASE_TAG")" = "$TARGET_COMMIT"
+          fi
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.artifact_ref }}
+          path: incoming
+          persist-credentials: false
+      - name: Verify APK checksum, signature, package and ARM64 contents
+        working-directory: incoming
+        shell: bash
+        run: |
+          set -euo pipefail
+          apk=app-arm64-v8a-release.apk
+          test -s "$apk"
+          printf '%s  %s\n' "$APK_SHA256" "$apk" | sha256sum --check --strict
+          tools=$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)
+          "$tools/apksigner" verify --verbose --print-certs "$apk" > signature.txt
+          grep -F 'Signer #1 certificate SHA-256 digest: b3b492ae085124fc19025a6ed6e46655a1915b28bbdb01ef47a8b95ebbb2fd07' signature.txt
+          "$tools/aapt" dump badging "$apk" > badging.txt
+          export VERSION="${RELEASE_TAG#v}"
+          export BUILD_NUMBER=$(sed -n 's/^version: .*+\([0-9]*\).*/\1/p' ../source/pubspec.yaml)
+          python3 - <<'PY'
+          import os, re, zipfile
+          from pathlib import Path
+          with zipfile.ZipFile('app-arm64-v8a-release.apk') as apk:
+              assert apk.testzip() is None, 'Corrupt APK ZIP'
+              abis = {n.split('/')[1] for n in apk.namelist() if n.startswith('lib/') and n.endswith('.so')}
+              assert abis == {'arm64-v8a'}, abis
+          badging = Path('badging.txt').read_text()
+          package = badging.splitlines()[0]
+          assert "name='com.choisangjin.switchcompanion'" in package
+          assert f"versionName='{os.environ['VERSION']}'" in package
+          assert f"versionCode='{2000 + int(os.environ['BUILD_NUMBER'])}'" in package
+          assert re.search(r'^application-icon-\d+:', badging, re.M), 'Missing launcher icon'
+          PY
+          sha256sum "$apk" > "$apk.sha256"
+      - name: Publish APK and checksum
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.tag }}
+          target_commitish: ${{ inputs.target_commit }}
+          name: '${{ inputs.tag }} · 앱 아이콘 업데이트'
+          draft: false
+          make_latest: true
+          fail_on_unmatched_files: true
+          files: |
+            incoming/app-arm64-v8a-release.apk
+            incoming/app-arm64-v8a-release.apk.sha256
