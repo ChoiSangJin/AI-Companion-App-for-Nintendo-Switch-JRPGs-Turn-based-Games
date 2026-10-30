@@ -34,7 +34,9 @@ class PinnedGoal {
   factory PinnedGoal.fromGuide(GuideData guide, GuideItem item) => PinnedGoal(
     id: DateTime.now().microsecondsSinceEpoch.toString(),
     sourceKey: keyFor(guide, item),
-    title: item.label,
+    title: guide.category == 'build' && guide.target.trim().isNotEmpty
+        ? guide.target.trim()
+        : item.label,
     done: item.isChecked,
     guide: GuideData.fromJson({
       ...guide.toJson(),

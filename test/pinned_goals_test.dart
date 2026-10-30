@@ -67,6 +67,22 @@ class FailingStore extends LocalStore {
 
 void main() {
   test(
+    'build card identifies the selected character when the source labels a job',
+    () async {
+      final store = await storeWithGame();
+      final source = guide();
+      source.items[0] = GuideItem(
+        label: '추천 상위 직업',
+        value: '최종 직업',
+        steps: source.items.single.steps,
+      );
+      final goal = await store.pinItem(source, source.items.single);
+      expect(goal.title, '주인공');
+      expect(goal.item.label, '추천 상위 직업');
+    },
+  );
+
+  test(
     'pin is a deep snapshot with independent progress and context',
     () async {
       final store = await storeWithGame();
