@@ -1,0 +1,1522 @@
+{
+  "schema": 1,
+  "revision": "2026-10-30",
+  "scope": "스칼렛·바이올렛 본편 / DLC·HOME·교환 제외",
+  "lines": [
+    {
+      "id": "sprigatito",
+      "forms": [
+        {
+          "id": 906,
+          "name": "나오하",
+          "english": "Sprigatito",
+          "types": [
+            "풀"
+          ]
+        },
+        {
+          "id": 907,
+          "name": "나로테",
+          "english": "Floragato",
+          "types": [
+            "풀"
+          ]
+        },
+        {
+          "id": 908,
+          "name": "마스카나",
+          "english": "Meowscarada",
+          "types": [
+            "풀",
+            "악"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.16에 진화",
+        "Lv.36에 진화"
+      ],
+      "location": "모험 시작 때 세 마리 중 한 마리로 선택합니다. 다른 첫 파트너는 교환이 필요합니다.",
+      "reason": "빠른 풀 타입으로 시작하고 최종 진화에서 악 타입이 더해집니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": true,
+      "source": "https://www.serebii.net/pokedex-sv/sprigatito/"
+    },
+    {
+      "id": "fuecoco",
+      "forms": [
+        {
+          "id": 909,
+          "name": "뜨아거",
+          "english": "Fuecoco",
+          "types": [
+            "불꽃"
+          ]
+        },
+        {
+          "id": 910,
+          "name": "악뜨거",
+          "english": "Crocalor",
+          "types": [
+            "불꽃"
+          ]
+        },
+        {
+          "id": 911,
+          "name": "라우드본",
+          "english": "Skeledirge",
+          "types": [
+            "불꽃",
+            "고스트"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.16에 진화",
+        "Lv.36에 진화"
+      ],
+      "location": "모험 시작 때 세 마리 중 한 마리로 선택합니다. 다른 첫 파트너는 교환이 필요합니다.",
+      "reason": "불꽃 특수 공격을 담당하고 최종 진화에서 고스트 타입이 더해집니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": true,
+      "source": "https://www.serebii.net/pokedex-sv/fuecoco/"
+    },
+    {
+      "id": "quaxly",
+      "forms": [
+        {
+          "id": 912,
+          "name": "꾸왁스",
+          "english": "Quaxly",
+          "types": [
+            "물"
+          ]
+        },
+        {
+          "id": 913,
+          "name": "아꾸왁",
+          "english": "Quaxwell",
+          "types": [
+            "물"
+          ]
+        },
+        {
+          "id": 914,
+          "name": "웨이니발",
+          "english": "Quaquaval",
+          "types": [
+            "물",
+            "격투"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.16에 진화",
+        "Lv.36에 진화"
+      ],
+      "location": "모험 시작 때 세 마리 중 한 마리로 선택합니다. 다른 첫 파트너는 교환이 필요합니다.",
+      "reason": "물 타입으로 시작하고 최종 진화에서 격투 타입이 더해집니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": true,
+      "source": "https://www.serebii.net/pokedex-sv/quaxly/"
+    },
+    {
+      "id": "pawmi",
+      "forms": [
+        {
+          "id": 921,
+          "name": "빠모",
+          "english": "Pawmi",
+          "types": [
+            "전기"
+          ]
+        },
+        {
+          "id": 922,
+          "name": "빠모트",
+          "english": "Pawmo",
+          "types": [
+            "전기",
+            "격투"
+          ]
+        },
+        {
+          "id": 923,
+          "name": "빠르모트",
+          "english": "Pawmot",
+          "types": [
+            "전기",
+            "격투"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.18에 진화",
+        "빠모트 상태로 레츠고를 이용해 1,000보 함께 걷고 일반 전투·사탕으로 레벨업"
+      ],
+      "location": "남부 지역의 들판에서 찾을 수 있습니다.",
+      "reason": "초반 전기 역할. 최종 진화에는 걷기 조건이 있어 일반 레벨업만으로는 부족합니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/pawmi/"
+    },
+    {
+      "id": "fletchling",
+      "forms": [
+        {
+          "id": 661,
+          "name": "화살꼬빈",
+          "english": "Fletchling",
+          "types": [
+            "노말",
+            "비행"
+          ]
+        },
+        {
+          "id": 662,
+          "name": "불화살빈",
+          "english": "Fletchinder",
+          "types": [
+            "불꽃",
+            "비행"
+          ]
+        },
+        {
+          "id": 663,
+          "name": "파이어로",
+          "english": "Talonflame",
+          "types": [
+            "불꽃",
+            "비행"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.17에 진화",
+        "Lv.35에 진화"
+      ],
+      "location": "남부 지역의 초반 들판에서 찾을 수 있습니다.",
+      "reason": "초반 비행 역할. 불화살빈으로 진화하면 불꽃 타입도 담당합니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/fletchling/"
+    },
+    {
+      "id": "azurill",
+      "forms": [
+        {
+          "id": 298,
+          "name": "루리리",
+          "english": "Azurill",
+          "types": [
+            "노말",
+            "페어리"
+          ]
+        },
+        {
+          "id": 183,
+          "name": "마릴",
+          "english": "Marill",
+          "types": [
+            "물",
+            "페어리"
+          ]
+        },
+        {
+          "id": 184,
+          "name": "마릴리",
+          "english": "Azumarill",
+          "types": [
+            "물",
+            "페어리"
+          ]
+        }
+      ],
+      "conditions": [
+        "친밀도가 높은 상태에서 레벨업",
+        "Lv.18 이상에서 레벨업"
+      ],
+      "location": "남부 지역의 물가에서 찾을 수 있습니다.",
+      "reason": "최종적으로 물·페어리 역할. 물리 공격용이라면 특성 천하장사 여부를 확인하세요.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/azurill/"
+    },
+    {
+      "id": "ralts",
+      "forms": [
+        {
+          "id": 280,
+          "name": "랄토스",
+          "english": "Ralts",
+          "types": [
+            "에스퍼",
+            "페어리"
+          ]
+        },
+        {
+          "id": 281,
+          "name": "킬리아",
+          "english": "Kirlia",
+          "types": [
+            "에스퍼",
+            "페어리"
+          ]
+        },
+        {
+          "id": 282,
+          "name": "가디안",
+          "english": "Gardevoir",
+          "types": [
+            "에스퍼",
+            "페어리"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.20에 진화",
+        "Lv.30에 가디안으로 진화"
+      ],
+      "location": "남부 지역에서 드물게 나타납니다. 게임 도감 서식지를 확인하세요.",
+      "reason": "에스퍼·페어리 역할. 이 카드는 가디안 경로이며 엘레이드 분기는 다루지 않습니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/ralts/"
+    },
+    {
+      "id": "mareep",
+      "forms": [
+        {
+          "id": 179,
+          "name": "메리프",
+          "english": "Mareep",
+          "types": [
+            "전기"
+          ]
+        },
+        {
+          "id": 180,
+          "name": "보송송",
+          "english": "Flaaffy",
+          "types": [
+            "전기"
+          ]
+        },
+        {
+          "id": 181,
+          "name": "전룡",
+          "english": "Ampharos",
+          "types": [
+            "전기"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.15에 진화",
+        "Lv.30에 진화"
+      ],
+      "location": "남부 지역의 들판에서 찾을 수 있습니다.",
+      "reason": "복잡한 추가 조건 없이 레벨업으로 완성하는 전기 특수 공격 후보입니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/mareep/"
+    },
+    {
+      "id": "magikarp",
+      "forms": [
+        {
+          "id": 129,
+          "name": "잉어킹",
+          "english": "Magikarp",
+          "types": [
+            "물"
+          ]
+        },
+        {
+          "id": 130,
+          "name": "갸라도스",
+          "english": "Gyarados",
+          "types": [
+            "물",
+            "비행"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.20에 진화"
+      ],
+      "location": "강·연못 등 물가에서 찾을 수 있습니다.",
+      "reason": "갸라도스로 진화한 뒤 물·비행 역할. 잉어킹 상태에서는 다른 멤버의 육성 도움이 필요합니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/magikarp/"
+    },
+    {
+      "id": "fidough",
+      "forms": [
+        {
+          "id": 926,
+          "name": "쫀도기",
+          "english": "Fidough",
+          "types": [
+            "페어리"
+          ]
+        },
+        {
+          "id": 927,
+          "name": "바우첼",
+          "english": "Dachsbun",
+          "types": [
+            "페어리"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.26에 진화"
+      ],
+      "location": "남부 지역의 마을 주변에서 찾을 수 있습니다.",
+      "reason": "페어리 역할. 바우첼의 노릇노릇바디 특성은 불꽃 기술에 대응할 때 유용합니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/fidough/"
+    },
+    {
+      "id": "nacli",
+      "forms": [
+        {
+          "id": 932,
+          "name": "베베솔트",
+          "english": "Nacli",
+          "types": [
+            "바위"
+          ]
+        },
+        {
+          "id": 933,
+          "name": "스태솔트",
+          "english": "Naclstack",
+          "types": [
+            "바위"
+          ]
+        },
+        {
+          "id": 934,
+          "name": "콜로솔트",
+          "english": "Garganacl",
+          "types": [
+            "바위"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.24에 진화",
+        "Lv.38에 진화"
+      ],
+      "location": "남부·동부의 바위가 많은 곳에서 찾을 수 있습니다.",
+      "reason": "바위 역할의 튼튼한 후보. 물·풀·격투·땅·강철 약점을 파티와 함께 보완하세요.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/nacli/"
+    },
+    {
+      "id": "smoliv",
+      "forms": [
+        {
+          "id": 928,
+          "name": "미니브",
+          "english": "Smoliv",
+          "types": [
+            "풀",
+            "노말"
+          ]
+        },
+        {
+          "id": 929,
+          "name": "올리뇨",
+          "english": "Dolliv",
+          "types": [
+            "풀",
+            "노말"
+          ]
+        },
+        {
+          "id": 930,
+          "name": "올리르바",
+          "english": "Arboliva",
+          "types": [
+            "풀",
+            "노말"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.25에 진화",
+        "Lv.35에 진화"
+      ],
+      "location": "남부의 올리브 밭 주변에서 찾을 수 있습니다.",
+      "reason": "풀 특수 공격 후보. 노말 타입이 함께 있으므로 격투 공격에 주의하세요.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/smoliv/"
+    },
+    {
+      "id": "wattrel",
+      "forms": [
+        {
+          "id": 940,
+          "name": "찌리비",
+          "english": "Wattrel",
+          "types": [
+            "전기",
+            "비행"
+          ]
+        },
+        {
+          "id": 941,
+          "name": "찌리비크",
+          "english": "Kilowattrel",
+          "types": [
+            "전기",
+            "비행"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.25에 진화"
+      ],
+      "location": "팔데아 해안가에서 찾을 수 있습니다.",
+      "reason": "전기·비행을 한 자리에서 담당합니다. 다른 전기 멤버와 역할이 겹치는지 확인하세요.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/wattrel/"
+    },
+    {
+      "id": "tinkatink",
+      "forms": [
+        {
+          "id": 957,
+          "name": "어리짱",
+          "english": "Tinkatink",
+          "types": [
+            "페어리",
+            "강철"
+          ]
+        },
+        {
+          "id": 958,
+          "name": "벼리짱",
+          "english": "Tinkatuff",
+          "types": [
+            "페어리",
+            "강철"
+          ]
+        },
+        {
+          "id": 959,
+          "name": "두드리짱",
+          "english": "Tinkaton",
+          "types": [
+            "페어리",
+            "강철"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.24에 진화",
+        "Lv.38에 진화"
+      ],
+      "location": "팔데아 각지의 유적 주변에서 찾을 수 있습니다.",
+      "reason": "페어리·강철 조합으로 파티의 타입 구성을 보완합니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/tinkatink/"
+    },
+    {
+      "id": "mankey",
+      "forms": [
+        {
+          "id": 56,
+          "name": "망키",
+          "english": "Mankey",
+          "types": [
+            "격투"
+          ]
+        },
+        {
+          "id": 57,
+          "name": "성원숭",
+          "english": "Primeape",
+          "types": [
+            "격투"
+          ]
+        },
+        {
+          "id": 979,
+          "name": "저승갓숭",
+          "english": "Annihilape",
+          "types": [
+            "격투",
+            "고스트"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.28에 진화",
+        "성원숭이로 분노의주먹을 20회 사용한 뒤 레벨업 (기술은 Lv.35에 습득)"
+      ],
+      "location": "서부·남부의 들판에서 찾을 수 있습니다.",
+      "reason": "격투 역할. 저승갓숭 진화는 기술 사용 횟수를 따로 채워야 합니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/mankey/"
+    },
+    {
+      "id": "charcadet-scarlet",
+      "forms": [
+        {
+          "id": 935,
+          "name": "카르본",
+          "english": "Charcadet",
+          "types": [
+            "불꽃"
+          ]
+        },
+        {
+          "id": 936,
+          "name": "카디나르마",
+          "english": "Armarouge",
+          "types": [
+            "불꽃",
+            "에스퍼"
+          ]
+        }
+      ],
+      "conditions": [
+        "피케마을에서 동미러의조각 10개로 교환한 축복받은갑옷을 사용"
+      ],
+      "location": "팔데아 여러 지역에서 드물게 나타납니다. 갑옷 교환은 스칼렛 기준입니다.",
+      "reason": "불꽃·에스퍼의 카디나르마 경로. 바이올렛의 진화 아이템과 다릅니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/charcadet/"
+    },
+    {
+      "id": "charcadet-violet",
+      "forms": [
+        {
+          "id": 935,
+          "name": "카르본",
+          "english": "Charcadet",
+          "types": [
+            "불꽃"
+          ]
+        },
+        {
+          "id": 937,
+          "name": "파라블레이즈",
+          "english": "Ceruledge",
+          "types": [
+            "불꽃",
+            "고스트"
+          ]
+        }
+      ],
+      "conditions": [
+        "피케마을에서 데인차의조각 10개로 교환한 저주받은갑옷을 사용"
+      ],
+      "location": "팔데아 여러 지역에서 드물게 나타납니다. 갑옷 교환은 바이올렛 기준입니다.",
+      "reason": "불꽃·고스트의 파라블레이즈 경로. 스칼렛의 진화 아이템과 다릅니다.",
+      "stage": "초반",
+      "versions": [
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/charcadet/"
+    },
+    {
+      "id": "gible",
+      "forms": [
+        {
+          "id": 443,
+          "name": "딥상어동",
+          "english": "Gible",
+          "types": [
+            "드래곤",
+            "땅"
+          ]
+        },
+        {
+          "id": 444,
+          "name": "한바이트",
+          "english": "Gabite",
+          "types": [
+            "드래곤",
+            "땅"
+          ]
+        },
+        {
+          "id": 445,
+          "name": "한카리아스",
+          "english": "Garchomp",
+          "types": [
+            "드래곤",
+            "땅"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.24에 진화",
+        "Lv.48에 진화"
+      ],
+      "location": "팔데아 서쪽의 동굴 주변을 찾아보세요.",
+      "reason": "땅·드래곤 후보. 최종 진화까지 시간이 필요하고 얼음 약점은 크게 주의해야 합니다.",
+      "stage": "중반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/gible/"
+    },
+    {
+      "id": "riolu",
+      "forms": [
+        {
+          "id": 447,
+          "name": "리오르",
+          "english": "Riolu",
+          "types": [
+            "격투"
+          ]
+        },
+        {
+          "id": 448,
+          "name": "루카리오",
+          "english": "Lucario",
+          "types": [
+            "격투",
+            "강철"
+          ]
+        }
+      ],
+      "conditions": [
+        "친밀도가 높은 상태에서 낮에 레벨업"
+      ],
+      "location": "남서부 지역에서 드물게 나타납니다.",
+      "reason": "최종 진화에서 격투·강철 역할. 친밀도와 시간대를 모두 확인하세요.",
+      "stage": "중반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/riolu/"
+    },
+    {
+      "id": "rookidee",
+      "forms": [
+        {
+          "id": 821,
+          "name": "파라꼬",
+          "english": "Rookidee",
+          "types": [
+            "비행"
+          ]
+        },
+        {
+          "id": 822,
+          "name": "파크로우",
+          "english": "Corvisquire",
+          "types": [
+            "비행"
+          ]
+        },
+        {
+          "id": 823,
+          "name": "아머까오",
+          "english": "Corviknight",
+          "types": [
+            "비행",
+            "강철"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.18에 진화",
+        "Lv.38에 진화"
+      ],
+      "location": "남부·동부의 들판에서 찾을 수 있습니다.",
+      "reason": "최종 진화에서 비행·강철 역할. 진화 전에는 강철 타입이 아닙니다.",
+      "stage": "초반",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/rookidee/"
+    },
+    {
+      "id": "larvitar",
+      "forms": [
+        {
+          "id": 246,
+          "name": "애버라스",
+          "english": "Larvitar",
+          "types": [
+            "바위",
+            "땅"
+          ]
+        },
+        {
+          "id": 247,
+          "name": "데기라스",
+          "english": "Pupitar",
+          "types": [
+            "바위",
+            "땅"
+          ]
+        },
+        {
+          "id": 248,
+          "name": "마기라스",
+          "english": "Tyranitar",
+          "types": [
+            "바위",
+            "악"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.30에 진화",
+        "Lv.55에 진화"
+      ],
+      "location": "스칼렛 본편의 동굴·산지에서 찾을 수 있습니다.",
+      "reason": "스칼렛 전용 장기 육성 후보. 최종 진화 때 땅 타입이 악 타입으로 바뀝니다.",
+      "stage": "중반",
+      "versions": [
+        "scarlet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/larvitar/"
+    },
+    {
+      "id": "deino",
+      "forms": [
+        {
+          "id": 633,
+          "name": "모노두",
+          "english": "Deino",
+          "types": [
+            "악",
+            "드래곤"
+          ]
+        },
+        {
+          "id": 634,
+          "name": "디헤드",
+          "english": "Zweilous",
+          "types": [
+            "악",
+            "드래곤"
+          ]
+        },
+        {
+          "id": 635,
+          "name": "삼삼드래",
+          "english": "Hydreigon",
+          "types": [
+            "악",
+            "드래곤"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.50에 진화",
+        "Lv.64에 진화"
+      ],
+      "location": "스칼렛 본편의 동굴에서 찾을 수 있습니다.",
+      "reason": "스칼렛 전용 악·드래곤 후보. 진화 레벨이 높아 초반 주력으로는 부담이 큽니다.",
+      "stage": "후반",
+      "versions": [
+        "scarlet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/deino/"
+    },
+    {
+      "id": "bagon",
+      "forms": [
+        {
+          "id": 371,
+          "name": "아공이",
+          "english": "Bagon",
+          "types": [
+            "드래곤"
+          ]
+        },
+        {
+          "id": 372,
+          "name": "쉘곤",
+          "english": "Shelgon",
+          "types": [
+            "드래곤"
+          ]
+        },
+        {
+          "id": 373,
+          "name": "보만다",
+          "english": "Salamence",
+          "types": [
+            "드래곤",
+            "비행"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.30에 진화",
+        "Lv.50에 진화"
+      ],
+      "location": "바이올렛 본편의 동굴에서 찾을 수 있습니다.",
+      "reason": "바이올렛 전용 장기 육성 후보. 보만다로 진화하면 비행 타입이 더해집니다.",
+      "stage": "중반",
+      "versions": [
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/bagon/"
+    },
+    {
+      "id": "dreepy",
+      "forms": [
+        {
+          "id": 885,
+          "name": "드라꼰",
+          "english": "Dreepy",
+          "types": [
+            "드래곤",
+            "고스트"
+          ]
+        },
+        {
+          "id": 886,
+          "name": "드래런치",
+          "english": "Drakloak",
+          "types": [
+            "드래곤",
+            "고스트"
+          ]
+        },
+        {
+          "id": 887,
+          "name": "드래펄트",
+          "english": "Dragapult",
+          "types": [
+            "드래곤",
+            "고스트"
+          ]
+        }
+      ],
+      "conditions": [
+        "Lv.50에 진화",
+        "Lv.60에 진화"
+      ],
+      "location": "바이올렛 본편의 물가·습지에서 찾을 수 있습니다.",
+      "reason": "바이올렛 전용 드래곤·고스트 후보. 진화 레벨이 높아 후반 육성에 적합합니다.",
+      "stage": "후반",
+      "versions": [
+        "violet"
+      ],
+      "starter": false,
+      "source": "https://www.serebii.net/pokedex-sv/dreepy/"
+    }
+  ],
+  "route": [
+    {
+      "id": "cortondo",
+      "title": "세르클마을 체육관",
+      "kind": "체육관",
+      "type": "벌레",
+      "level": 15,
+      "tip": "벌레 타입에 대비해 불꽃·비행·바위 기술을 준비하세요.",
+      "reward": ""
+    },
+    {
+      "id": "klawf",
+      "title": "암벽의 주인",
+      "kind": "주인",
+      "type": "바위",
+      "level": 16,
+      "tip": "물·풀·격투·땅·강철 기술을 가진 멤버를 준비하세요.",
+      "reward": "대시"
+    },
+    {
+      "id": "artazon",
+      "title": "보울마을 체육관",
+      "kind": "체육관",
+      "type": "풀",
+      "level": 17,
+      "tip": "불꽃·비행·벌레·독·얼음 기술을 검토하세요.",
+      "reward": ""
+    },
+    {
+      "id": "bombirdier",
+      "title": "대공의 주인",
+      "kind": "주인",
+      "type": "비행·악",
+      "level": 19,
+      "tip": "전기·얼음·바위·페어리 기술을 검토하세요.",
+      "reward": "헤엄치기"
+    },
+    {
+      "id": "dark",
+      "title": "스타단 악 아지트",
+      "kind": "스타단",
+      "type": "악",
+      "level": 21,
+      "tip": "격투·벌레·페어리 멤버와 레츠고용 3마리를 준비하세요.",
+      "reward": ""
+    },
+    {
+      "id": "levincia",
+      "title": "누룩스시티 체육관",
+      "kind": "체육관",
+      "type": "전기",
+      "level": 24,
+      "tip": "땅 기술만 믿지 말고 특성·테라스탈로 약점이 달라지는 상황에 대비하세요.",
+      "reward": ""
+    },
+    {
+      "id": "fire",
+      "title": "스타단 불꽃 아지트",
+      "kind": "스타단",
+      "type": "불꽃",
+      "level": 27,
+      "tip": "물·땅·바위 멤버와 레츠고용 3마리를 준비하세요.",
+      "reward": ""
+    },
+    {
+      "id": "orthworm",
+      "title": "잠강의 주인",
+      "kind": "주인",
+      "type": "강철",
+      "level": 28,
+      "tip": "땅 공격을 흡수하는 특성이 있으므로 불꽃·격투 기술을 준비하세요.",
+      "reward": "높이뛰기"
+    },
+    {
+      "id": "cascarrafa",
+      "title": "카라프시티 체육관",
+      "kind": "체육관",
+      "type": "물",
+      "level": 30,
+      "tip": "풀·전기 기술을 준비하세요.",
+      "reward": ""
+    },
+    {
+      "id": "poison",
+      "title": "스타단 독 아지트",
+      "kind": "스타단",
+      "type": "독",
+      "level": 33,
+      "tip": "땅·에스퍼 기술을 검토하고 상태이상 회복 도구를 챙기세요.",
+      "reward": ""
+    },
+    {
+      "id": "medali",
+      "title": "참푸르마을 체육관",
+      "kind": "체육관",
+      "type": "노말",
+      "level": 36,
+      "tip": "격투 기술과 충분한 회복 도구를 준비하세요.",
+      "reward": ""
+    },
+    {
+      "id": "montenevera",
+      "title": "프리지마을 체육관",
+      "kind": "체육관",
+      "type": "고스트",
+      "level": 42,
+      "tip": "더블배틀에 쓸 두 멤버와 악·고스트 기술을 준비하세요.",
+      "reward": ""
+    },
+    {
+      "id": "earth",
+      "title": "토진의 주인",
+      "kind": "주인",
+      "type": "버전별 다름",
+      "level": 44,
+      "tip": "스칼렛은 땅·격투, 바이올렛은 땅·강철 상대입니다. 물·풀 기술을 검토하세요.",
+      "reward": "활공"
+    },
+    {
+      "id": "alfornada",
+      "title": "베이크마을 체육관",
+      "kind": "체육관",
+      "type": "에스퍼",
+      "level": 45,
+      "tip": "악·고스트·벌레 기술을 검토하세요.",
+      "reward": ""
+    },
+    {
+      "id": "glaseado",
+      "title": "나페산 체육관",
+      "kind": "체육관",
+      "type": "얼음",
+      "level": 48,
+      "tip": "불꽃·격투·바위·강철 기술을 검토하세요.",
+      "reward": ""
+    },
+    {
+      "id": "fairy",
+      "title": "스타단 페어리 아지트",
+      "kind": "스타단",
+      "type": "페어리",
+      "level": 51,
+      "tip": "독·강철 멤버와 레츠고용 3마리를 준비하세요.",
+      "reward": ""
+    },
+    {
+      "id": "dragon",
+      "title": "위룡의 주인",
+      "kind": "주인",
+      "type": "물 → 드래곤·물",
+      "level": 55,
+      "tip": "첫 상대의 물 타입과 뒤이은 드래곤·물 타입에 각각 대비하세요.",
+      "reward": "벽타기"
+    },
+    {
+      "id": "fighting",
+      "title": "스타단 격투 아지트",
+      "kind": "스타단",
+      "type": "격투",
+      "level": 56,
+      "tip": "비행·에스퍼·페어리 멤버와 레츠고용 3마리를 준비하세요.",
+      "reward": ""
+    }
+  ],
+  "typeChart": {
+    "노말": {
+      "노말": 1.0,
+      "격투": 1.0,
+      "비행": 1.0,
+      "독": 1.0,
+      "땅": 1.0,
+      "바위": 0.5,
+      "벌레": 1.0,
+      "고스트": 0.0,
+      "강철": 0.5,
+      "불꽃": 1.0,
+      "물": 1.0,
+      "풀": 1.0,
+      "전기": 1.0,
+      "에스퍼": 1.0,
+      "얼음": 1.0,
+      "드래곤": 1.0,
+      "악": 1.0,
+      "페어리": 1.0
+    },
+    "격투": {
+      "노말": 2.0,
+      "격투": 1.0,
+      "비행": 0.5,
+      "독": 0.5,
+      "땅": 1.0,
+      "바위": 2.0,
+      "벌레": 0.5,
+      "고스트": 0.0,
+      "강철": 2.0,
+      "불꽃": 1.0,
+      "물": 1.0,
+      "풀": 1.0,
+      "전기": 1.0,
+      "에스퍼": 0.5,
+      "얼음": 2.0,
+      "드래곤": 1.0,
+      "악": 2.0,
+      "페어리": 0.5
+    },
+    "비행": {
+      "노말": 1.0,
+      "격투": 2.0,
+      "비행": 1.0,
+      "독": 1.0,
+      "땅": 1.0,
+      "바위": 0.5,
+      "벌레": 2.0,
+      "고스트": 1.0,
+      "강철": 0.5,
+      "불꽃": 1.0,
+      "물": 1.0,
+      "풀": 2.0,
+      "전기": 0.5,
+      "에스퍼": 1.0,
+      "얼음": 1.0,
+      "드래곤": 1.0,
+      "악": 1.0,
+      "페어리": 1.0
+    },
+    "독": {
+      "노말": 1.0,
+      "격투": 1.0,
+      "비행": 1.0,
+      "독": 0.5,
+      "땅": 0.5,
+      "바위": 0.5,
+      "벌레": 1.0,
+      "고스트": 0.5,
+      "강철": 0.0,
+      "불꽃": 1.0,
+      "물": 1.0,
+      "풀": 2.0,
+      "전기": 1.0,
+      "에스퍼": 1.0,
+      "얼음": 1.0,
+      "드래곤": 1.0,
+      "악": 1.0,
+      "페어리": 2.0
+    },
+    "땅": {
+      "노말": 1.0,
+      "격투": 1.0,
+      "비행": 0.0,
+      "독": 2.0,
+      "땅": 1.0,
+      "바위": 2.0,
+      "벌레": 0.5,
+      "고스트": 1.0,
+      "강철": 2.0,
+      "불꽃": 2.0,
+      "물": 1.0,
+      "풀": 0.5,
+      "전기": 2.0,
+      "에스퍼": 1.0,
+      "얼음": 1.0,
+      "드래곤": 1.0,
+      "악": 1.0,
+      "페어리": 1.0
+    },
+    "바위": {
+      "노말": 1.0,
+      "격투": 0.5,
+      "비행": 2.0,
+      "독": 1.0,
+      "땅": 0.5,
+      "바위": 1.0,
+      "벌레": 2.0,
+      "고스트": 1.0,
+      "강철": 0.5,
+      "불꽃": 2.0,
+      "물": 1.0,
+      "풀": 1.0,
+      "전기": 1.0,
+      "에스퍼": 1.0,
+      "얼음": 2.0,
+      "드래곤": 1.0,
+      "악": 1.0,
+      "페어리": 1.0
+    },
+    "벌레": {
+      "노말": 1.0,
+      "격투": 0.5,
+      "비행": 0.5,
+      "독": 0.5,
+      "땅": 1.0,
+      "바위": 1.0,
+      "벌레": 1.0,
+      "고스트": 0.5,
+      "강철": 0.5,
+      "불꽃": 0.5,
+      "물": 1.0,
+      "풀": 2.0,
+      "전기": 1.0,
+      "에스퍼": 2.0,
+      "얼음": 1.0,
+      "드래곤": 1.0,
+      "악": 2.0,
+      "페어리": 0.5
+    },
+    "고스트": {
+      "노말": 0.0,
+      "격투": 1.0,
+      "비행": 1.0,
+      "독": 1.0,
+      "땅": 1.0,
+      "바위": 1.0,
+      "벌레": 1.0,
+      "고스트": 2.0,
+      "강철": 1.0,
+      "불꽃": 1.0,
+      "물": 1.0,
+      "풀": 1.0,
+      "전기": 1.0,
+      "에스퍼": 2.0,
+      "얼음": 1.0,
+      "드래곤": 1.0,
+      "악": 0.5,
+      "페어리": 1.0
+    },
+    "강철": {
+      "노말": 1.0,
+      "격투": 1.0,
+      "비행": 1.0,
+      "독": 1.0,
+      "땅": 1.0,
+      "바위": 2.0,
+      "벌레": 1.0,
+      "고스트": 1.0,
+      "강철": 0.5,
+      "불꽃": 0.5,
+      "물": 0.5,
+      "풀": 1.0,
+      "전기": 0.5,
+      "에스퍼": 1.0,
+      "얼음": 2.0,
+      "드래곤": 1.0,
+      "악": 1.0,
+      "페어리": 2.0
+    },
+    "불꽃": {
+      "노말": 1.0,
+      "격투": 1.0,
+      "비행": 1.0,
+      "독": 1.0,
+      "땅": 1.0,
+      "바위": 0.5,
+      "벌레": 2.0,
+      "고스트": 1.0,
+      "강철": 2.0,
+      "불꽃": 0.5,
+      "물": 0.5,
+      "풀": 2.0,
+      "전기": 1.0,
+      "에스퍼": 1.0,
+      "얼음": 2.0,
+      "드래곤": 0.5,
+      "악": 1.0,
+      "페어리": 1.0
+    },
+    "물": {
+      "노말": 1.0,
+      "격투": 1.0,
+      "비행": 1.0,
+      "독": 1.0,
+      "땅": 2.0,
+      "바위": 2.0,
+      "벌레": 1.0,
+      "고스트": 1.0,
+      "강철": 1.0,
+      "불꽃": 2.0,
+      "물": 0.5,
+      "풀": 0.5,
+      "전기": 1.0,
+      "에스퍼": 1.0,
+      "얼음": 1.0,
+      "드래곤": 0.5,
+      "악": 1.0,
+      "페어리": 1.0
+    },
+    "풀": {
+      "노말": 1.0,
+      "격투": 1.0,
+      "비행": 0.5,
+      "독": 0.5,
+      "땅": 2.0,
+      "바위": 2.0,
+      "벌레": 0.5,
+      "고스트": 1.0,
+      "강철": 0.5,
+      "불꽃": 0.5,
+      "물": 2.0,
+      "풀": 0.5,
+      "전기": 1.0,
+      "에스퍼": 1.0,
+      "얼음": 1.0,
+      "드래곤": 0.5,
+      "악": 1.0,
+      "페어리": 1.0
+    },
+    "전기": {
+      "노말": 1.0,
+      "격투": 1.0,
+      "비행": 2.0,
+      "독": 1.0,
+      "땅": 0.0,
+      "바위": 1.0,
+      "벌레": 1.0,
+      "고스트": 1.0,
+      "강철": 1.0,
+      "불꽃": 1.0,
+      "물": 2.0,
+      "풀": 0.5,
+      "전기": 0.5,
+      "에스퍼": 1.0,
+      "얼음": 1.0,
+      "드래곤": 0.5,
+      "악": 1.0,
+      "페어리": 1.0
+    },
+    "에스퍼": {
+      "노말": 1.0,
+      "격투": 2.0,
+      "비행": 1.0,
+      "독": 2.0,
+      "땅": 1.0,
+      "바위": 1.0,
+      "벌레": 1.0,
+      "고스트": 1.0,
+      "강철": 0.5,
+      "불꽃": 1.0,
+      "물": 1.0,
+      "풀": 1.0,
+      "전기": 1.0,
+      "에스퍼": 0.5,
+      "얼음": 1.0,
+      "드래곤": 1.0,
+      "악": 0.0,
+      "페어리": 1.0
+    },
+    "얼음": {
+      "노말": 1.0,
+      "격투": 1.0,
+      "비행": 2.0,
+      "독": 1.0,
+      "땅": 2.0,
+      "바위": 1.0,
+      "벌레": 1.0,
+      "고스트": 1.0,
+      "강철": 0.5,
+      "불꽃": 0.5,
+      "물": 0.5,
+      "풀": 2.0,
+      "전기": 1.0,
+      "에스퍼": 1.0,
+      "얼음": 0.5,
+      "드래곤": 2.0,
+      "악": 1.0,
+      "페어리": 1.0
+    },
+    "드래곤": {
+      "노말": 1.0,
+      "격투": 1.0,
+      "비행": 1.0,
+      "독": 1.0,
+      "땅": 1.0,
+      "바위": 1.0,
+      "벌레": 1.0,
+      "고스트": 1.0,
+      "강철": 0.5,
+      "불꽃": 1.0,
+      "물": 1.0,
+      "풀": 1.0,
+      "전기": 1.0,
+      "에스퍼": 1.0,
+      "얼음": 1.0,
+      "드래곤": 2.0,
+      "악": 1.0,
+      "페어리": 0.0
+    },
+    "악": {
+      "노말": 1.0,
+      "격투": 0.5,
+      "비행": 1.0,
+      "독": 1.0,
+      "땅": 1.0,
+      "바위": 1.0,
+      "벌레": 1.0,
+      "고스트": 2.0,
+      "강철": 1.0,
+      "불꽃": 1.0,
+      "물": 1.0,
+      "풀": 1.0,
+      "전기": 1.0,
+      "에스퍼": 2.0,
+      "얼음": 1.0,
+      "드래곤": 1.0,
+      "악": 0.5,
+      "페어리": 0.5
+    },
+    "페어리": {
+      "노말": 1.0,
+      "격투": 2.0,
+      "비행": 1.0,
+      "독": 0.5,
+      "땅": 1.0,
+      "바위": 1.0,
+      "벌레": 1.0,
+      "고스트": 1.0,
+      "강철": 0.5,
+      "불꽃": 0.5,
+      "물": 1.0,
+      "풀": 1.0,
+      "전기": 1.0,
+      "에스퍼": 1.0,
+      "얼음": 1.0,
+      "드래곤": 2.0,
+      "악": 2.0,
+      "페어리": 1.0
+    }
+  }
+}

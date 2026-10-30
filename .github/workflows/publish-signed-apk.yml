@@ -98,6 +98,9 @@ jobs:
           assert f"versionName='{os.environ['VERSION']}'" in package
           assert f"versionCode='{2000 + int(os.environ['BUILD_NUMBER'])}'" in package
           assert re.search(r'^application-icon-\d+:', badging, re.M), 'Missing launcher icon'
+          if int(os.environ['VERSION'].split('.')[0]) >= 2:
+              assert "application-label:'팔데아 플래너'" in badging, 'Wrong application label'
+              assert 'android.permission.INTERNET' not in badging, 'Offline release requests Internet permission'
           PY
           sha256sum "$apk" > "$apk.sha256"
       - name: Publish APK and checksum
@@ -105,7 +108,7 @@ jobs:
         with:
           tag_name: ${{ inputs.tag }}
           target_commitish: ${{ inputs.target_commit }}
-          name: '${{ inputs.tag }} · Switch 공략 컴패니언'
+          name: '${{ inputs.tag }} · 팔데아 플래너'
           draft: false
           make_latest: true
           fail_on_unmatched_files: true
