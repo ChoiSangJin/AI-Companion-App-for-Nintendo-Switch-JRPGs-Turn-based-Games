@@ -12,6 +12,8 @@ import 'widgets/guide_page.dart';
 import 'widgets/guide_details.dart';
 import 'widgets/guide_sources.dart';
 import 'widgets/goal_board.dart';
+import 'widgets/ai_setup_page.dart';
+import 'services/ai_settings_repository.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -290,79 +292,23 @@ class _HomeState extends State<Home> {
     try {
       final key = await secure.read(key: 'gemini_api_key') ?? '';
       if (!mounted) return;
-      final keyInput = TextEditingController(text: key),
-          modelInput = TextEditingController(text: store.model);
-      final save = await showDialog<bool>(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: const Text('Gemini 설정'),
-          content: SizedBox(
-            width: 480,
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    '검색어·붙여넣은 공략·게임 이름과 규칙은 Google Gemini로 전송됩니다. API 사용료가 발생할 수 있습니다. 공략집은 기기에만 저장됩니다.\n',
-                  ),
-                  TextField(
-                    controller: keyInput,
-                    obscureText: true,
-                    autocorrect: false,
-                    enableSuggestions: false,
-                    decoration: const InputDecoration(
-                      labelText: 'Google AI Studio API 키 (비우면 삭제)',
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  TextField(
-                    controller: modelInput,
-                    decoration: const InputDecoration(
-                      labelText: '모델명',
-                      helperText: '예: gemini-2.5-flash · Google 검색 지원 모델',
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-                  const Text(
-                    'API 키는 Android 보안 저장소에 저장됩니다. 앱 삭제 시 로컬 데이터도 삭제됩니다. AI의 스포일러 차단과 정답은 보장되지 않으므로 출처를 확인하세요.',
-                  ),
-                ],
-              ),
-            ),
+      final changed = await Navigator.push<bool>(
+        context,
+        MaterialPageRoute(
+          builder: (_) => AiSetupPage(
+            initialKey: key,
+            initialModel: store.model,
+            onSave: AiSettingsRepository(
+              store: store,
+              readKey: () => secure.read(key: 'gemini_api_key'),
+              writeKey: (value) => value == null
+                  ? secure.delete(key: 'gemini_api_key')
+                  : secure.write(key: 'gemini_api_key', value: value),
+            ).save,
           ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context, false),
-              child: const Text('취소'),
-            ),
-            FilledButton(
-              onPressed: () => Navigator.pop(context, true),
-              child: const Text('저장'),
-            ),
-          ],
         ),
       );
-      if (save == true) {
-        final model = modelInput.text.trim();
-        if (!RegExp(r'^[a-zA-Z0-9._-]+$').hasMatch(model)) {
-          message('유효한 모델명을 입력하세요.');
-        } else {
-          if (keyInput.text.trim().isEmpty) {
-            await secure.delete(key: 'gemini_api_key');
-          } else {
-            await secure.write(
-              key: 'gemini_api_key',
-              value: keyInput.text.trim(),
-            );
-          }
-          store.model = model;
-          await persist();
-        }
-      }
-      await Future<void>.delayed(const Duration(milliseconds: 250));
-      keyInput.dispose();
-      modelInput.dispose();
+      if (changed == true && mounted) setState(() {});
     } catch (_) {
       message('보안 저장소에 접근할 수 없습니다. 기기 잠금 설정을 확인하세요.');
     }
