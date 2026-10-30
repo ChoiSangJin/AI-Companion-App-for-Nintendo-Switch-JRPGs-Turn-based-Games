@@ -434,6 +434,11 @@ void main() {
       );
       await store.save();
       await tester.pumpWidget(CompanionApp(store: store));
+      await tester.scrollUntilVisible(
+        find.text('놓치기 쉬운 요소'),
+        150,
+        scrollable: find.byType(Scrollable).last,
+      );
       await tester.tap(find.text('놓치기 쉬운 요소'));
       await tester.pumpAndSettle();
       expect(
@@ -515,6 +520,11 @@ void main() {
       store.putGuide(cached(old, GuideTopic.missables));
       await store.save();
       await tester.pumpWidget(CompanionApp(store: store));
+      await tester.scrollUntilVisible(
+        find.text('다른 게임 찾기'),
+        150,
+        scrollable: find.byType(Scrollable).last,
+      );
       await tester.tap(find.text('다른 게임 찾기'));
       await tester.pumpAndSettle();
       await tester.enterText(find.byType(TextField), '페르소나 4');

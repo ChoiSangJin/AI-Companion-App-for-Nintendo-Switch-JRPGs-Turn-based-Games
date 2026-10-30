@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../data/game_catalog.dart';
 import '../models/models.dart';
+import '../services/storage.dart';
 import 'guide_details.dart';
 import 'guide_sources.dart';
 
@@ -16,8 +17,10 @@ class GuidePage extends StatefulWidget {
     required this.persist,
     this.target = '',
     this.initialGuide,
+    this.store,
   });
   final GameProfile game;
+  final LocalStore? store;
   final GuideTopic topic;
   final String target;
   final GuideData? initialGuide;
@@ -78,6 +81,27 @@ class _GuidePageState extends State<GuidePage> {
     }
   }
 
+  Future<void> _pin(GuideItem item) async {
+    if (saving || widget.store == null || guide == null) return;
+    setState(() => saving = true);
+    try {
+      await widget.store!.pinItem(guide!, item);
+      if (mounted) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text('내 목표 현황판에 고정했습니다.')));
+      }
+    } catch (_) {
+      if (mounted) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text('목표를 저장하지 못했습니다.')));
+      }
+    } finally {
+      if (mounted) setState(() => saving = false);
+    }
+  }
+
   Future<void> _openCharacter(String name) async {
     await Navigator.push<void>(
       context,
@@ -88,6 +112,7 @@ class _GuidePageState extends State<GuidePage> {
           target: name,
           load: widget.load,
           persist: widget.persist,
+          store: widget.store,
         ),
       ),
     );
@@ -246,6 +271,32 @@ class _GuidePageState extends State<GuidePage> {
                                 child: Text('조건: ${entry.value.note}'),
                               ),
                             GuideDetails(item: entry.value),
+                            if (widget.store != null)
+                              Padding(
+                                padding: const EdgeInsets.only(top: 12),
+                                child: OutlinedButton.icon(
+                                  onPressed:
+                                      saving ||
+                                          loading ||
+                                          widget.store!.pinnedItem(
+                                                guide!,
+                                                entry.value,
+                                              ) !=
+                                              null
+                                      ? null
+                                      : () => _pin(entry.value),
+                                  icon: const Icon(Icons.push_pin_outlined),
+                                  label: Text(
+                                    widget.store!.pinnedItem(
+                                              guide!,
+                                              entry.value,
+                                            ) !=
+                                            null
+                                        ? '내 목표에 고정됨'
+                                        : '내 목표에 고정',
+                                  ),
+                                ),
+                              ),
                           ],
                         ),
                       ),

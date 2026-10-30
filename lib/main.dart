@@ -11,6 +11,7 @@ import 'widgets/game_picker.dart';
 import 'widgets/guide_page.dart';
 import 'widgets/guide_details.dart';
 import 'widgets/guide_sources.dart';
+import 'widgets/goal_board.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -233,14 +234,17 @@ class _HomeState extends State<Home> {
       false;
   Future<void> deleteGame() async {
     final current = game;
-    if (current == null || !await confirm('${current.name}과 저장된 공략을 삭제할까요?')) {
+    if (current == null ||
+        !await confirm('${current.name}과 저장된 공략·목표를 삭제할까요?')) {
       return;
     }
-    store.games.removeWhere((g) => g.id == current.id);
-    store.guides.removeWhere((g) => g.gameId == current.id);
-    store.selectedId = store.games.firstOrNull?.id;
-    result = null;
-    await persist();
+    try {
+      await store.deleteGame(current.id);
+      result = null;
+      if (mounted) setState(() {});
+    } catch (_) {
+      message('게임을 삭제하지 못했습니다. 저장 공간을 확인하세요.');
+    }
   }
 
   Future<void> request(bool convert) async {
@@ -545,6 +549,7 @@ class _HomeState extends State<Home> {
           load: (t, target, refresh) =>
               _loadGuided(selected, t, target, refresh),
           persist: store.save,
+          store: store,
         ),
       ),
     );
@@ -559,7 +564,15 @@ class _HomeState extends State<Home> {
         .take(3)
         .toList();
     return [
-      Text('이 게임의 공략', style: Theme.of(context).textTheme.headlineSmall),
+      GoalBoard(
+        key: ValueKey('goals-${current.id}'),
+        store: store,
+        game: current,
+        onChanged: () {
+          if (mounted) setState(() {});
+        },
+      ),
+      Text('공략 찾기', style: Theme.of(context).textTheme.headlineSmall),
       const SizedBox(height: 8),
       Text(definition.platform),
       if (definition.verifyAvailability)
@@ -653,6 +666,52 @@ class _HomeState extends State<Home> {
     ];
   }
 
+  Future<void> _showGuideMenu() async {
+    final current = game;
+    if (current == null || busy) return;
+    final definition = definitionFor(current) ?? genericGame;
+    final topic = await showModalBottomSheet<GuideTopic>(
+      context: context,
+      showDragHandle: true,
+      builder: (context) => SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Text(
+                  current.name,
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+              ),
+              for (final t in definition.topics)
+                ListTile(
+                  title: Text(
+                    t == GuideTopic.roster ? '캐릭터별 추천 직업·육성' : t.label,
+                  ),
+                  subtitle: Text(t.description),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () => Navigator.pop(context, t),
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
+    if (topic != null && mounted) await _openTopic(topic);
+  }
+
+  Future<void> _pinGuideItem(GuideData guide, GuideItem item) async {
+    try {
+      await store.pinItem(guide, item);
+      if (mounted) setState(() {});
+      message('내 목표 현황판에 고정했습니다.');
+    } catch (_) {
+      message('목표를 저장하지 못했습니다.');
+    }
+  }
+
   Widget guideCard(GuideData g, {required bool saved}) => Card(
     child: Padding(
       padding: const EdgeInsets.all(16),
@@ -709,12 +768,30 @@ class _HomeState extends State<Home> {
                               child: text,
                             ),
                     ),
-                    if (saved)
-                      IconButton(
-                        tooltip: '항목 수정',
-                        onPressed: () => editItem(g, entry.key),
-                        icon: const Icon(Icons.edit_outlined),
-                      ),
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        IconButton(
+                          tooltip: store.pinnedItem(g, item) == null
+                              ? '내 목표에 고정'
+                              : '내 목표에 고정됨',
+                          onPressed: store.pinnedItem(g, item) != null
+                              ? null
+                              : () => _pinGuideItem(g, item),
+                          icon: Icon(
+                            store.pinnedItem(g, item) != null
+                                ? Icons.push_pin
+                                : Icons.push_pin_outlined,
+                          ),
+                        ),
+                        if (saved)
+                          IconButton(
+                            tooltip: '항목 수정',
+                            onPressed: () => editItem(g, entry.key),
+                            icon: const Icon(Icons.edit_outlined),
+                          ),
+                      ],
+                    ),
                   ],
                 );
               }),
@@ -760,7 +837,7 @@ class _HomeState extends State<Home> {
                     ),
                     TextButton.icon(
                       onPressed: () async {
-                        if (await confirm('이 공략을 삭제할까요?')) {
+                        if (await confirm('이 공략을 삭제할까요? 고정한 목표는 유지됩니다.')) {
                           store.guides.remove(g);
                           await persist();
                         }
@@ -801,6 +878,11 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: const Text('Switch 공략집'),
         actions: [
+          IconButton(
+            tooltip: '공략 찾기',
+            onPressed: busy || game == null ? null : _showGuideMenu,
+            icon: const Icon(Icons.travel_explore),
+          ),
           IconButton(
             tooltip: '게임 추가',
             onPressed: busy ? null : addGame,
@@ -995,7 +1077,7 @@ class _HomeState extends State<Home> {
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.dashboard_outlined),
-            label: '게임 공략',
+            label: '내 현황판',
           ),
           NavigationDestination(icon: Icon(Icons.playlist_add), label: '공략 변환'),
           NavigationDestination(
