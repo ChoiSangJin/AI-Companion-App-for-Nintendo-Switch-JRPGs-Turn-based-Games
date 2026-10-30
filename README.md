@@ -31,7 +31,18 @@ Nintendo Switch 1·2 JRPG/턴제 게임용 개인 Android 앱입니다. Flutter 
 
 공략은 Gemini Google Search grounding을 사용합니다. 자체적으로 새 육성법을 만드는 대신, 작품·버전·난이도·입수 시점에 맞는 공개 커뮤니티·위키 공략을 찾아 조건과 대체 경로를 요약하도록 요청합니다. 검색으로 확인한 자료를 사용하며 한 사이트의 의견을 보편적인 정답으로 단정하지 않도록 합니다. 정확한 작품·플랫폼의 발매 및 공략 공개 여부, 캐릭터·전직·입수 조건을 검색하도록 요청합니다. 출처가 없거나 응답 유형·진행 범위가 다르거나 필수 추천 조건이 부족하면 저장하지 않습니다. 확인할 수 없다는 응답은 오류로 표시하며 다른 작품의 정보를 대체 데이터로 사용하지 않습니다. 이는 응답 형식·범위 검사이며 웹 출처의 사실성이나 AI의 스포일러 차단을 완전히 보장하지 않습니다.
 
-API 키와 모델은 설정에서 입력합니다. 기본 모델은 `gemini-2.5-flash`이며 Google 검색 지원 모델로 변경할 수 있습니다. 실제 Gemini 호출에는 개인 키와 사용량이 필요합니다.
+API 키와 모델은 설정의 **AI 연결 안내**에서 연결합니다. 새 사용자는 모델 이름을 직접 입력할 필요가 없습니다. 실제 Gemini 호출에는 개인 키와 사용량이 필요합니다.
+
+## 처음 사용하는 사람을 위한 AI 연결
+
+1. **AI Studio에서 API 키 만들기** 버튼으로 [Google 공식 발급 페이지](https://aistudio.google.com/apikey)를 엽니다. Google 계정 로그인·약관 확인 후 API 키 만들기를 선택하고, 프로젝트 선택이 나오면 공식 화면 안내에 따라 선택·생성합니다.
+2. 키 값을 복사해 앱의 **복사한 키 붙여넣기**로 입력합니다. 키는 가려서 표시하며 사용자가 누를 때만 클립보드를 읽습니다. 발급 화면이 다르면 공식 발급 안내, 계정·지역 이용 조건과 요금 링크를 사용할 수 있습니다.
+3. **키 확인하고 공식 모델 불러오기**로 Google `GET /v1beta/models`의 현재 목록을 확인합니다. 일반 콘텐츠 생성용 Gemini 모델을 버전 번호 기준 최신순으로 표시하고 같은 버전에서는 Flash를 먼저 추천합니다. 미리보기·실험용·자동 변경 별칭은 별도 영역에 표시합니다. 새 키에는 최신 안정 버전을 제안하고 기존 키의 유효한 저장 모델은 유지하면서 최신 추천을 선택할 수 있게 합니다.
+4. **이 설정으로 저장**을 누릅니다. 저장 버튼에는 현재 선택을 함께 표시합니다. 다른 키를 입력하면 이전 키로 조회한 목록과 검증 상태를 폐기합니다. 키 삭제는 별도 확인을 거치며 목표·공략은 유지합니다.
+
+공식 모델 목록 API에는 출시일과 Google 검색 도구 지원 여부가 포함되지 않습니다. 따라서 이 순서는 출시일순이나 모든 계정에서의 호출·무료 사용 보장이 아닙니다. 계정별 권한·지역·한도·요금은 Google 안내를 확인하세요. **선택 모델로 검색 연결 테스트**는 짧은 공개 질문으로 실제 검색 도구 응답과 출처를 확인하는 선택 기능이며 API 사용량·요금이 발생할 수 있습니다. 모델 목록 확인만으로 검색 연결 테스트 완료를 표시하지 않습니다. Gemini 앱 구독과 API 이용 요금은 별도입니다.
+
+모델 목록·지원 정보는 앱에 고정하지 않고 공식 API에서 매번 조회합니다. 참고한 공식 프로토콜은 [Google Model 정의](https://github.com/googleapis/googleapis/blob/master/google/ai/generativelanguage/v1beta/model.proto), [ListModels 정의](https://github.com/googleapis/googleapis/blob/master/google/ai/generativelanguage/v1beta/model_service.proto) 및 [공식 모델 안내](https://ai.google.dev/gemini-api/docs/models)입니다. API 키를 채팅·로그·저장소에 올리지 마세요.
 
 ## 개발
 
@@ -82,11 +93,11 @@ keytool -genkeypair -keystore release.jks -alias switch-companion \
 # Linux: base64 -w 0 release.jks (출력을 공개 로그에 남기지 마세요)
 ```
 
-`pubspec.yaml`의 버전과 태그를 일치시켜 배포합니다. 현재 버전은 `v1.2.0`입니다. 수동 실행 시에도 main에 포함된 커밋을 대상으로 선택하세요.
+`pubspec.yaml`의 버전과 태그를 일치시켜 배포합니다. 현재 버전은 `v1.3.0`입니다. 수동 실행 시에도 main에 포함된 커밋을 대상으로 선택하세요.
 
 ```sh
-git tag v1.2.0
-git push origin v1.2.0
+git tag v1.3.0
+git push origin v1.3.0
 ```
 
 빌드 명령은 `flutter build apk --release --target-platform android-arm64 --split-per-abi`이며 산출물은 `build/app/outputs/flutter-apk/app-arm64-v8a-release.apk`입니다. 로컬 릴리즈 빌드에는 `ANDROID_KEYSTORE_PATH` (절대 경로), `ANDROID_STORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`가 필요합니다. 서명 설정 없이 릴리즈 배포를 진행하지 않습니다.
