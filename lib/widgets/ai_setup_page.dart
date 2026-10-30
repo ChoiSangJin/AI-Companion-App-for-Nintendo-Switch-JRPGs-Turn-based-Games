@@ -27,6 +27,8 @@ class _AiSetupPageState extends State<AiSetupPage> {
   late final service = widget.service ?? GeminiModelsService();
   GeminiModelList? catalog;
   String selected = '', listedKey = '', notice = '';
+  String verifiedKey = '', verifiedModel = '';
+  bool get verified => verifiedKey == listedKey && verifiedModel == selected;
   String? error;
   bool visible = false, fetching = false, saving = false, testing = false;
   int generation = 0;
@@ -48,6 +50,7 @@ class _AiSetupPageState extends State<AiSetupPage> {
     if (keyInput.text.trim() == listedKey && listedKey.isNotEmpty) return;
     generation++;
     setState(() {
+      verifiedKey = verifiedModel = '';
       catalog = null;
       listedKey = '';
       notice = '';
@@ -120,6 +123,7 @@ class _AiSetupPageState extends State<AiSetupPage> {
     if (saving || testing) return;
     final key = keyInput.text.trim();
     final request = ++generation;
+    verifiedKey = verifiedModel = '';
     final previousSelection = selected;
     final keepSelection =
         key == listedKey ||
@@ -141,9 +145,9 @@ class _AiSetupPageState extends State<AiSetupPage> {
         selected =
             keepSelection && result.models.any((m) => m.id == previousSelection)
             ? previousSelection
-            : result.recommended!.id;
+            : result.connectionCandidate!.id;
         notice =
-            'Google 공식 목록을 확인했습니다. 모델별 사용 권한·한도와 검색 지원은 별도 확인이 필요할 수 있습니다.';
+            '모델 목록만 확인했습니다. 무료 사용 가능 여부는 아직 확인되지 않았습니다. 저장할 때 선택한 모델로 검색 연결을 확인합니다.';
       });
     } on FormatException catch (e) {
       if (mounted && request == generation) {
@@ -171,6 +175,7 @@ class _AiSetupPageState extends State<AiSetupPage> {
 
   Future<void> _testSearch() async {
     if (!canSave) return;
+    verifiedKey = verifiedModel = '';
     final key = listedKey, model = selected, request = ++generation;
     setState(() {
       testing = true;
@@ -180,7 +185,11 @@ class _AiSetupPageState extends State<AiSetupPage> {
     try {
       await service.testSearch(key, model);
       if (mounted && request == generation && model == selected) {
-        setState(() => notice = '선택한 모델에서 검색 출처가 있는 응답을 확인했습니다.');
+        setState(() {
+          verifiedKey = key;
+          verifiedModel = model;
+          notice = '검색 연결을 확인했습니다. 현재 요청이 성공했다는 뜻이며 무료 요금이나 남은 한도를 보장하지 않습니다.';
+        });
       }
     } on FormatException catch (e) {
       if (mounted && request == generation) setState(() => error = e.message);
@@ -198,6 +207,8 @@ class _AiSetupPageState extends State<AiSetupPage> {
 
   Future<void> _save() async {
     if (!canSave) return;
+    if (!verified) await _testSearch();
+    if (!mounted || !canSave || !verified) return;
     setState(() {
       saving = true;
       error = null;
@@ -277,7 +288,7 @@ class _AiSetupPageState extends State<AiSetupPage> {
     value: model.id,
     enabled: !busy,
     title: Text(
-      '${model.name}${catalog?.recommended?.id == model.id ? ' · 추천' : ''}',
+      '${model.name}${verified && selected == model.id ? ' · 검색 연결 확인' : ''}',
     ),
     subtitle: Text(
       '${model.kind}${model.preview
@@ -358,7 +369,7 @@ class _AiSetupPageState extends State<AiSetupPage> {
             ),
           if (notice.isNotEmpty)
             Padding(padding: const EdgeInsets.all(12), child: Text(notice)),
-          _step('3. 추천 모델 선택', [
+          _step('3. 모델 선택 및 연결 확인', [
             if (catalog == null) ...[
               const Text(
                 '키를 확인하면 Google 공식 API의 모델 목록을 최신 버전부터 표시합니다. 모델 이름을 직접 입력할 필요가 없어요.',
@@ -367,20 +378,22 @@ class _AiSetupPageState extends State<AiSetupPage> {
                 Text('현재 저장된 모델: ${widget.initialModel}'),
             ] else ...[
               const Text(
-                '안정 버전은 버전 번호가 높은 순서로 표시합니다. 같은 버전에서는 빠른 공략 조회용 Flash를 먼저 추천합니다.',
+                '목록은 최신 버전순이며 무료 모델 목록이 아닙니다. 처음에는 안정 Flash를 연결 후보로 선택합니다. 목록에 보여도 무료 할당량이 0일 수 있습니다. 실패하면 다른 Flash를 선택해 확인하세요.',
               ),
-              if (catalog!.recommended != null &&
-                  selected != catalog!.recommended!.id)
+              if (catalog!.connectionCandidate != null &&
+                  selected != catalog!.connectionCandidate!.id)
                 TextButton.icon(
                   onPressed: busy
                       ? null
                       : () => setState(() {
-                          selected = catalog!.recommended!.id;
+                          selected = catalog!.connectionCandidate!.id;
                           error = null;
                           notice = '';
                         }),
                   icon: const Icon(Icons.auto_awesome),
-                  label: Text('최신 추천 선택: ${catalog!.recommended!.name}'),
+                  label: Text(
+                    '최신 Flash 후보 선택: ${catalog!.connectionCandidate!.name}',
+                  ),
                 ),
               RadioGroup<String>(
                 groupValue: selected,
@@ -417,9 +430,13 @@ class _AiSetupPageState extends State<AiSetupPage> {
                 label: const Text('선택 모델로 검색 연결 테스트'),
               ),
               const Text(
-                '선택 사항입니다. 짧은 공개 질문으로 테스트하며 소량의 API 사용량·요금이 발생할 수 있습니다.',
+                '저장 전 검색 연결 확인이 필요합니다. 저장 버튼도 같은 테스트를 실행합니다. 공개 질문 1회로 사용량이 소모되며, 결제가 연결된 프로젝트는 요금이 발생할 수 있습니다. 무료 제공 여부를 보장하는 검사는 아닙니다.',
               ),
             ],
+            TextButton(
+              onPressed: () => _open(GeminiLinks.usage),
+              child: const Text('AI Studio에서 내 사용량·한도 확인'),
+            ),
             TextButton(
               onPressed: () => _open(GeminiLinks.models),
               child: const Text('Google 공식 모델·지원 기능 안내'),

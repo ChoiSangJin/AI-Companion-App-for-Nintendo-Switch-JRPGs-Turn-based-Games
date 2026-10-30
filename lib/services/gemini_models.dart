@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 abstract final class GeminiLinks {
+  static final usage = Uri.https('aistudio.google.com', '/usage');
   static final apiKeys = Uri.https('aistudio.google.com', '/apikey');
   static final keyHelp = Uri.https(
     'ai.google.dev',
@@ -109,6 +110,12 @@ class GeminiModelList {
       models.where((m) => !m.preview && !m.alias).toList();
   List<GeminiModel> get additional =>
       models.where((m) => m.preview || m.alias).toList();
+  GeminiModel? get connectionCandidate =>
+      stable
+          .where((m) => m.id.contains('flash') && !m.id.contains('lite'))
+          .firstOrNull ??
+      stable.where((m) => m.id.contains('flash')).firstOrNull ??
+      recommended;
   GeminiModel? get recommended =>
       stable.firstOrNull ??
       models.where((m) => !m.alias).firstOrNull ??
@@ -142,6 +149,58 @@ class GeminiModelsService {
     }
   }
 
+  // Read only structured quota metadata; never display Google's raw message,
+  // which may contain request data or credentials.
+  static String quotaMessage(http.Response response) {
+    var zeroFree = false, daily = false, rate = false;
+    try {
+      final body = jsonDecode(utf8.decode(response.bodyBytes));
+      final details = body is Map && body['error'] is Map
+          ? body['error']['details']
+          : null;
+      if (details is List) {
+        for (final detail in details.whereType<Map>()) {
+          if (detail['@type'] !=
+              'type.googleapis.com/google.rpc.QuotaFailure') {
+            continue;
+          }
+          final violations = detail['violations'];
+          if (violations is! List) continue;
+          for (final v in violations.whereType<Map>()) {
+            final metric = '${v['quotaMetric'] ?? ''} ${v['quotaId'] ?? ''}'
+                .toLowerCase();
+            final zero = v['quotaValue'] == 0 || v['quotaValue'] == '0';
+            zeroFree |=
+                zero &&
+                (metric.contains('free_tier') || metric.contains('freetier'));
+            daily |= metric.contains('perday') || metric.contains('per_day');
+            rate |=
+                metric.contains('perminute') || metric.contains('per_minute');
+          }
+        }
+      }
+    } catch (_) {
+      /* Missing metadata must not become a guessed diagnosis. */
+    }
+    if (zeroFree) {
+      return '이 모델의 무료 할당량이 0으로 안내됐습니다. 처음 연결해도 사용할 수 없을 수 있어요. AI 연결 설정에서 다른 Flash 모델을 선택해 검색 연결을 확인하세요. AI Studio 사용량에서 프로젝트·모델별 한도를 확인할 수 있습니다.';
+    }
+    if (daily) {
+      return '이 프로젝트·모델의 일일 한도에 도달했습니다. 같은 프로젝트의 다른 키로 바꿔도 한도는 늘지 않습니다. AI Studio 사용량에서 초기화 시점과 한도를 확인하세요.';
+    }
+    if (rate) {
+      return '짧은 시간의 요청 한도에 도달했습니다. 잠시 기다린 뒤 다시 시도하세요. 반복되면 AI Studio 사용량에서 해당 모델의 한도를 확인하세요.';
+    }
+    return 'Google이 요청 한도를 제한했습니다. 처음 연결한 경우에도 모델의 무료 할당량이 없을 수 있습니다. 일시 제한인지 무료 한도 문제인지는 이 응답으로 확인되지 않았습니다. AI 연결 설정에서 다른 Flash 모델을 테스트하거나 AI Studio 사용량을 확인하세요.';
+  }
+
+  static void checkResponse(http.Response response) {
+    if (response.statusCode == 429) {
+      throw FormatException(quotaMessage(response));
+    }
+    checkStatus(response.statusCode);
+  }
+
   static void checkStatus(int status) {
     if (status == 200) return;
     throw FormatException(switch (status) {
@@ -169,7 +228,7 @@ class GeminiModelsService {
           headers: {'x-goog-api-key': apiKey},
         ),
       );
-      checkStatus(response.statusCode);
+      checkResponse(response);
       try {
         final data =
             jsonDecode(utf8.decode(response.bodyBytes)) as Map<String, dynamic>;
@@ -242,7 +301,7 @@ class GeminiModelsService {
         '선택한 모델의 검색 요청을 처리하지 못했습니다. 다른 추천 모델을 선택하거나 공식 지원 기능을 확인해 주세요.',
       );
     }
-    checkStatus(response.statusCode);
+    checkResponse(response);
     try {
       final data = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
       final candidates = data['candidates'] as List? ?? [];

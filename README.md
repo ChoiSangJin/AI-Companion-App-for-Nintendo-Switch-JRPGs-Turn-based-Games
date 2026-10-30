@@ -37,10 +37,12 @@ API 키와 모델은 설정의 **AI 연결 안내**에서 연결합니다. 새 �
 
 1. **AI Studio에서 API 키 만들기** 버튼으로 [Google 공식 발급 페이지](https://aistudio.google.com/apikey)를 엽니다. Google 계정 로그인·약관 확인 후 API 키 만들기를 선택하고, 프로젝트 선택이 나오면 공식 화면 안내에 따라 선택·생성합니다.
 2. 키 값을 복사해 앱의 **복사한 키 붙여넣기**로 입력합니다. 키는 가려서 표시하며 사용자가 누를 때만 클립보드를 읽습니다. 발급 화면이 다르면 공식 발급 안내, 계정·지역 이용 조건과 요금 링크를 사용할 수 있습니다.
-3. **키 확인하고 공식 모델 불러오기**로 Google `GET /v1beta/models`의 현재 목록을 확인합니다. 일반 콘텐츠 생성용 Gemini 모델을 버전 번호 기준 최신순으로 표시하고 같은 버전에서는 Flash를 먼저 추천합니다. 미리보기·실험용·자동 변경 별칭은 별도 영역에 표시합니다. 새 키에는 최신 안정 버전을 제안하고 기존 키의 유효한 저장 모델은 유지하면서 최신 추천을 선택할 수 있게 합니다.
-4. **이 설정으로 저장**을 누릅니다. 저장 버튼에는 현재 선택을 함께 표시합니다. 다른 키를 입력하면 이전 키로 조회한 목록과 검증 상태를 폐기합니다. 키 삭제는 별도 확인을 거치며 목표·공략은 유지합니다.
+3. **키 확인하고 공식 모델 불러오기**로 Google `GET /v1beta/models`의 현재 목록을 최신 버전순으로 확인합니다. 이 목록은 무료 모델 목록이 아닙니다. 처음에는 안정 Flash를 연결 후보로 선택하며, 기존 키의 저장 모델은 유지합니다. 미리보기·실험용·자동 변경 별칭은 별도로 표시합니다.
+4. **이 설정으로 저장**을 누르면 선택한 모델로 공개 질문 1회의 검색 연결을 확인한 뒤 저장합니다. 실패하면 키·모델을 저장하지 않습니다. 다른 Flash를 직접 선택해 확인할 수 있으며 자동 재시도·자동 모델 전환은 하지 않습니다. 같은 키·모델로 이미 테스트에 성공했다면 저장 시 중복 호출하지 않습니다. 키 변경 시 검증을 폐기합니다. 키 삭제는 별도 확인을 거치며 목표·공략은 유지합니다.
 
-공식 모델 목록 API에는 출시일과 Google 검색 도구 지원 여부가 포함되지 않습니다. 따라서 이 순서는 출시일순이나 모든 계정에서의 호출·무료 사용 보장이 아닙니다. 계정별 권한·지역·한도·요금은 Google 안내를 확인하세요. **선택 모델로 검색 연결 테스트**는 짧은 공개 질문으로 실제 검색 도구 응답과 출처를 확인하는 선택 기능이며 API 사용량·요금이 발생할 수 있습니다. 모델 목록 확인만으로 검색 연결 테스트 완료를 표시하지 않습니다. Gemini 앱 구독과 API 이용 요금은 별도입니다.
+모델 목록 API에는 요금제·남은 할당량·출시일·검색 지원 정보가 없습니다. 검색 연결 성공도 현재 요청 성공을 뜻하며 무료 요금이나 이후 사용을 보장하지 않습니다. 테스트는 API 사용량을 소모하며 결제가 연결된 프로젝트에서는 요금이 발생할 수 있습니다. Gemini 앱 구독과 API 요금은 별도입니다. 앱에서 결제를 등록하거나 자동으로 유료 모델로 전환하지 않습니다.
+
+429 오류는 Google의 구조화된 QuotaFailure 정보가 있는 경우 무료 할당량 0, 일일 한도, 분당 제한을 구분합니다. 정보가 없으면 원인을 추정하지 않고 AI Studio 사용량·한도 확인과 다른 Flash 테스트를 안내합니다. 원문 오류 메시지·키는 표시하지 않습니다. 무료 한도가 0이면 처음 사용해도 실패할 수 있으며, 같은 프로젝트에 새 키를 만들어도 프로젝트 한도가 늘지 않습니다.
 
 모델 목록·지원 정보는 앱에 고정하지 않고 공식 API에서 매번 조회합니다. 참고한 공식 프로토콜은 [Google Model 정의](https://github.com/googleapis/googleapis/blob/master/google/ai/generativelanguage/v1beta/model.proto), [ListModels 정의](https://github.com/googleapis/googleapis/blob/master/google/ai/generativelanguage/v1beta/model_service.proto) 및 [공식 모델 안내](https://ai.google.dev/gemini-api/docs/models)입니다. API 키를 채팅·로그·저장소에 올리지 마세요.
 
@@ -93,11 +95,11 @@ keytool -genkeypair -keystore release.jks -alias switch-companion \
 # Linux: base64 -w 0 release.jks (출력을 공개 로그에 남기지 마세요)
 ```
 
-`pubspec.yaml`의 버전과 태그를 일치시켜 배포합니다. 현재 버전은 `v1.3.0`입니다. 수동 실행 시에도 main에 포함된 커밋을 대상으로 선택하세요.
+`pubspec.yaml`의 버전과 태그를 일치시켜 배포합니다. 현재 버전은 `v1.3.1`입니다. 수동 실행 시에도 main에 포함된 커밋을 대상으로 선택하세요.
 
 ```sh
-git tag v1.3.0
-git push origin v1.3.0
+git tag v1.3.1
+git push origin v1.3.1
 ```
 
 빌드 명령은 `flutter build apk --release --target-platform android-arm64 --split-per-abi`이며 산출물은 `build/app/outputs/flutter-apk/app-arm64-v8a-release.apk`입니다. 로컬 릴리즈 빌드에는 `ANDROID_KEYSTORE_PATH` (절대 경로), `ANDROID_STORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`가 필요합니다. 서명 설정 없이 릴리즈 배포를 진행하지 않습니다.
