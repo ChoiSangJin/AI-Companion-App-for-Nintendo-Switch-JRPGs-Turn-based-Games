@@ -26,16 +26,39 @@ http.Response response(Object body, {int status = 200}) => http.Response.bytes(
   status,
   headers: {'content-type': 'application/json; charset=utf-8'},
 );
+
+http.Response groundedResponse() => response({
+  'candidates': [
+    {
+      'finishReason': 'STOP',
+      'content': {
+        'parts': [
+          {'text': '공식 API 키 안내'},
+        ],
+      },
+      'groundingMetadata': {
+        'groundingChunks': [
+          {
+            'web': {'uri': 'https://ai.google.dev/'},
+          },
+        ],
+      },
+    },
+  ],
+});
+
 GeminiModelsService fakeCatalog() => GeminiModelsService(
   client: MockClient(
-    (_) async => response({
-      'models': [
-        model('gemini-2.5-flash', name: '기존 모델'),
-        model('gemini-10.0-pro', name: '새 Pro'),
-        model('gemini-10.0-flash', name: '최신 Flash'),
-        model('gemini-11.0-flash-preview', name: '미리보기 모델'),
-      ],
-    }),
+    (request) async => request.method == 'POST'
+        ? groundedResponse()
+        : response({
+            'models': [
+              model('gemini-2.5-flash', name: '기존 모델'),
+              model('gemini-10.0-pro', name: '새 Pro'),
+              model('gemini-10.0-flash', name: '최신 Flash'),
+              model('gemini-11.0-flash-preview', name: '미리보기 모델'),
+            ],
+          }),
   ),
 );
 
@@ -95,6 +118,113 @@ Future<void> fetchModels(WidgetTester tester) async {
 }
 
 void main() {
+  test(
+    'connection candidate prefers stable Flash over a newer general model',
+    () {
+      final list = GeminiModelList([
+        GeminiModel.fromApi(model('gemini-4.0-argon'))!,
+        GeminiModel.fromApi(model('gemini-3.8-flash'))!,
+        GeminiModel.fromApi(model('gemini-4.1-flash-preview'))!,
+      ]);
+      expect(list.connectionCandidate!.id, 'gemini-3.8-flash');
+    },
+  );
+  for (final entry in {
+    'FreeTierRequestsPerDay': '무료 할당량이 0',
+    'GenerateRequestsPerDay': '일일 한도',
+    'GenerateRequestsPerMinute': '짧은 시간',
+  }.entries) {
+    test('quota metadata distinguishes ${entry.key} without raw message', () {
+      final error = response({
+        'error': {
+          'message': 'secret-key must not appear',
+          'details': [
+            {
+              '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+              'violations': [
+                {'quotaId': entry.key, 'quotaValue': '0'},
+              ],
+            },
+          ],
+        },
+      }, status: 429);
+      final message = GeminiModelsService.quotaMessage(error);
+      expect(message, contains(entry.value));
+      expect(message, isNot(contains('secret-key')));
+    });
+  }
+  test(
+    'unknown quota metadata does not invent a retry or free-tier diagnosis',
+    () {
+      final message = GeminiModelsService.quotaMessage(
+        http.Response('secret', 429),
+      );
+      expect(message, contains('확인되지 않았습니다'));
+      expect(message, isNot(contains('secret')));
+    },
+  );
+  testWidgets(
+    'failed search blocks save; selecting another Flash can recover',
+    (tester) async {
+      var calls = 0, saves = 0;
+      final api = GeminiModelsService(
+        client: MockClient((request) async {
+          if (request.method == 'GET') {
+            return response({
+              'models': [model('gemini-3.8-flash'), model('gemini-3.7-flash')],
+            });
+          }
+          calls++;
+          if (request.url.path.contains('3.8')) {
+            return response({
+              'error': {
+                'details': [
+                  {
+                    '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+                    'violations': [
+                      {'quotaId': 'FreeTierRequestsPerDay', 'quotaValue': '0'},
+                    ],
+                  },
+                ],
+              },
+            }, status: 429);
+          }
+          return groundedResponse();
+        }),
+      );
+      addTearDown(api.close);
+      await openPage(
+        tester,
+        service: api,
+        initialKey: 'key',
+        save: (_, _) async {
+          saves++;
+        },
+      );
+      await tester.tap(find.text('이 설정으로 저장'));
+      await tester.pumpAndSettle();
+      expect(saves, 0);
+      expect(calls, 1);
+      expect(find.textContaining('무료 할당량이 0'), findsWidgets);
+      await tester.scrollUntilVisible(
+        find.text('gemini-3.7-flash'),
+        200,
+        scrollable: find.byType(Scrollable).first,
+      );
+      await Scrollable.ensureVisible(
+        tester.element(find.text('gemini-3.7-flash')),
+        alignment: 0.35,
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('gemini-3.7-flash'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('이 설정으로 저장'));
+      await tester.pumpAndSettle();
+      expect(calls, 2);
+      expect(saves, 1);
+    },
+  );
+
   test('official links use first-party HTTPS pages', () {
     expect(
       GeminiLinks.apiKeys.toString(),
@@ -380,11 +510,16 @@ void main() {
       );
       expect(find.text('선택: 기존 모델'), findsOneWidget);
       await tester.scrollUntilVisible(
-        find.text('최신 추천 선택: 최신 Flash'),
+        find.text('최신 Flash 후보 선택: 최신 Flash'),
         200,
         scrollable: find.byType(Scrollable).first,
       );
-      await tester.tap(find.text('최신 추천 선택: 최신 Flash'));
+      await Scrollable.ensureVisible(
+        tester.element(find.text('최신 Flash 후보 선택: 최신 Flash')),
+        alignment: 0.35,
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('최신 Flash 후보 선택: 최신 Flash'));
       await tester.pumpAndSettle();
       await tester.tap(find.text('이 설정으로 저장'));
       await tester.pumpAndSettle();
@@ -445,11 +580,21 @@ void main() {
         300,
         scrollable: find.byType(Scrollable).first,
       );
+      await Scrollable.ensureVisible(
+        tester.element(find.text('저장한 API 키 삭제')),
+        alignment: 0.35,
+      );
+      await tester.pumpAndSettle();
       await tester.tap(find.text('저장한 API 키 삭제'));
       await tester.pumpAndSettle();
       await tester.tap(find.text('취소'));
       await tester.pumpAndSettle();
       expect(saved, isNull);
+      await Scrollable.ensureVisible(
+        tester.element(find.text('저장한 API 키 삭제')),
+        alignment: 0.35,
+      );
+      await tester.pumpAndSettle();
       await tester.tap(find.text('저장한 API 키 삭제'));
       await tester.pumpAndSettle();
       await tester.tap(find.text('키 삭제'));
