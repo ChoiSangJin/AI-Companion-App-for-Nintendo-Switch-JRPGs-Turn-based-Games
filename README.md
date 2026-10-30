@@ -95,11 +95,11 @@ keytool -genkeypair -keystore release.jks -alias switch-companion \
 # Linux: base64 -w 0 release.jks (출력을 공개 로그에 남기지 마세요)
 ```
 
-`pubspec.yaml`의 버전과 태그를 일치시켜 배포합니다. 현재 버전은 `v1.3.1`입니다. 수동 실행 시에도 main에 포함된 커밋을 대상으로 선택하세요.
+`pubspec.yaml`의 버전과 태그를 일치시켜 배포합니다. 현재 버전은 `v1.3.2`입니다. 수동 실행 시에도 main에 포함된 커밋을 대상으로 선택하세요.
 
 ```sh
-git tag v1.3.1
-git push origin v1.3.1
+git tag v1.3.2
+git push origin v1.3.2
 ```
 
 빌드 명령은 `flutter build apk --release --target-platform android-arm64 --split-per-abi`이며 산출물은 `build/app/outputs/flutter-apk/app-arm64-v8a-release.apk`입니다. 로컬 릴리즈 빌드에는 `ANDROID_KEYSTORE_PATH` (절대 경로), `ANDROID_STORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`가 필요합니다. 서명 설정 없이 릴리즈 배포를 진행하지 않습니다.
@@ -109,3 +109,9 @@ git push origin v1.3.1
 게임·규칙·검색어·붙여넣은 공략은 요청 시 Google Gemini에 전송되며 사용료가 발생할 수 있습니다. 로컬 API 키는 보안 저장소에 있지만 기기를 완전히 신뢰할 수 없는 환경에서는 노출될 수 있습니다. AI 답변의 정확성이나 스포일러 차단은 보장되지 않습니다. 원문의 스포일러는 직접 제거하고 출처를 확인하세요. `shared_preferences`는 개인용 소규모 공략집 용도이며 대용량 DB나 클라우드 백업을 제공하지 않습니다. 앱 삭제 시 데이터가 사라집니다. 기기 성능에 따른 0.1초 조회 보장은 측정 전에는 주장하지 않습니다.
 
 GitHub Actions 비밀값을 관리할 수 없는 환경에서 이미 서명한 APK를 게시하려면 `Publish verified signed APK` 워크플로우를 사용합니다. `deploy-artifacts/vX.Y.Z` 임시 브랜치 루트에 APK를 전달한 뒤 태그, main의 정확한 커밋 SHA, APK SHA-256을 지정해 수동 실행합니다. 워크플로우는 현재 앱 서명 인증서, 패키지·버전·아이콘·ARM64 구성과 체크섬을 검증하고 게시합니다. 완료 후 임시 브랜치를 삭제하세요. 서명 키를 교체하는 경우 워크플로우의 공개 인증서 지문도 검토·수정해야 합니다.
+
+### 연결 실패 진단
+
+AI Studio의 총 요청 수·성공률 그래프는 모델별 잔여 할당량 표시가 아닙니다. 앱도 HTTP 429만으로 사용량 소진을 단정하지 않습니다. 구체적인 QuotaFailure가 없으면 제한 항목 미확인으로 표시합니다. 오류에는 요청 종류, HTTP 코드, 허용된 Google 상태 코드, 선택 모델만 포함하며 원문 오류·API 키는 표시하지 않습니다. 알려진 제한 항목은 앱이 정한 요청 수·토큰·검색 도구 라벨로, 재시도 시간은 숫자로만 표시합니다.
+
+설정에서 **일반 생성만 진단 (검색 제외)**를 누르면 검색 도구 없이 짧은 요청 1회를 보냅니다. 검색 포함 요청 결과와 따로 보관하고 **진단 결과 복사 (API 키 제외)**로 공유할 수 있습니다. 일반 생성 성공·검색 실패도 검색 한도 소진의 증거는 아니며, 일반 생성 성공만으로 검색 연결을 검증하거나 저장을 허용하지 않습니다. 진단은 사용자가 누를 때만 실행되고 자동 재시도는 없습니다. 키·모델 변경 시 결과를 지웁니다.

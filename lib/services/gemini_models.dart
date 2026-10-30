@@ -153,6 +153,8 @@ class GeminiModelsService {
   // which may contain request data or credentials.
   static String quotaMessage(http.Response response) {
     var zeroFree = false, daily = false, rate = false;
+    final metrics = <String>{};
+    String? retry;
     try {
       final body = jsonDecode(utf8.decode(response.bodyBytes));
       final details = body is Map && body['error'] is Map
@@ -160,6 +162,13 @@ class GeminiModelsService {
           : null;
       if (details is List) {
         for (final detail in details.whereType<Map>()) {
+          if (detail['@type'] == 'type.googleapis.com/google.rpc.RetryInfo') {
+            final value = detail['retryDelay'];
+            if (value is String &&
+                RegExp(r'^\d{1,6}(?:\.\d{1,9})?s$').hasMatch(value)) {
+              retry = value;
+            }
+          }
           if (detail['@type'] !=
               'type.googleapis.com/google.rpc.QuotaFailure') {
             continue;
@@ -176,41 +185,83 @@ class GeminiModelsService {
             daily |= metric.contains('perday') || metric.contains('per_day');
             rate |=
                 metric.contains('perminute') || metric.contains('per_minute');
+            // Show only our own labels, not provider-controlled message/identifiers.
+            if (metric.contains('token')) metrics.add('토큰');
+            if (metric.contains('request')) metrics.add('요청 수');
+            if (metric.contains('ground') || metric.contains('search')) {
+              metrics.add('검색 도구');
+            }
           }
         }
       }
     } catch (_) {
-      /* Missing metadata must not become a guessed diagnosis. */
+      /* An HTTP status alone does not establish quota exhaustion. */
     }
-    if (zeroFree) {
-      return '이 모델의 무료 할당량이 0으로 안내됐습니다. 처음 연결해도 사용할 수 없을 수 있어요. AI 연결 설정에서 다른 Flash 모델을 선택해 검색 연결을 확인하세요. AI Studio 사용량에서 프로젝트·모델별 한도를 확인할 수 있습니다.';
-    }
-    if (daily) {
-      return '이 프로젝트·모델의 일일 한도에 도달했습니다. 같은 프로젝트의 다른 키로 바꿔도 한도는 늘지 않습니다. AI Studio 사용량에서 초기화 시점과 한도를 확인하세요.';
-    }
-    if (rate) {
-      return '짧은 시간의 요청 한도에 도달했습니다. 잠시 기다린 뒤 다시 시도하세요. 반복되면 AI Studio 사용량에서 해당 모델의 한도를 확인하세요.';
-    }
-    return 'Google이 요청 한도를 제한했습니다. 처음 연결한 경우에도 모델의 무료 할당량이 없을 수 있습니다. 일시 제한인지 무료 한도 문제인지는 이 응답으로 확인되지 않았습니다. AI 연결 설정에서 다른 Flash 모델을 테스트하거나 AI Studio 사용량을 확인하세요.';
+    final message = zeroFree
+        ? 'Google이 이 모델의 무료 할당량을 0으로 보고했습니다. 사용량을 다 썼다는 뜻과는 다릅니다. 프로젝트·모델의 이용 조건을 확인하세요.'
+        : daily
+        ? 'Google이 일일 한도 항목을 이유로 요청을 거절했습니다. 해당 모델·항목을 AI Studio에서 확인하세요. 전체 API 사용량 소진을 의미하지는 않습니다.'
+        : rate
+        ? 'Google이 분당 제한 항목을 이유로 요청을 거절했습니다. 전체 API 사용량이 남아 있어도 발생할 수 있습니다.'
+        : '요청이 거절됐습니다 (HTTP 429). 응답에 구체적인 제한 항목이 없어 사용량 소진 여부를 확인할 수 없습니다. 일반 생성과 검색 포함 요청을 나눠 진단해 주세요.';
+    return [
+      message,
+      if (metrics.isNotEmpty) '제한 항목: ${metrics.join(', ')}',
+      if (retry != null) 'Google 재시도 안내: $retry',
+    ].join('\n');
   }
 
-  static void checkResponse(http.Response response) {
-    if (response.statusCode == 429) {
-      throw FormatException(quotaMessage(response));
-    }
-    checkStatus(response.statusCode);
+  static String requestFailure(
+    http.Response response, {
+    required String operation,
+    String? model,
+  }) {
+    String? status;
+    try {
+      final body = jsonDecode(utf8.decode(response.bodyBytes));
+      final value = body is Map && body['error'] is Map
+          ? body['error']['status']
+          : null;
+      if (const {
+        'RESOURCE_EXHAUSTED',
+        'UNAVAILABLE',
+        'INVALID_ARGUMENT',
+        'PERMISSION_DENIED',
+        'UNAUTHENTICATED',
+        'NOT_FOUND',
+        'INTERNAL',
+        'DEADLINE_EXCEEDED',
+      }.contains(value)) {
+        status = value as String;
+      }
+    } catch (_) {}
+    final message = response.statusCode == 429
+        ? quotaMessage(response)
+        : switch (response.statusCode) {
+            400 => 'Google이 요청 형식 또는 선택 기능을 거절했습니다. 키 오류나 한도 소진으로 단정할 수 없습니다.',
+            401 => 'API 키 인증을 확인하지 못했습니다.',
+            403 => '프로젝트·키 권한 또는 이용 조건을 확인해 주세요.',
+            404 => '요청한 모델을 찾지 못했습니다. 공식 목록을 새로 불러와 주세요.',
+            _ => 'Google 요청을 완료하지 못했습니다. 서비스 상태와 인터넷 연결을 확인하세요.',
+          };
+    return [
+      message,
+      '진단: $operation · HTTP ${response.statusCode}${status == null ? '' : ' · $status'}',
+      if (model != null && RegExp(r'^gemini-[a-zA-Z0-9._-]+$').hasMatch(model))
+        '모델: $model',
+    ].join('\n');
   }
 
-  static void checkStatus(int status) {
-    if (status == 200) return;
-    throw FormatException(switch (status) {
-      400 || 401 => 'API 키를 확인하지 못했습니다. AI Studio에서 키 값을 다시 복사해 주세요.',
-      403 =>
-        '이 키의 사용 권한을 확인해 주세요. AI Studio에서 프로젝트·키 제한 및 이용 가능 지역을 확인할 수 있습니다.',
-      404 => '선택한 모델을 찾지 못했습니다. 공식 모델 목록을 새로 불러와 주세요.',
-      429 => 'Google 요청 한도에 도달했습니다. 잠시 후 다시 시도하거나 AI Studio의 사용량을 확인해 주세요.',
-      _ => 'Google 서비스에 연결하지 못했습니다 ($status). 잠시 후 다시 시도해 주세요.',
-    });
+  static void checkResponse(
+    http.Response response, {
+    String operation = '모델 목록 조회',
+    String? model,
+  }) {
+    if (response.statusCode != 200) {
+      throw FormatException(
+        requestFailure(response, operation: operation, model: model),
+      );
+    }
   }
 
   Future<GeminiModelList> listModels(String key) async {
@@ -266,6 +317,54 @@ class GeminiModelsService {
     throw const FormatException('모델 목록이 너무 길어 확인을 완료하지 못했습니다. 다시 시도해 주세요.');
   }
 
+  Future<void> testGeneration(String key, String model) async {
+    final apiKey = checkedKey(key);
+    if (!RegExp(r'^gemini-[a-zA-Z0-9._-]+$').hasMatch(model)) {
+      throw const FormatException('공식 목록에서 모델을 선택해 주세요.');
+    }
+    final response = await _request(
+      () => client.post(
+        Uri.https(
+          'generativelanguage.googleapis.com',
+          '/v1beta/models/$model:generateContent',
+        ),
+        headers: {'x-goog-api-key': apiKey, 'Content-Type': 'application/json'},
+        body: jsonEncode({
+          'contents': [
+            {
+              'role': 'user',
+              'parts': [
+                {'text': 'Reply with OK.'},
+              ],
+            },
+          ],
+          'generationConfig': {'maxOutputTokens': 64},
+        }),
+      ),
+    );
+    checkResponse(response, operation: '일반 생성 (검색 제외)', model: model);
+    try {
+      final body = jsonDecode(utf8.decode(response.bodyBytes));
+      if (body is Map &&
+          body['candidates'] is List &&
+          (body['candidates'] as List).whereType<Map>().any((c) {
+            final parts = c['content'] is Map ? c['content']['parts'] : null;
+            return parts is List &&
+                parts.whereType<Map>().any(
+                  (p) =>
+                      p['thought'] != true &&
+                      p['text'] is String &&
+                      (p['text'] as String).trim().isNotEmpty,
+                );
+          })) {
+        return;
+      }
+    } catch (_) {}
+    throw const FormatException(
+      '일반 생성 요청은 HTTP 200으로 처리됐지만 답변을 확인하지 못했습니다. 한도 소진 오류는 아닙니다.',
+    );
+  }
+
   Future<void> testSearch(String key, String model) async {
     final apiKey = checkedKey(key);
     if (!RegExp(r'^[a-zA-Z0-9._-]+$').hasMatch(model)) {
@@ -296,12 +395,7 @@ class GeminiModelsService {
         }),
       ),
     );
-    if (response.statusCode == 400) {
-      throw const FormatException(
-        '선택한 모델의 검색 요청을 처리하지 못했습니다. 다른 추천 모델을 선택하거나 공식 지원 기능을 확인해 주세요.',
-      );
-    }
-    checkResponse(response);
+    checkResponse(response, operation: '검색 포함 생성', model: model);
     try {
       final data = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
       final candidates = data['candidates'] as List? ?? [];

@@ -107,18 +107,14 @@ class GeminiService {
     } on http.ClientException {
       throw const FormatException('연결할 수 없습니다. 인터넷 연결을 확인하세요.');
     }
-    if (response.statusCode == 429) {
-      throw FormatException(GeminiModelsService.quotaMessage(response));
-    }
     if (response.statusCode != 200) {
-      throw FormatException(switch (response.statusCode) {
-        400 =>
-          '선택한 모델의 검색 요청을 처리하지 못했습니다. AI 연결 설정에서 다른 Flash 모델을 선택하거나 검색 연결을 테스트해 주세요.',
-        401 || 403 => 'API 키와 Gemini API 권한을 확인하세요.',
-        404 => '선택한 모델을 찾지 못했습니다. AI 연결 설정에서 공식 목록을 새로 불러와 주세요.',
-        429 => '사용량 한도를 초과했습니다. 잠시 후 다시 시도하세요.',
-        _ => 'Gemini 요청 실패 (${response.statusCode}). 다시 시도하세요.',
-      });
+      throw FormatException(
+        GeminiModelsService.requestFailure(
+          response,
+          operation: convert ? '붙여넣은 공략 변환 (검색 제외)' : '공략 생성 (검색 포함)',
+          model: model,
+        ),
+      );
     }
     try {
       final body =

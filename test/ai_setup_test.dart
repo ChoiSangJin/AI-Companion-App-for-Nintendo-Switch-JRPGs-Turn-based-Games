@@ -119,6 +119,125 @@ Future<void> fetchModels(WidgetTester tester) async {
 
 void main() {
   test(
+    'unclassified 429 exposes request context but no guessed cause or raw body',
+    () {
+      final text = GeminiModelsService.requestFailure(
+        response({
+          'error': {
+            'status': 'RESOURCE_EXHAUSTED',
+            'message': 'private-key and private prompt',
+          },
+        }, status: 429),
+        operation: '검색 포함 생성',
+        model: 'gemini-3.8-flash',
+      );
+      expect(text, contains('HTTP 429'));
+      expect(text, contains('RESOURCE_EXHAUSTED'));
+      expect(text, contains('검색 포함 생성'));
+      expect(text, contains('gemini-3.8-flash'));
+      expect(text, contains('소진 여부를 확인할 수 없습니다'));
+      expect(text, isNot(contains('private')));
+    },
+  );
+  test('retry delay is numeric and quota details use safe labels only', () {
+    final text = GeminiModelsService.quotaMessage(
+      response({
+        'error': {
+          'details': [
+            {
+              '@type': 'type.googleapis.com/google.rpc.RetryInfo',
+              'retryDelay': '12.5s',
+            },
+            {
+              '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+              'violations': [
+                {
+                  'quotaMetric': 'generate_content_free_tier_tokens',
+                  'quotaId': 'TokensPerMinute-private-key',
+                },
+              ],
+            },
+          ],
+        },
+      }, status: 429),
+    );
+    expect(text, contains('12.5s'));
+    expect(text, contains('토큰'));
+    expect(text, contains('분당 제한'));
+    expect(text, isNot(contains('private-key')));
+  });
+  test(
+    'plain generation diagnostic excludes Search and does not accept model-list JSON',
+    () async {
+      var count = 0;
+      final api = GeminiModelsService(
+        client: MockClient((request) async {
+          expect(request.headers['x-goog-api-key'], 'private-key');
+          final body = jsonDecode(request.body) as Map;
+          expect(body.containsKey('tools'), false);
+          expect(body['generationConfig']['maxOutputTokens'], 64);
+          count++;
+          return count == 1 ? groundedResponse() : response({'models': []});
+        }),
+      );
+      addTearDown(api.close);
+      await api.testGeneration('private-key', 'gemini-3.8-flash');
+      await expectLater(
+        api.testGeneration('private-key', 'gemini-3.8-flash'),
+        throwsFormatException,
+      );
+    },
+  );
+  testWidgets(
+    'plain success and search failure remain separate and cannot enable saving',
+    (tester) async {
+      var saved = false;
+      final api = GeminiModelsService(
+        client: MockClient((request) async {
+          if (request.method == 'GET') {
+            return response({
+              'models': [model('gemini-3.8-flash')],
+            });
+          }
+          if ((jsonDecode(request.body) as Map).containsKey('tools')) {
+            return response({
+              'error': {'status': 'RESOURCE_EXHAUSTED'},
+            }, status: 429);
+          }
+          return groundedResponse();
+        }),
+      );
+      addTearDown(api.close);
+      await openPage(
+        tester,
+        service: api,
+        initialKey: 'key',
+        save: (_, _) async {
+          saved = true;
+        },
+      );
+      await tester.tap(find.text('이 설정으로 저장'));
+      await tester.pumpAndSettle();
+      expect(saved, false);
+      final target = find.text('일반 생성만 진단 (검색 제외)');
+      await tester.scrollUntilVisible(
+        target,
+        200,
+        scrollable: find.byType(Scrollable).first,
+      );
+      await Scrollable.ensureVisible(tester.element(target), alignment: 0.3);
+      await tester.pumpAndSettle();
+      await tester.tap(target);
+      await tester.pumpAndSettle();
+      expect(find.textContaining('일반 생성 (검색 제외): 성공'), findsWidgets);
+      expect(find.textContaining('검색 포함 생성: 실패'), findsWidgets);
+      await tester.tap(find.text('이 설정으로 저장'));
+      await tester.pumpAndSettle();
+      expect(saved, false);
+    },
+  );
+
+  test(
     'connection candidate prefers stable Flash over a newer general model',
     () {
       final list = GeminiModelList([
@@ -130,9 +249,9 @@ void main() {
     },
   );
   for (final entry in {
-    'FreeTierRequestsPerDay': '무료 할당량이 0',
+    'FreeTierRequestsPerDay': '무료 할당량을 0',
     'GenerateRequestsPerDay': '일일 한도',
-    'GenerateRequestsPerMinute': '짧은 시간',
+    'GenerateRequestsPerMinute': '분당 제한',
   }.entries) {
     test('quota metadata distinguishes ${entry.key} without raw message', () {
       final error = response({
@@ -159,7 +278,7 @@ void main() {
       final message = GeminiModelsService.quotaMessage(
         http.Response('secret', 429),
       );
-      expect(message, contains('확인되지 않았습니다'));
+      expect(message, contains('소진 여부를 확인할 수 없습니다'));
       expect(message, isNot(contains('secret')));
     },
   );
@@ -205,7 +324,7 @@ void main() {
       await tester.pumpAndSettle();
       expect(saves, 0);
       expect(calls, 1);
-      expect(find.textContaining('무료 할당량이 0'), findsWidgets);
+      expect(find.textContaining('무료 할당량을 0'), findsWidgets);
       await tester.scrollUntilVisible(
         find.text('gemini-3.7-flash'),
         200,

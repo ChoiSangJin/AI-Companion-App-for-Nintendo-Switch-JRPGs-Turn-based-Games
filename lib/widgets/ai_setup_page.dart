@@ -30,6 +30,11 @@ class _AiSetupPageState extends State<AiSetupPage> {
   String verifiedKey = '', verifiedModel = '';
   bool get verified => verifiedKey == listedKey && verifiedModel == selected;
   String? error;
+  String generationResult = '', searchResult = '';
+  void _resetDiagnostics() {
+    generationResult = searchResult = '';
+  }
+
   bool visible = false, fetching = false, saving = false, testing = false;
   int generation = 0;
   bool get busy => fetching || saving || testing;
@@ -51,6 +56,7 @@ class _AiSetupPageState extends State<AiSetupPage> {
     generation++;
     setState(() {
       verifiedKey = verifiedModel = '';
+      _resetDiagnostics();
       catalog = null;
       listedKey = '';
       notice = '';
@@ -124,6 +130,7 @@ class _AiSetupPageState extends State<AiSetupPage> {
     final key = keyInput.text.trim();
     final request = ++generation;
     verifiedKey = verifiedModel = '';
+    _resetDiagnostics();
     final previousSelection = selected;
     final keepSelection =
         key == listedKey ||
@@ -179,6 +186,7 @@ class _AiSetupPageState extends State<AiSetupPage> {
     final key = listedKey, model = selected, request = ++generation;
     setState(() {
       testing = true;
+      searchResult = '';
       error = null;
       notice = '';
     });
@@ -186,16 +194,61 @@ class _AiSetupPageState extends State<AiSetupPage> {
       await service.testSearch(key, model);
       if (mounted && request == generation && model == selected) {
         setState(() {
+          searchResult = '검색 포함 생성: 성공';
           verifiedKey = key;
           verifiedModel = model;
           notice = '검색 연결을 확인했습니다. 현재 요청이 성공했다는 뜻이며 무료 요금이나 남은 한도를 보장하지 않습니다.';
         });
       }
     } on FormatException catch (e) {
-      if (mounted && request == generation) setState(() => error = e.message);
+      if (mounted && request == generation) {
+        setState(() {
+          error = e.message;
+          searchResult = '검색 포함 생성: 실패\n${e.message}';
+        });
+      }
     } catch (_) {
       if (mounted && request == generation) {
         setState(() => error = '검색 연결을 확인하지 못했습니다. 다른 모델을 선택하거나 다시 시도해 주세요.');
+      }
+    } finally {
+      if (mounted && request == generation) {
+        setState(() => testing = false);
+        if (error != null) _announceError();
+      }
+    }
+  }
+
+  Future<void> _testGeneration() async {
+    if (!canSave) return;
+    final key = listedKey, model = selected, request = ++generation;
+    setState(() {
+      testing = true;
+      error = null;
+      notice = '';
+      generationResult = '';
+    });
+    try {
+      await service.testGeneration(key, model);
+      if (mounted && request == generation) {
+        setState(
+          () => generationResult =
+              '일반 생성 (검색 제외): 성공. 이 결과만으로 검색 연결이나 무료 잔여 한도가 확인된 것은 아닙니다.',
+        );
+      }
+    } on FormatException catch (e) {
+      if (mounted && request == generation) {
+        setState(() {
+          error = e.message;
+          generationResult = '일반 생성 (검색 제외): 실패\n${e.message}';
+        });
+      }
+    } catch (_) {
+      if (mounted && request == generation) {
+        setState(() {
+          error = '일반 생성 진단을 완료하지 못했습니다.';
+          generationResult = error!;
+        });
       }
     } finally {
       if (mounted && request == generation) {
@@ -387,6 +440,7 @@ class _AiSetupPageState extends State<AiSetupPage> {
                       ? null
                       : () => setState(() {
                           selected = catalog!.connectionCandidate!.id;
+                          _resetDiagnostics();
                           error = null;
                           notice = '';
                         }),
@@ -401,6 +455,7 @@ class _AiSetupPageState extends State<AiSetupPage> {
                   if (value != null && !busy) {
                     setState(() {
                       selected = value;
+                      _resetDiagnostics();
                       error = null;
                       notice = '';
                     });
@@ -429,6 +484,52 @@ class _AiSetupPageState extends State<AiSetupPage> {
                 icon: const Icon(Icons.search),
                 label: const Text('선택 모델로 검색 연결 테스트'),
               ),
+              OutlinedButton.icon(
+                onPressed: canSave ? _testGeneration : null,
+                icon: const Icon(Icons.troubleshoot),
+                label: const Text('일반 생성만 진단 (검색 제외)'),
+              ),
+              const Text(
+                '검색 테스트가 실패할 때 눌러 원인을 나눠 확인하세요. 누를 때마다 별도 API 요청 1회가 발생합니다.',
+              ),
+              if (generationResult.isNotEmpty || searchResult.isNotEmpty)
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('연결 진단 결과'),
+                        SelectableText(
+                          '모델: $selected\n${[generationResult, searchResult].where((s) => s.isNotEmpty).join('\n\n')}',
+                        ),
+                        if (generationResult.startsWith('일반 생성 (검색 제외): 성공') &&
+                            searchResult.startsWith('검색 포함 생성: 실패'))
+                          const Text(
+                            '일반 생성 성공·검색 실패라면 검색을 포함한 요청에서만 실패한 것입니다. 검색 한도 소진으로 단정할 수는 없습니다.',
+                          ),
+                        TextButton.icon(
+                          onPressed: () async {
+                            await Clipboard.setData(
+                              ClipboardData(
+                                text:
+                                    '모델: $selected\n${[generationResult, searchResult].where((s) => s.isNotEmpty).join('\n\n')}',
+                              ),
+                            );
+                            if (!context.mounted) return;
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text('키·원문 응답을 제외한 진단 결과를 복사했습니다.'),
+                              ),
+                            );
+                          },
+                          icon: const Icon(Icons.copy),
+                          label: const Text('진단 결과 복사 (API 키 제외)'),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               const Text(
                 '저장 전 검색 연결 확인이 필요합니다. 저장 버튼도 같은 테스트를 실행합니다. 공개 질문 1회로 사용량이 소모되며, 결제가 연결된 프로젝트는 요금이 발생할 수 있습니다. 무료 제공 여부를 보장하는 검사는 아닙니다.',
               ),
