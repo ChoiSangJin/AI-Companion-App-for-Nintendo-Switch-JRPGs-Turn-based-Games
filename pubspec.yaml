@@ -1,17 +1,14 @@
 name: switch_companion
-description: Personal, local-first Nintendo Switch JRPG guide companion.
+description: Offline Scarlet and Violet party, evolution and adventure planner.
 publish_to: none
-version: 1.3.2+7
+version: 2.0.0+8
 environment:
   sdk: '>=3.10.0 <4.0.0'
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.6.0
   shared_preferences: ^2.5.4
-  flutter_secure_storage: ^10.0.0
   url_launcher: ^6.3.2
-  webview_flutter: ^4.13.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -19,3 +16,6 @@ dev_dependencies:
   flutter_launcher_icons: ^0.14.4
 flutter:
   uses-material-design: true
+  assets:
+    - assets/data/paldea.json
+    - assets/data/POKEAPI-LICENSE.txt
