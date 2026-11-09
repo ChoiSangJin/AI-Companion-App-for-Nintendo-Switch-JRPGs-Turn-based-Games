@@ -49,69 +49,6 @@ class FieldCard extends StatelessWidget {
   );
 }
 
-Color typeColor(String type) => switch (type) {
-  '불꽃' => const Color(0xFFAE4333),
-  '물' => const Color(0xFF27679A),
-  '풀' => const Color(0xFF427B43),
-  '전기' => const Color(0xFF8A6900),
-  '페어리' => const Color(0xFFA0447B),
-  '강철' => const Color(0xFF526C78),
-  '땅' => const Color(0xFF866339),
-  '비행' => const Color(0xFF5D689C),
-  '고스트' => const Color(0xFF70508B),
-  '격투' => const Color(0xFF8B4936),
-  '악' => const Color(0xFF525164),
-  '드래곤' => const Color(0xFF5848A0),
-  _ => const Color(0xFF5B6868),
-};
-Widget typeTags(List<String> types) => Wrap(
-  spacing: 6,
-  runSpacing: 6,
-  children: types
-      .map(
-        (type) => Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-          decoration: BoxDecoration(
-            color: typeColor(type).withValues(alpha: 0.10),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Text(
-            type,
-            style: TextStyle(
-              color: typeColor(type),
-              fontSize: 12,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ),
-      )
-      .toList(),
-);
-
-class Monogram extends StatelessWidget {
-  const Monogram(this.name, this.type, {super.key, this.size = 48});
-  final String name, type;
-  final double size;
-  @override
-  Widget build(BuildContext context) => Container(
-    width: size,
-    height: size,
-    alignment: Alignment.center,
-    decoration: BoxDecoration(
-      color: typeColor(type).withValues(alpha: 0.12),
-      borderRadius: BorderRadius.circular(16),
-    ),
-    child: Text(
-      name.substring(0, 1),
-      style: TextStyle(
-        fontSize: size * 0.43,
-        color: typeColor(type),
-        fontWeight: FontWeight.w900,
-      ),
-    ),
-  );
-}
-
 Future<List<String>?> editFields(
   BuildContext context, {
   required String title,
@@ -223,3 +160,46 @@ Future<bool> confirm(
       ),
     ) ??
     false;
+
+Future<int?> chooseLevel(
+  BuildContext context,
+  int initial, {
+  String title = '재료 기본 레벨 상한',
+  int max = 150,
+}) => showDialog<int>(
+  context: context,
+  builder: (context) {
+    var value = initial.clamp(1, max).toDouble();
+    return StatefulBuilder(
+      builder: (context, update) => AlertDialog(
+        title: Text(title),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Lv.${value.round()}',
+              style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+            ),
+            Slider(
+              min: 1,
+              max: max.toDouble(),
+              divisions: max - 1,
+              value: value,
+              onChanged: (v) => update(() => value = v),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('취소'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(context, value.round()),
+            child: const Text('적용'),
+          ),
+        ],
+      ),
+    );
+  },
+);

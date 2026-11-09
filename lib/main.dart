@@ -1,23 +1,28 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'data/paldea.dart';
-import 'services/planner_store.dart';
-import 'widgets/planner_home.dart';
+import 'models/compendium.dart';
+import 'services/compendium_store.dart';
+import 'widgets/fusion_home.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   LicenseRegistry.addLicense(() async* {
     yield LicenseEntryWithLineBreaks([
-      'PokéAPI data',
-    ], await rootBundle.loadString('assets/data/POKEAPI-LICENSE.txt'));
+      'Megaten Fusion Tools · aqiu384',
+    ], await rootBundle.loadString('assets/megaten/UNLICENSE.txt'));
+  });
+  LicenseRegistry.addLicense(() async* {
+    yield LicenseEntryWithLineBreaks([
+      'PokéAPI · legacy archive name lookup',
+    ], await rootBundle.loadString('assets/archive/POKEAPI-LICENSE.txt'));
   });
   try {
-    final data = await PaldeaData.load();
-    final store = PlannerStore(await SharedPreferences.getInstance(), data)
+    final games = await GameData.loadAll();
+    final store = CompendiumStore(await SharedPreferences.getInstance(), games)
       ..load();
-    runApp(PaldeaApp(store: store));
+    runApp(AtlusApp(store: store));
   } catch (_) {
     runApp(
       const MaterialApp(
@@ -27,7 +32,7 @@ Future<void> main() async {
               child: Padding(
                 padding: EdgeInsets.all(24),
                 child: Text(
-                  '기록을 안전하게 불러오지 못했습니다.\n앱 데이터를 지우지 말고 저장 공간을 확인한 뒤 다시 실행해 주세요.',
+                  '전서 데이터나 기록을 읽지 못했습니다.\n앱 데이터를 지우지 말고 저장 공간을 확인한 뒤 다시 실행해 주세요.',
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -39,30 +44,28 @@ Future<void> main() async {
   }
 }
 
-class PaldeaApp extends StatelessWidget {
-  const PaldeaApp({super.key, required this.store});
-  final PlannerStore store;
+class AtlusApp extends StatelessWidget {
+  const AtlusApp({super.key, required this.store});
+  final CompendiumStore store;
   @override
   Widget build(BuildContext context) => ListenableBuilder(
     listenable: store,
     builder: (context, _) {
-      final accent = store.edition == 'scarlet'
-          ? const Color(0xFFB64140)
-          : const Color(0xFF6950A0);
       final scheme = ColorScheme.fromSeed(
-        seedColor: accent,
-        brightness: Brightness.light,
-        surface: const Color(0xFFFAF8F3),
+        seedColor: const Color(0xFFD3B471),
+        brightness: Brightness.dark,
+        surface: const Color(0xFF192131),
       );
       return MaterialApp(
-        title: '팔데아 플래너',
+        title: '합체전서',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           useMaterial3: true,
+          brightness: Brightness.dark,
           colorScheme: scheme,
-          scaffoldBackgroundColor: const Color(0xFFF3F0E9),
+          scaffoldBackgroundColor: const Color(0xFF101622),
           appBarTheme: const AppBarTheme(
-            backgroundColor: Color(0xFFF3F0E9),
+            backgroundColor: Color(0xFF101622),
             centerTitle: false,
             elevation: 0,
           ),
@@ -71,14 +74,14 @@ class PaldeaApp extends StatelessWidget {
             color: scheme.surface,
             margin: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(22),
+              borderRadius: BorderRadius.circular(18),
             ),
           ),
           inputDecorationTheme: InputDecorationTheme(
             filled: true,
             fillColor: scheme.surface,
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(14),
               borderSide: BorderSide.none,
             ),
           ),
@@ -95,7 +98,7 @@ class PaldeaApp extends StatelessWidget {
             indicatorColor: scheme.primaryContainer,
           ),
         ),
-        home: PlannerHome(store: store),
+        home: FusionHome(store: store),
       );
     },
   );

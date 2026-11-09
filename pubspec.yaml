@@ -1,7 +1,7 @@
 name: switch_companion
-description: Offline Scarlet and Violet party, evolution and adventure planner.
+description: Offline Persona and Shin Megami Tensei compendium and fusion calculator.
 publish_to: none
-version: 2.0.0+8
+version: 3.0.0+9
 environment:
   sdk: '>=3.10.0 <4.0.0'
 dependencies:
@@ -17,5 +17,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/data/paldea.json
-    - assets/data/POKEAPI-LICENSE.txt
+    - assets/megaten/
+    - assets/archive/
