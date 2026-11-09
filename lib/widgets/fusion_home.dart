@@ -90,48 +90,54 @@ class _FusionHomeState extends State<FusionHome> {
                   child: Row(
                     children: [
                       Expanded(
-                        child: DropdownButtonFormField<String>(
-                          key: ValueKey('game-${store.selected}'),
-                          initialValue: store.selected,
-                          isDense: false,
-                          isExpanded: true,
-                          itemHeight: 72,
-                          decoration: const InputDecoration(
-                            labelText: '작품 선택',
-                            contentPadding: EdgeInsets.fromLTRB(14, 8, 12, 8),
+                        child: OutlinedButton(
+                          key: const ValueKey('game-switcher'),
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.all(14),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
                           ),
-                          items: store.games.values
-                              .map(
-                                (g) => DropdownMenuItem(
-                                  value: g.id,
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        g.name,
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: const TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w700,
-                                        ),
-                                      ),
-                                      Text(
-                                        g.title,
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: const TextStyle(fontSize: 10),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              )
-                              .toList(),
-                          onChanged: (id) {
-                            if (id != null) run(() => store.selectGame(id));
+                          onPressed: () async {
+                            FocusManager.instance.primaryFocus?.unfocus();
+                            final id = await showModalBottomSheet<String>(
+                              context: context,
+                              isScrollControlled: true,
+                              showDragHandle: true,
+                              builder: (_) => GameSelectionSheet(
+                                games: store.games.values.toList(),
+                                selected: store.selected,
+                              ),
+                            );
+                            if (id != null && mounted) {
+                              await run(() => store.selectGame(id));
+                            }
                           },
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text(
+                                      '현재 작품',
+                                      style: TextStyle(fontSize: 11),
+                                    ),
+                                    const SizedBox(height: 4),
+                                    Text(
+                                      game.name,
+                                      style: const TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              const Icon(Icons.unfold_more),
+                            ],
+                          ),
                         ),
                       ),
                       const SizedBox(width: 8),
@@ -458,7 +464,7 @@ class DemonTile extends StatelessWidget {
           style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 17),
         ),
         subtitle: Text(
-          '${demon.raceName}${demon.name != demon.id ? ' · ${demon.id}' : ''}${disabled ? '\nDLC 설정에서 제외됨' : ''}',
+          '${demon.raceName}${disabled ? '\nDLC 설정에서 제외됨' : ''}',
           style: const TextStyle(fontSize: 12),
         ),
         trailing: onRegister == null
@@ -472,6 +478,109 @@ class DemonTile extends StatelessWidget {
                 onPressed: onRegister,
               ),
         onTap: onTap,
+      ),
+    ),
+  );
+}
+
+class GameSelectionSheet extends StatelessWidget {
+  const GameSelectionSheet({
+    super.key,
+    required this.games,
+    required this.selected,
+  });
+  final List<GameData> games;
+  final String selected;
+  @override
+  Widget build(BuildContext context) => SafeArea(
+    child: ConstrainedBox(
+      constraints: BoxConstraints(
+        maxHeight: MediaQuery.sizeOf(context).height * .8,
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 8, 8),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    '작품 선택',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                ),
+                IconButton(
+                  tooltip: '닫기',
+                  onPressed: () => Navigator.pop(context),
+                  icon: const Icon(Icons.close),
+                ),
+              ],
+            ),
+          ),
+          Flexible(
+            child: ListView(
+              shrinkWrap: true,
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+              children: [
+                for (final game in games)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: Card(
+                      color: game.id == selected
+                          ? gameColor(game.id).withValues(alpha: .15)
+                          : null,
+                      child: InkWell(
+                        key: ValueKey('game-choice-${game.id}'),
+                        borderRadius: BorderRadius.circular(16),
+                        onTap: () => Navigator.pop(context, game.id),
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 4,
+                                height: 40,
+                                color: gameColor(game.id),
+                              ),
+                              const SizedBox(width: 14),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      game.name,
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 4),
+                                    Text(
+                                      game.title,
+                                      style: Theme.of(
+                                        context,
+                                      ).textTheme.bodySmall,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              Icon(
+                                game.id == selected
+                                    ? Icons.check_circle
+                                    : Icons.chevron_right,
+                                color: gameColor(game.id),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ],
       ),
     ),
   );

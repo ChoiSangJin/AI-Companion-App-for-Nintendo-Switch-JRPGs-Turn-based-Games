@@ -156,7 +156,16 @@ class _DemonPageState extends State<DemonPage> {
                     fontWeight: FontWeight.w800,
                   ),
                 ),
-                Text(demon.id, style: Theme.of(context).textTheme.bodySmall),
+                ExpansionTile(
+                  title: const Text('영문·다른 표기'),
+                  tilePadding: EdgeInsets.zero,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text({demon.id, ...demon.aliases}.join(' · ')),
+                    ),
+                  ],
+                ),
                 const SizedBox(height: 12),
                 Wrap(
                   spacing: 8,
@@ -919,7 +928,7 @@ class FusionSettingsPage extends StatelessWidget {
         ),
         const SectionTitle('계산 범위'),
         const Text(
-          '일반 2신·특수 합체·정령/보마 합체와 P4 Golden의 3신 합체를 제공합니다. 역검색은 기본 레벨 기준입니다. 육성 재료의 3신 순서와 보마 합체는 합체 계산의 현재 레벨 입력을 사용하세요.\n\n해금·주인공 레벨·소환 비용·합체 경보/사고·스킬 계승은 자동으로 판정하지 않습니다. 원본 조건 문장은 영문으로 남아 있을 수 있고 한국어 이름이 없는 항목은 영문으로 표시합니다. 원본 데이터에 없는 조합은 추측해 만들지 않습니다.',
+          '일반 2신·특수 합체·정령/보마 합체와 P4 Golden의 3신 합체를 제공합니다. 역검색은 기본 레벨 기준입니다. 육성 재료의 3신 순서와 보마 합체는 합체 계산의 현재 레벨 입력을 사용하세요.\n\n해금·주인공 레벨·소환 비용·합체 경보/사고·스킬 계승은 자동으로 판정하지 않습니다. 원본 조건 문장은 영문으로 남아 있을 수 있고 악마·페르소나 이름은 한국어로 표시하며 일부 보완 이름은 편집 표기입니다. 영문·다른 표기도 검색할 수 있습니다. 원본 데이터에 없는 조합은 추측해 만들지 않습니다.',
         ),
         const SectionTitle('데이터와 출처'),
         const Text(
@@ -947,12 +956,12 @@ class FusionSettingsPage extends StatelessWidget {
           onPressed: () => showLicensePage(
             context: context,
             applicationName: '합체전서',
-            applicationVersion: '3.0.0',
+            applicationVersion: '3.1.0',
           ),
           child: const Text('오픈소스 라이선스'),
         ),
         const Text(
-          '독립 제작 비공식 도구이며 ATLUS·SEGA와 제휴하지 않았습니다. 게임명과 캐릭터 이름의 권리는 각 권리자에게 있습니다.\n\n합체전서 3.0.0 · Android ARM64',
+          '독립 제작 비공식 도구이며 ATLUS·SEGA와 제휴하지 않았습니다. 게임명과 캐릭터 이름의 권리는 각 권리자에게 있습니다.\n\n합체전서 3.1.0 · Android ARM64',
           style: TextStyle(fontSize: 12),
         ),
       ],

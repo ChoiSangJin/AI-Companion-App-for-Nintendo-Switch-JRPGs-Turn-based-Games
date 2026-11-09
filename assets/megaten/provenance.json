@@ -35,10 +35,42 @@
     "smt5/data/element-chart.json": "fac0ac0d5fb2875996349ac2b0e5172253d49b66dcf887c369c2917e89f115c6",
     "smt5/data/ven-fusion-prereqs.json": "58161038acb41b470a538254df31edf288873ffe5c71488fcf18bc5b4569b4ba"
   },
+  "koreanNames": {
+    "sha256": "72ce33ce5576511df18ad79f78df587307f942213fee1a4f8113cc056b7273df",
+    "sources": {
+      "p3r_locale": {
+        "repository": "https://github.com/aqiu384/megaten-database",
+        "commit": "8f87f212e206748b71298a52eb1eaec1efed6161",
+        "path": "src/p3r/Content/Xrd777/Blueprints/common/Names/DatPersonaNameDataAsset.tsv",
+        "sha256": "c7569eb612397de2e8cdbf5cf48bc62e41ad01389a6d6be87a8f0ce4d50f37c1"
+      },
+      "smt5v_locale": {
+        "repository": "https://github.com/sisyphusw/smt5v",
+        "commit": "3d2e1a543e2ac486ffbee3f14b31c62d86d9a69c",
+        "path": "locales/character_name.json",
+        "sha256": "40668e19fa82819603306139ae384affefac4d5a392c642c0ed7d78f6917fc94"
+      },
+      "upstream_names": {
+        "repository": "https://github.com/aqiu384/megaten-fusion-tool",
+        "commit": "0b207612f6cdcff092e62af16f5c355271a1d892",
+        "path": "src/app/compendium/data/demon-names.json",
+        "sha256": "398f380980dea9c275a6e030ab9171c9e1a6dffe903b19a2b713e73d2bcc31b1"
+      }
+    },
+    "basisCounts": {
+      "p3r_locale": 194,
+      "upstream_korean": 396,
+      "editorial_ko": 31,
+      "shared_p3r_smt_locale": 3,
+      "same_japanese_alias": 4,
+      "shared_smt_locale": 5,
+      "smt5v_locale": 273
+    }
+  },
   "notes": [
     "Guest humans and essence-only proto-fiends excluded by chart races.",
     "Explicit Fusion Accident acquisitions excluded from deterministic result pools.",
-    "English IDs remain canonical; missing Korean names fall back to English except explicit Korean glossary supplements (SMT race names and Preta).",
+    "English IDs remain canonical; all demon display names use audited per-game Korean labels. See tools/localization/korean_demon_names.json for factual name sources and editorial supplements.",
     "P3R Persona 4 Set and Persona 4 Set 1 label variants grouped into the same installable pack.",
     "Normal charts are adapted using upstream PersonaFusionChart/SmtFusionChart conventions."
   ]

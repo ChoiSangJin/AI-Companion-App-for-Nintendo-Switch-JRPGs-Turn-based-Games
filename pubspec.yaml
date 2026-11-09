@@ -1,7 +1,7 @@
 name: switch_companion
 description: Offline Persona and Shin Megami Tensei compendium and fusion calculator.
 publish_to: none
-version: 3.0.0+9
+version: 3.1.0+10
 environment:
   sdk: '>=3.10.0 <4.0.0'
 dependencies:

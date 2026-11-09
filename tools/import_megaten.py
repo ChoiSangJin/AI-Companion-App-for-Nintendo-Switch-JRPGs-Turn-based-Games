@@ -7,6 +7,8 @@ import argparse, hashlib, json, re, subprocess
 from pathlib import Path
 parser=argparse.ArgumentParser();parser.add_argument('--source',type=Path,required=True)
 root=parser.parse_args().source; app=root/'src/app'; used={}
+locale_path=Path('tools/localization/korean_demon_names.json')
+locale=json.loads(locale_path.read_text())
 def load(path):
  p=app/path; used[str(path)]=hashlib.sha256(p.read_bytes()).hexdigest();return json.loads(p.read_text())
 def merge(paths):
@@ -28,7 +30,6 @@ def chart(raw,persona,triple=False):
  return result
 # Standard Korean SMT race terminology supplements gaps in upstream's locale map.
 SMT_RACES_KO={'Herald':'대천사','Megami':'여신','Avian':'영조','Divine':'천사','Yoma':'요마','Vile':'사신','Raptor':'흉조','Deity':'마신','Wargod':'군신','Avatar':'신수','Holy':'성수','Genma':'환마','Element':'정령','Fairy':'요정','Beast':'마수','Jirae':'지령','Fiend':'마인','Jaki':'사귀','Wilder':'요수','Fury':'파괴신','Lady':'지모신','Dragon':'용신','Kishin':'귀신','Kunitsu':'국진신','Femme':'귀녀','Brute':'요귀','Fallen':'타천사','Night':'야마','Snake':'용왕','Tyrant':'마왕','Drake':'사룡','Haunt':'유귀','Foul':'외도','Enigma':'비신','UMA':'진수','Qadistu':'여마','Devil':'악마','Primal':'원마'}
-NAME_FALLBACK_KO={'Preta':'아귀'}
 configs=[
  ('p3r','Persona 3 Reload','페르소나 3 리로드','p3r',['demon-data'],'special-recipes','demon-unlocks','fusion-chart',None,None),
  ('p4g','Persona 4 Golden','페르소나 4 골든','p4',['demon-data','golden-demon-data'],'special-recipes','golden-demon-unlocks','golden-fusion-chart',None,None),
@@ -70,9 +71,9 @@ for key,title,ko,folder,dfiles,special,unlock,normal,element,prereq in configs:
   res={};divisor=1000 if key=='smt5v' else 10000
   for elem,code in zip(cfg['resistElems'],v.get('resists','')):
    res[translated(elem,elems)]={1:'흡수',2:'반사',3:'무효',4:'내성',5:'보통',6:'약점'}.get(cfg['resistCodes'].get(code,5*divisor)//divisor,'미확인')
-  demons.append({'id':n,'name':NAME_FALLBACK_KO.get(n,translated(n,names)),'race':v['race'],'raceName':SMT_RACES_KO.get(v['race'],translated(v['race'],races)) if key=='smt5v' else translated(v['race'],races),'level':v['lvl'],'stats':dict(zip([translated(s,elems) for s in cfg['baseStats']],v['stats'])),'resists':res,'skills':[{'id':s,'name':translated(s,skills),'level':lvl} for s,lvl in v.get('skills',{}).items()],'dlc':demon_group.get(n),'requirements':requirements.get(n,[]),'acquisition':'special' if sp.get(n) else 'accident' if n in sp and n not in ec['elems'] else 'element' if n in ec['elems'] else 'normal'})
+  demons.append({'id':n,'name':locale['games'][key][n]['name'],'aliases':locale['games'][key][n]['aliases'],'race':v['race'],'raceName':SMT_RACES_KO.get(v['race'],translated(v['race'],races)) if key=='smt5v' else translated(v['race'],races),'level':v['lvl'],'stats':dict(zip([translated(s,elems) for s in cfg['baseStats']],v['stats'])),'resists':res,'skills':[{'id':s,'name':translated(s,skills),'level':lvl} for s,lvl in v.get('skills',{}).items()],'dlc':demon_group.get(n),'requirements':requirements.get(n,[]),'acquisition':'special' if sp.get(n) else 'accident' if n in sp and n not in ec['elems'] else 'element' if n in ec['elems'] else 'normal'})
  data={'schema':1,'id':key,'title':title,'name':ko,'demons':demons,'dlc':dlc,'races':nc['races'],'normalChart':chart(nc,key!='smt5v'),'tripleChart':chart(nc,True,True) if key=='p4g' else {},'elementChart':elementmap,'elements':ec['elems'],'special':sp,'sourceCommit':subprocess.check_output(['git','-C',str(root),'rev-parse','HEAD']).decode().strip()}
  out=Path('assets/megaten')/f'{key}.json';out.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
  print(key,len(demons),'demons',len(sp),'special/other recipes',len(dlc),'DLC switches')
 Path('assets/megaten/UNLICENSE.txt').write_text((root/'LICENSE.md').read_text())
-Path('assets/megaten/provenance.json').write_text(json.dumps({'source':'https://github.com/aqiu384/megaten-fusion-tool','rawSource':'https://github.com/aqiu384/megaten-database','commit':data['sourceCommit'],'imported':'2026-11-09','files':used,'notes':['Guest humans and essence-only proto-fiends excluded by chart races.','Explicit Fusion Accident acquisitions excluded from deterministic result pools.','English IDs remain canonical; missing Korean names fall back to English except explicit Korean glossary supplements (SMT race names and Preta).','P3R Persona 4 Set and Persona 4 Set 1 label variants grouped into the same installable pack.','Normal charts are adapted using upstream PersonaFusionChart/SmtFusionChart conventions.']},ensure_ascii=False,indent=2)+'\n')
+Path('assets/megaten/provenance.json').write_text(json.dumps({'source':'https://github.com/aqiu384/megaten-fusion-tool','rawSource':'https://github.com/aqiu384/megaten-database','commit':data['sourceCommit'],'imported':'2026-11-09','files':used,'koreanNames':{'sha256':hashlib.sha256(locale_path.read_bytes()).hexdigest(),'sources':locale['sources'],'basisCounts':locale['basis_counts']},'notes':['Guest humans and essence-only proto-fiends excluded by chart races.','Explicit Fusion Accident acquisitions excluded from deterministic result pools.','English IDs remain canonical; all demon display names use audited per-game Korean labels. See tools/localization/korean_demon_names.json for factual name sources and editorial supplements.','P3R Persona 4 Set and Persona 4 Set 1 label variants grouped into the same installable pack.','Normal charts are adapted using upstream PersonaFusionChart/SmtFusionChart conventions.']},ensure_ascii=False,indent=2)+'\n')
