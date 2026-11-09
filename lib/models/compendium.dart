@@ -14,6 +14,7 @@ class Demon {
   Demon.fromJson(Map<String, dynamic> j)
     : id = j['id'] as String,
       name = j['name'] as String,
+      aliases = List<String>.from(j['aliases'] as List? ?? const []),
       race = j['race'] as String,
       raceName = j['raceName'] as String,
       level = j['level'] as int,
@@ -28,6 +29,7 @@ class Demon {
           .map((v) => Map<String, String>.from(v as Map))
           .toList();
   final String id, name, race, raceName, acquisition;
+  final List<String> aliases;
   final String? dlc;
   final int level;
   final Map<String, num> stats;
@@ -36,7 +38,7 @@ class Demon {
   final List<Map<String, String>> requirements;
   bool matches(String query) {
     final q = query.toLowerCase().replaceAll(' ', '');
-    return '$name$id$race$raceName'
+    return '$name$id$race$raceName${aliases.join(' ')}'
         .toLowerCase()
         .replaceAll(' ', '')
         .contains(q);

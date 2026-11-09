@@ -7,6 +7,10 @@
     {
       "id": "Abaddon",
       "name": "아바돈",
+      "aliases": [
+        "Abaddon",
+        "アバドン"
+      ],
       "race": "Devil",
       "raceName": "악마",
       "level": 76,
@@ -73,6 +77,10 @@
     {
       "id": "Alice",
       "name": "앨리스",
+      "aliases": [
+        "Alice",
+        "アリス"
+      ],
       "race": "Death",
       "raceName": "사신",
       "level": 68,
@@ -139,6 +147,10 @@
     {
       "id": "Alilat",
       "name": "알릴라트",
+      "aliases": [
+        "Alilat",
+        "アリラト"
+      ],
       "race": "Empress",
       "raceName": "여황제",
       "level": 84,
@@ -210,6 +222,10 @@
     {
       "id": "Ananta",
       "name": "아난타",
+      "aliases": [
+        "Ananta",
+        "アナンタ"
+      ],
       "race": "Aeon",
       "raceName": "영겁",
       "level": 73,
@@ -276,6 +292,10 @@
     {
       "id": "Anat",
       "name": "아나트",
+      "aliases": [
+        "Anat",
+        "アナト"
+      ],
       "race": "Priestess",
       "raceName": "여법황",
       "level": 53,
@@ -342,6 +362,10 @@
     {
       "id": "Angel",
       "name": "엔젤",
+      "aliases": [
+        "Angel",
+        "エンジェル"
+      ],
       "race": "Justice",
       "raceName": "정의",
       "level": 4,
@@ -398,6 +422,10 @@
     {
       "id": "Anubis",
       "name": "아누비스",
+      "aliases": [
+        "Anubis",
+        "アヌビス"
+      ],
       "race": "Judgement",
       "raceName": "심판",
       "level": 40,
@@ -464,6 +492,10 @@
     {
       "id": "Apsaras",
       "name": "아프사라스",
+      "aliases": [
+        "Apsaras",
+        "アプサラス"
+      ],
       "race": "Priestess",
       "raceName": "여법황",
       "level": 2,
@@ -525,6 +557,10 @@
     {
       "id": "Ara Mitama",
       "name": "아라미타마",
+      "aliases": [
+        "Ara Mitama",
+        "アラミタマ"
+      ],
       "race": "Chariot",
       "raceName": "전차",
       "level": 6,
@@ -586,6 +622,10 @@
     {
       "id": "Arahabaki",
       "name": "아라하바키",
+      "aliases": [
+        "Arahabaki",
+        "アラハバキ"
+      ],
       "race": "Hermit",
       "raceName": "은둔자",
       "level": 68,
@@ -657,6 +697,10 @@
     {
       "id": "Archangel",
       "name": "아크엔젤",
+      "aliases": [
+        "Archangel",
+        "アークエンジェル"
+      ],
       "race": "Justice",
       "raceName": "정의",
       "level": 10,
@@ -718,6 +762,10 @@
     {
       "id": "Arsene",
       "name": "아르센",
+      "aliases": [
+        "Arsene",
+        "アルセーヌ"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 23,
@@ -784,6 +832,10 @@
     {
       "id": "Astarte",
       "name": "아스타르테",
+      "aliases": [
+        "Astarte",
+        "アスタルテ"
+      ],
       "race": "Empress",
       "raceName": "여황제",
       "level": 54,
@@ -850,6 +902,10 @@
     {
       "id": "Asura",
       "name": "아수라왕",
+      "aliases": [
+        "Asura",
+        "アスラおう"
+      ],
       "race": "Sun",
       "raceName": "태양",
       "level": 85,
@@ -921,6 +977,10 @@
     {
       "id": "Atavaka",
       "name": "아타바크",
+      "aliases": [
+        "Atavaka",
+        "アタバク"
+      ],
       "race": "Strength",
       "raceName": "힘",
       "level": 72,
@@ -992,6 +1052,10 @@
     {
       "id": "Atropos",
       "name": "아트로포스",
+      "aliases": [
+        "Atropos",
+        "アトロポス"
+      ],
       "race": "Fortune",
       "raceName": "운명",
       "level": 56,
@@ -1058,6 +1122,10 @@
     {
       "id": "Attis",
       "name": "아티스",
+      "aliases": [
+        "Attis",
+        "アティス"
+      ],
       "race": "Hanged",
       "raceName": "사형수",
       "level": 73,
@@ -1128,7 +1196,12 @@
     },
     {
       "id": "Baal Zebul",
-      "name": "바알제불",
+      "name": "바알세불",
+      "aliases": [
+        "Baal Zebul",
+        "バアル・ゼブル",
+        "바알제불"
+      ],
       "race": "Moon",
       "raceName": "달",
       "level": 72,
@@ -1195,6 +1268,10 @@
     {
       "id": "Baphomet",
       "name": "바포멧",
+      "aliases": [
+        "Baphomet",
+        "バフォメット"
+      ],
       "race": "Devil",
       "raceName": "악마",
       "level": 30,
@@ -1261,6 +1338,10 @@
     {
       "id": "Barong",
       "name": "바롱",
+      "aliases": [
+        "Barong",
+        "バロン"
+      ],
       "race": "Emperor",
       "raceName": "황제",
       "level": 63,
@@ -1326,7 +1407,12 @@
     },
     {
       "id": "Beelzebub",
-      "name": "바알제붑(벨제부브)",
+      "name": "베엘제붑",
+      "aliases": [
+        "Beelzebub",
+        "ベルゼブブ",
+        "바알제붑(벨제부브)"
+      ],
       "race": "Devil",
       "raceName": "악마",
       "level": 81,
@@ -1398,6 +1484,10 @@
     {
       "id": "Belphegor",
       "name": "벨페고르",
+      "aliases": [
+        "Belphegor",
+        "ベルフェゴール"
+      ],
       "race": "Emperor",
       "raceName": "황제",
       "level": 53,
@@ -1464,6 +1554,10 @@
     {
       "id": "Berith",
       "name": "베리스",
+      "aliases": [
+        "Berith",
+        "ベリス"
+      ],
       "race": "Hierophant",
       "raceName": "법황",
       "level": 13,
@@ -1525,6 +1619,10 @@
     {
       "id": "Bishamonten",
       "name": "비사문천",
+      "aliases": [
+        "Bishamonten",
+        "ビシャモンテン"
+      ],
       "race": "Tower",
       "raceName": "탑",
       "level": 60,
@@ -1591,6 +1689,10 @@
     {
       "id": "Black Frost",
       "name": "사악한 프로스트",
+      "aliases": [
+        "Black Frost",
+        "ジャアクフロスト"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 37,
@@ -1667,6 +1769,10 @@
     {
       "id": "Byakko",
       "name": "백호",
+      "aliases": [
+        "Byakko",
+        "ビャッコ"
+      ],
       "race": "Temperance",
       "raceName": "절제",
       "level": 63,
@@ -1738,6 +1844,10 @@
     {
       "id": "Captain Kidd",
       "name": "캡틴 키드",
+      "aliases": [
+        "Captain Kidd",
+        "キャプテンキッド"
+      ],
       "race": "Chariot",
       "raceName": "전차",
       "level": 18,
@@ -1804,6 +1914,10 @@
     {
       "id": "Carmen",
       "name": "카르멘",
+      "aliases": [
+        "Carmen",
+        "カルメン"
+      ],
       "race": "Lovers",
       "raceName": "연인",
       "level": 19,
@@ -1870,6 +1984,10 @@
     {
       "id": "Cendrillon",
       "name": "상드리용",
+      "aliases": [
+        "Cendrillon",
+        "サンドリヨン"
+      ],
       "race": "Star",
       "raceName": "별",
       "level": 36,
@@ -1936,6 +2054,10 @@
     {
       "id": "Chernobog",
       "name": "체르노보그",
+      "aliases": [
+        "Chernobog",
+        "チェルノボグ"
+      ],
       "race": "Moon",
       "raceName": "달",
       "level": 56,
@@ -2002,6 +2124,10 @@
     {
       "id": "Chi You",
       "name": "치우",
+      "aliases": [
+        "Chi You",
+        "シュウ"
+      ],
       "race": "Tower",
       "raceName": "탑",
       "level": 86,
@@ -2073,6 +2199,10 @@
     {
       "id": "Chimera",
       "name": "키마이라",
+      "aliases": [
+        "Chimera",
+        "キマイラ"
+      ],
       "race": "Chariot",
       "raceName": "전차",
       "level": 9,
@@ -2134,6 +2264,10 @@
     {
       "id": "Clotho",
       "name": "클로토",
+      "aliases": [
+        "Clotho",
+        "クロト"
+      ],
       "race": "Fortune",
       "raceName": "운명",
       "level": 37,
@@ -2200,6 +2334,10 @@
     {
       "id": "Cu Chulainn",
       "name": "쿠 훌린",
+      "aliases": [
+        "Cu Chulainn",
+        "クー・フーリン"
+      ],
       "race": "Tower",
       "raceName": "탑",
       "level": 40,
@@ -2271,6 +2409,10 @@
     {
       "id": "Cybele",
       "name": "키벨레",
+      "aliases": [
+        "Cybele",
+        "キュベレ"
+      ],
       "race": "Lovers",
       "raceName": "연인",
       "level": 67,
@@ -2342,6 +2484,10 @@
     {
       "id": "Daisoujou",
       "name": "대승정",
+      "aliases": [
+        "Daisoujou",
+        "だいそうじょう"
+      ],
       "race": "Hierophant",
       "raceName": "법황",
       "level": 59,
@@ -2408,6 +2554,10 @@
     {
       "id": "Dakini",
       "name": "다키니",
+      "aliases": [
+        "Dakini",
+        "ダーキニー"
+      ],
       "race": "Hermit",
       "raceName": "은둔자",
       "level": 38,
@@ -2469,6 +2619,10 @@
     {
       "id": "Decarabia",
       "name": "데카라비아",
+      "aliases": [
+        "Decarabia",
+        "デカラビア"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 54,
@@ -2545,6 +2699,10 @@
     {
       "id": "Dionysus",
       "name": "디오니소스",
+      "aliases": [
+        "Dionysus",
+        "ディオニュソス"
+      ],
       "race": "Moon",
       "raceName": "달",
       "level": 49,
@@ -2611,6 +2769,10 @@
     {
       "id": "Dominion",
       "name": "도미니온",
+      "aliases": [
+        "Dominion",
+        "ドミニオン"
+      ],
       "race": "Justice",
       "raceName": "정의",
       "level": 42,
@@ -2677,6 +2839,10 @@
     {
       "id": "Eligor",
       "name": "엘리고르",
+      "aliases": [
+        "Eligor",
+        "エリゴール"
+      ],
       "race": "Tower",
       "raceName": "탑",
       "level": 31,
@@ -2738,6 +2904,10 @@
     {
       "id": "Flauros",
       "name": "플라로우스",
+      "aliases": [
+        "Flauros",
+        "フラロウス"
+      ],
       "race": "Hierophant",
       "raceName": "법황",
       "level": 33,
@@ -2804,6 +2974,10 @@
     {
       "id": "Forneus",
       "name": "포르네우스",
+      "aliases": [
+        "Forneus",
+        "フォルネウス"
+      ],
       "race": "Emperor",
       "raceName": "황제",
       "level": 7,
@@ -2870,6 +3044,10 @@
     {
       "id": "Fortuna",
       "name": "포르투나",
+      "aliases": [
+        "Fortuna",
+        "フォルトゥナ"
+      ],
       "race": "Fortune",
       "raceName": "운명",
       "level": 15,
@@ -2936,6 +3114,10 @@
     {
       "id": "Futsunushi",
       "name": "후츠누시",
+      "aliases": [
+        "Futsunushi",
+        "フツヌシ"
+      ],
       "race": "Magician",
       "raceName": "마법사",
       "level": 74,
@@ -3007,6 +3189,10 @@
     {
       "id": "Gabriel",
       "name": "가브리엘",
+      "aliases": [
+        "Gabriel",
+        "ガブリエル"
+      ],
       "race": "Empress",
       "raceName": "여황제",
       "level": 62,
@@ -3073,6 +3259,10 @@
     {
       "id": "Ganesha",
       "name": "가네샤",
+      "aliases": [
+        "Ganesha",
+        "ガネーシャ"
+      ],
       "race": "Star",
       "raceName": "별",
       "level": 51,
@@ -3139,6 +3329,10 @@
     {
       "id": "Ganga",
       "name": "강가",
+      "aliases": [
+        "Ganga",
+        "ガンガー"
+      ],
       "race": "Priestess",
       "raceName": "여법황",
       "level": 41,
@@ -3205,6 +3399,10 @@
     {
       "id": "Garuda",
       "name": "가루다",
+      "aliases": [
+        "Garuda",
+        "ガルーダ"
+      ],
       "race": "Star",
       "raceName": "별",
       "level": 64,
@@ -3266,6 +3464,10 @@
     {
       "id": "Genbu",
       "name": "현무",
+      "aliases": [
+        "Genbu",
+        "ゲンブ"
+      ],
       "race": "Temperance",
       "raceName": "절제",
       "level": 30,
@@ -3332,6 +3534,11 @@
     {
       "id": "Girimekhala",
       "name": "기리메칼라",
+      "aliases": [
+        "Girimehkala",
+        "Girimekhala",
+        "ギリメカラ"
+      ],
       "race": "Moon",
       "raceName": "달",
       "level": 39,
@@ -3398,6 +3605,10 @@
     {
       "id": "Goemon",
       "name": "고에몬",
+      "aliases": [
+        "Goemon",
+        "ゴエモン"
+      ],
       "race": "Emperor",
       "raceName": "황제",
       "level": 27,
@@ -3464,6 +3675,10 @@
     {
       "id": "Gurulu",
       "name": "구루루",
+      "aliases": [
+        "Gurulu",
+        "グルル"
+      ],
       "race": "Moon",
       "raceName": "달",
       "level": 14,
@@ -3530,6 +3745,10 @@
     {
       "id": "Hanuman",
       "name": "하누만",
+      "aliases": [
+        "Hanuman",
+        "ハヌマーン"
+      ],
       "race": "Strength",
       "raceName": "힘",
       "level": 36,
@@ -3596,6 +3815,10 @@
     {
       "id": "Hariti",
       "name": "하리티",
+      "aliases": [
+        "Hariti",
+        "ハリティー"
+      ],
       "race": "Empress",
       "raceName": "여황제",
       "level": 48,
@@ -3657,6 +3880,10 @@
     {
       "id": "Hecate",
       "name": "헤카테",
+      "aliases": [
+        "Hecate",
+        "ヘカーテ"
+      ],
       "race": "Lovers",
       "raceName": "연인",
       "level": 42,
@@ -3723,6 +3950,10 @@
     {
       "id": "Hecatoncheires",
       "name": "헤카톤케일",
+      "aliases": [
+        "Hecatoncheires",
+        "ヘカトンケイル"
+      ],
       "race": "Hanged",
       "raceName": "사형수",
       "level": 47,
@@ -3789,6 +4020,10 @@
     {
       "id": "Helel",
       "name": "루시펠",
+      "aliases": [
+        "Helel",
+        "ルシフェル"
+      ],
       "race": "Star",
       "raceName": "별",
       "level": 88,
@@ -3865,6 +4100,10 @@
     {
       "id": "Hell Biker",
       "name": "헬즈 엔젤",
+      "aliases": [
+        "Hell Biker",
+        "ヘルズエンジェル"
+      ],
       "race": "Hanged",
       "raceName": "사형수",
       "level": 65,
@@ -3936,6 +4175,10 @@
     {
       "id": "High Pixie",
       "name": "하이픽시",
+      "aliases": [
+        "High Pixie",
+        "ハイピクシー"
+      ],
       "race": "Priestess",
       "raceName": "여법황",
       "level": 20,
@@ -3997,6 +4240,10 @@
     {
       "id": "Horus",
       "name": "호루스",
+      "aliases": [
+        "Horus",
+        "ホルス"
+      ],
       "race": "Sun",
       "raceName": "태양",
       "level": 67,
@@ -4068,6 +4315,10 @@
     {
       "id": "Houou",
       "name": "봉황",
+      "aliases": [
+        "Houou",
+        "ホウオウ"
+      ],
       "race": "Star",
       "raceName": "별",
       "level": 70,
@@ -4139,6 +4390,10 @@
     {
       "id": "Hua Po",
       "name": "화백",
+      "aliases": [
+        "Hua Po",
+        "カハク"
+      ],
       "race": "Magician",
       "raceName": "마법사",
       "level": 19,
@@ -4205,6 +4460,10 @@
     {
       "id": "Incubus",
       "name": "인큐버스",
+      "aliases": [
+        "Incubus",
+        "インキュバス"
+      ],
       "race": "Devil",
       "raceName": "악마",
       "level": 37,
@@ -4271,6 +4530,10 @@
     {
       "id": "Inugami",
       "name": "이누가미",
+      "aliases": [
+        "Inugami",
+        "イヌガミ"
+      ],
       "race": "Hanged",
       "raceName": "사형수",
       "level": 10,
@@ -4327,6 +4590,10 @@
     {
       "id": "Izanagi",
       "name": "이자나기",
+      "aliases": [
+        "Izanagi",
+        "イザナギ"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 46,
@@ -4393,6 +4660,10 @@
     {
       "id": "Jack Frost",
       "name": "잭 프로스트",
+      "aliases": [
+        "Jack Frost",
+        "ジャックフロスト"
+      ],
       "race": "Magician",
       "raceName": "마법사",
       "level": 8,
@@ -4459,6 +4730,10 @@
     {
       "id": "Jack-o'-Lantern",
       "name": "잭 오 랜턴",
+      "aliases": [
+        "Jack-o'-Lantern",
+        "ジャックランタン"
+      ],
       "race": "Magician",
       "raceName": "마법사",
       "level": 15,
@@ -4525,6 +4800,10 @@
     {
       "id": "Jatayu",
       "name": "자타유",
+      "aliases": [
+        "Jatayu",
+        "ジャターユ"
+      ],
       "race": "Sun",
       "raceName": "태양",
       "level": 55,
@@ -4591,6 +4870,10 @@
     {
       "id": "Jikokuten",
       "name": "지국천",
+      "aliases": [
+        "Jikokuten",
+        "ジコクテン"
+      ],
       "race": "Strength",
       "raceName": "힘",
       "level": 29,
@@ -4657,6 +4940,10 @@
     {
       "id": "Johanna",
       "name": "요한나",
+      "aliases": [
+        "Johanna",
+        "ヨハンナ"
+      ],
       "race": "Priestess",
       "raceName": "여법황",
       "level": 28,
@@ -4723,6 +5010,10 @@
     {
       "id": "Kaguya",
       "name": "카구야",
+      "aliases": [
+        "Kaguya",
+        "カグヤ"
+      ],
       "race": "Moon",
       "raceName": "달",
       "level": 34,
@@ -4789,6 +5080,10 @@
     {
       "id": "Kaiwan",
       "name": "케완",
+      "aliases": [
+        "Kaiwan",
+        "キウン"
+      ],
       "race": "Star",
       "raceName": "별",
       "level": 42,
@@ -4855,6 +5150,10 @@
     {
       "id": "Kali",
       "name": "칼리",
+      "aliases": [
+        "Kali",
+        "カーリー"
+      ],
       "race": "Strength",
       "raceName": "힘",
       "level": 63,
@@ -4921,6 +5220,10 @@
     {
       "id": "Kamu Susano-o",
       "name": "카무스사노오",
+      "aliases": [
+        "Kamu Susano-o",
+        "カムスサノヲ"
+      ],
       "race": "Emperor",
       "raceName": "황제",
       "level": 47,
@@ -4987,6 +5290,10 @@
     {
       "id": "Kikuri-Hime",
       "name": "키쿠리히메",
+      "aliases": [
+        "Kikuri-Hime",
+        "キクリヒメ"
+      ],
       "race": "Priestess",
       "raceName": "여법황",
       "level": 61,
@@ -5053,6 +5360,10 @@
     {
       "id": "King Frost",
       "name": "킹 프로스트",
+      "aliases": [
+        "King Frost",
+        "キングフロスト"
+      ],
       "race": "Emperor",
       "raceName": "황제",
       "level": 34,
@@ -5129,6 +5440,10 @@
     {
       "id": "Kohryu",
       "name": "황룡",
+      "aliases": [
+        "Kohryu",
+        "コウリュウ"
+      ],
       "race": "Hierophant",
       "raceName": "법황",
       "level": 71,
@@ -5200,6 +5515,10 @@
     {
       "id": "Koumokuten",
       "name": "광목천",
+      "aliases": [
+        "Koumokuten",
+        "コウモクテン"
+      ],
       "race": "Chariot",
       "raceName": "전차",
       "level": 52,
@@ -5266,6 +5585,10 @@
     {
       "id": "Kumbhanda",
       "name": "쿠반다",
+      "aliases": [
+        "Kumbhanda",
+        "クヴァンダ"
+      ],
       "race": "Hermit",
       "raceName": "은둔자",
       "level": 61,
@@ -5332,6 +5655,10 @@
     {
       "id": "Kurama Tengu",
       "name": "쿠라마텐구",
+      "aliases": [
+        "Kurama Tengu",
+        "クラマテング"
+      ],
       "race": "Hermit",
       "raceName": "은둔자",
       "level": 46,
@@ -5393,6 +5720,10 @@
     {
       "id": "Kushi Mitama",
       "name": "쿠시미타마",
+      "aliases": [
+        "Kushi Mitama",
+        "クシミタマ"
+      ],
       "race": "Fortune",
       "raceName": "운명",
       "level": 28,
@@ -5459,6 +5790,10 @@
     {
       "id": "Lachesis",
       "name": "라케시스",
+      "aliases": [
+        "Lachesis",
+        "ラケシス"
+      ],
       "race": "Fortune",
       "raceName": "운명",
       "level": 44,
@@ -5525,6 +5860,10 @@
     {
       "id": "Lakshmi",
       "name": "락슈미",
+      "aliases": [
+        "Lakshmi",
+        "ラクシュミ"
+      ],
       "race": "Fortune",
       "raceName": "운명",
       "level": 73,
@@ -5596,6 +5935,10 @@
     {
       "id": "Lamia",
       "name": "라미아",
+      "aliases": [
+        "Lamia",
+        "ラミア"
+      ],
       "race": "Hermit",
       "raceName": "은둔자",
       "level": 25,
@@ -5657,6 +6000,10 @@
     {
       "id": "Leanan Sidhe",
       "name": "랴난시",
+      "aliases": [
+        "Leanan Sidhe",
+        "リャナンシー"
+      ],
       "race": "Empress",
       "raceName": "여황제",
       "level": 21,
@@ -5723,6 +6070,10 @@
     {
       "id": "Legion",
       "name": "레기온",
+      "aliases": [
+        "Legion",
+        "レギオン"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 26,
@@ -5789,6 +6140,10 @@
     {
       "id": "Lilim",
       "name": "릴림",
+      "aliases": [
+        "Lilim",
+        "リリム"
+      ],
       "race": "Devil",
       "raceName": "악마",
       "level": 8,
@@ -5845,6 +6200,10 @@
     {
       "id": "Lilith",
       "name": "릴리스",
+      "aliases": [
+        "Lilith",
+        "リリス"
+      ],
       "race": "Devil",
       "raceName": "악마",
       "level": 65,
@@ -5916,6 +6275,10 @@
     {
       "id": "Loa",
       "name": "로아",
+      "aliases": [
+        "Loa",
+        "ロア"
+      ],
       "race": "Death",
       "raceName": "사신",
       "level": 33,
@@ -5982,6 +6345,10 @@
     {
       "id": "Loki",
       "name": "로키",
+      "aliases": [
+        "Loki",
+        "ロキ"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 69,
@@ -6057,7 +6424,14 @@
     },
     {
       "id": "Loki A",
-      "name": "로키 A",
+      "name": "로키 (정의)",
+      "aliases": [
+        "Loki",
+        "Loki A",
+        "ロキ",
+        "로키",
+        "로키 A"
+      ],
       "race": "Justice",
       "raceName": "정의",
       "level": 60,
@@ -6124,6 +6498,10 @@
     {
       "id": "Lucifer",
       "name": "루시퍼",
+      "aliases": [
+        "Lucifer",
+        "ルシファー"
+      ],
       "race": "Judgement",
       "raceName": "심판",
       "level": 89,
@@ -6195,6 +6573,10 @@
     {
       "id": "Mada",
       "name": "마다",
+      "aliases": [
+        "Mada",
+        "マダ"
+      ],
       "race": "Hanged",
       "raceName": "사형수",
       "level": 57,
@@ -6266,6 +6648,10 @@
     {
       "id": "Magatsu-Izanagi",
       "name": "마가츠 이자나기",
+      "aliases": [
+        "Magatsu-Izanagi",
+        "マガツイザナギ"
+      ],
       "race": "Tower",
       "raceName": "탑",
       "level": 50,
@@ -6332,6 +6718,10 @@
     {
       "id": "Mara",
       "name": "마라",
+      "aliases": [
+        "Mara",
+        "マーラ"
+      ],
       "race": "Tower",
       "raceName": "탑",
       "level": 75,
@@ -6398,6 +6788,10 @@
     {
       "id": "Masakado",
       "name": "마사카도",
+      "aliases": [
+        "Masakado",
+        "マサカド"
+      ],
       "race": "Tower",
       "raceName": "탑",
       "level": 79,
@@ -6469,6 +6863,10 @@
     {
       "id": "Matador",
       "name": "마타도르",
+      "aliases": [
+        "Matador",
+        "マタドール"
+      ],
       "race": "Strength",
       "raceName": "힘",
       "level": 22,
@@ -6535,6 +6933,10 @@
     {
       "id": "Melchizedek",
       "name": "멜키세덱",
+      "aliases": [
+        "Melchizedek",
+        "メルキセデク"
+      ],
       "race": "Justice",
       "raceName": "정의",
       "level": 66,
@@ -6605,7 +7007,12 @@
     },
     {
       "id": "Mercurius",
-      "name": "메리쿠리우스",
+      "name": "메르쿠리우스",
+      "aliases": [
+        "Mercurius",
+        "メリクリウス",
+        "메리쿠리우스"
+      ],
       "race": "Magician",
       "raceName": "마법사",
       "level": 43,
@@ -6672,6 +7079,10 @@
     {
       "id": "Messiah",
       "name": "메사이어",
+      "aliases": [
+        "Messiah",
+        "メサイア"
+      ],
       "race": "Judgement",
       "raceName": "심판",
       "level": 91,
@@ -6748,6 +7159,10 @@
     {
       "id": "Metatron",
       "name": "메타트론",
+      "aliases": [
+        "Metatron",
+        "メタトロン"
+      ],
       "race": "Aeon",
       "raceName": "영겁",
       "level": 87,
@@ -6819,6 +7234,10 @@
     {
       "id": "Michael",
       "name": "미카엘",
+      "aliases": [
+        "Michael",
+        "ミカエル"
+      ],
       "race": "Judgement",
       "raceName": "심판",
       "level": 70,
@@ -6890,6 +7309,10 @@
     {
       "id": "Milady",
       "name": "밀라디",
+      "aliases": [
+        "Milady",
+        "ミラディ"
+      ],
       "race": "Empress",
       "raceName": "여황제",
       "level": 36,
@@ -6955,7 +7378,12 @@
     },
     {
       "id": "Mishaguji",
-      "name": "먀샤구지사마",
+      "name": "미샤구지사마",
+      "aliases": [
+        "Mishaguji",
+        "ミシャグジさま",
+        "먀샤구지사마"
+      ],
       "race": "Hierophant",
       "raceName": "법황",
       "level": 48,
@@ -7022,6 +7450,10 @@
     {
       "id": "Mithras",
       "name": "미트라스",
+      "aliases": [
+        "Mithras",
+        "ミトラス"
+      ],
       "race": "Chariot",
       "raceName": "전차",
       "level": 24,
@@ -7093,6 +7525,11 @@
     {
       "id": "Mitra",
       "name": "미트라",
+      "aliases": [
+        "Mithra",
+        "Mitra",
+        "ミトラ"
+      ],
       "race": "Temperance",
       "raceName": "절제",
       "level": 22,
@@ -7154,6 +7591,10 @@
     {
       "id": "Mokoi",
       "name": "모코이",
+      "aliases": [
+        "Mokoi",
+        "モコイ"
+      ],
       "race": "Devil",
       "raceName": "악마",
       "level": 18,
@@ -7215,6 +7656,10 @@
     {
       "id": "Mot",
       "name": "모트",
+      "aliases": [
+        "Mot",
+        "モト"
+      ],
       "race": "Death",
       "raceName": "사신",
       "level": 58,
@@ -7281,6 +7726,10 @@
     {
       "id": "Mother Harlot",
       "name": "마더 할롯",
+      "aliases": [
+        "Mother Harlot",
+        "マザーハーロット"
+      ],
       "race": "Empress",
       "raceName": "여황제",
       "level": 77,
@@ -7347,6 +7796,10 @@
     {
       "id": "Mothman",
       "name": "모스맨",
+      "aliases": [
+        "Mothman",
+        "モスマン"
+      ],
       "race": "Hermit",
       "raceName": "은둔자",
       "level": 31,
@@ -7413,6 +7866,10 @@
     {
       "id": "Naga",
       "name": "나가",
+      "aliases": [
+        "Naga",
+        "ナーガ"
+      ],
       "race": "Hermit",
       "raceName": "은둔자",
       "level": 17,
@@ -7474,6 +7931,11 @@
     {
       "id": "Naga Raja",
       "name": "나가라자",
+      "aliases": [
+        "Naga Raja",
+        "Raja Naga",
+        "ナーガラジャ"
+      ],
       "race": "Emperor",
       "raceName": "황제",
       "level": 43,
@@ -7540,6 +8002,10 @@
     {
       "id": "Narcissus",
       "name": "나르키소스",
+      "aliases": [
+        "Narcissus",
+        "ナルキッソス"
+      ],
       "race": "Lovers",
       "raceName": "연인",
       "level": 23,
@@ -7606,6 +8072,10 @@
     {
       "id": "Nebiros",
       "name": "네비로스",
+      "aliases": [
+        "Nebiros",
+        "ネビロス"
+      ],
       "race": "Hermit",
       "raceName": "은둔자",
       "level": 52,
@@ -7677,6 +8147,10 @@
     {
       "id": "Neko Shogun",
       "name": "네코쇼군",
+      "aliases": [
+        "Neko Shogun",
+        "ネコショウグン"
+      ],
       "race": "Star",
       "raceName": "별",
       "level": 17,
@@ -7738,6 +8212,10 @@
     {
       "id": "Nekomata",
       "name": "네코마타",
+      "aliases": [
+        "Nekomata",
+        "ネコマタ"
+      ],
       "race": "Magician",
       "raceName": "마법사",
       "level": 3,
@@ -7798,7 +8276,12 @@
     },
     {
       "id": "Nidhoggr",
-      "name": "니드호그",
+      "name": "니즈호그",
+      "aliases": [
+        "Nidhoggr",
+        "ニーズホッグ",
+        "니드호그"
+      ],
       "race": "Aeon",
       "raceName": "영겁",
       "level": 47,
@@ -7865,6 +8348,10 @@
     {
       "id": "Nigi Mitama",
       "name": "니기미타마",
+      "aliases": [
+        "Nigi Mitama",
+        "ニギミタマ"
+      ],
       "race": "Temperance",
       "raceName": "절제",
       "level": 12,
@@ -7926,6 +8413,10 @@
     {
       "id": "Norn",
       "name": "노른",
+      "aliases": [
+        "Norn",
+        "ノルン"
+      ],
       "race": "Fortune",
       "raceName": "운명",
       "level": 65,
@@ -7992,6 +8483,10 @@
     {
       "id": "Oberon",
       "name": "오베론",
+      "aliases": [
+        "Oberon",
+        "オベロン"
+      ],
       "race": "Emperor",
       "raceName": "황제",
       "level": 16,
@@ -8053,6 +8548,10 @@
     {
       "id": "Odin",
       "name": "오딘",
+      "aliases": [
+        "Odin",
+        "オーディン"
+      ],
       "race": "Emperor",
       "raceName": "황제",
       "level": 74,
@@ -8124,6 +8623,10 @@
     {
       "id": "Okuninushi",
       "name": "오오쿠니누시",
+      "aliases": [
+        "Okuninushi",
+        "オオクニヌシ"
+      ],
       "race": "Temperance",
       "raceName": "절제",
       "level": 44,
@@ -8190,6 +8693,10 @@
     {
       "id": "Omoikane",
       "name": "오모이카네",
+      "aliases": [
+        "Omoikane",
+        "オモイカネ"
+      ],
       "race": "Hierophant",
       "raceName": "법황",
       "level": 7,
@@ -8246,6 +8753,10 @@
     {
       "id": "Oni",
       "name": "오니",
+      "aliases": [
+        "Oni",
+        "オニ"
+      ],
       "race": "Chariot",
       "raceName": "전차",
       "level": 31,
@@ -8312,6 +8823,10 @@
     {
       "id": "Onmoraki",
       "name": "온모라키",
+      "aliases": [
+        "Onmoraki",
+        "オンモラキ"
+      ],
       "race": "Hermit",
       "raceName": "은둔자",
       "level": 8,
@@ -8373,6 +8888,10 @@
     {
       "id": "Orobas",
       "name": "오로바스",
+      "aliases": [
+        "Orobas",
+        "オロバス"
+      ],
       "race": "Magician",
       "raceName": "마법사",
       "level": 39,
@@ -8439,6 +8958,10 @@
     {
       "id": "Orpheus",
       "name": "오르페우스",
+      "aliases": [
+        "Orpheus",
+        "オルフェウス"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 1,
@@ -8495,6 +9018,10 @@
     {
       "id": "Orpheus Telos",
       "name": "진 오르페우스",
+      "aliases": [
+        "Orpheus Telos",
+        "オルフェウス・改"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 91,
@@ -8536,6 +9063,10 @@
     {
       "id": "Orthrus",
       "name": "오르트로스",
+      "aliases": [
+        "Orthrus",
+        "オルトロス"
+      ],
       "race": "Hanged",
       "raceName": "사형수",
       "level": 27,
@@ -8602,6 +9133,10 @@
     {
       "id": "Ose",
       "name": "오세",
+      "aliases": [
+        "Ose",
+        "オセ"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 41,
@@ -8668,6 +9203,10 @@
     {
       "id": "Pale Rider",
       "name": "페일 라이더",
+      "aliases": [
+        "Pale Rider",
+        "ペイルライダー"
+      ],
       "race": "Death",
       "raceName": "사신",
       "level": 23,
@@ -8734,6 +9273,10 @@
     {
       "id": "Parvati",
       "name": "파르바티",
+      "aliases": [
+        "Parvati",
+        "パールヴァティ"
+      ],
       "race": "Priestess",
       "raceName": "여법황",
       "level": 48,
@@ -8800,6 +9343,10 @@
     {
       "id": "Pazuzu",
       "name": "파즈스",
+      "aliases": [
+        "Pazuzu",
+        "パズス"
+      ],
       "race": "Devil",
       "raceName": "악마",
       "level": 56,
@@ -8866,6 +9413,10 @@
     {
       "id": "Pisaca",
       "name": "피샤차",
+      "aliases": [
+        "Pisaca",
+        "ピシャーチャ"
+      ],
       "race": "Death",
       "raceName": "사신",
       "level": 15,
@@ -8927,6 +9478,10 @@
     {
       "id": "Pixie",
       "name": "픽시",
+      "aliases": [
+        "Pixie",
+        "ピクシー"
+      ],
       "race": "Lovers",
       "raceName": "연인",
       "level": 2,
@@ -8983,6 +9538,10 @@
     {
       "id": "Power",
       "name": "파워",
+      "aliases": [
+        "Power",
+        "パワー"
+      ],
       "race": "Justice",
       "raceName": "정의",
       "level": 25,
@@ -9049,6 +9608,10 @@
     {
       "id": "Principality",
       "name": "프린시펄리티",
+      "aliases": [
+        "Principality",
+        "プリンシパリティ"
+      ],
       "race": "Justice",
       "raceName": "정의",
       "level": 16,
@@ -9110,6 +9673,11 @@
     {
       "id": "Qitian Dasheng",
       "name": "제천대성",
+      "aliases": [
+        "Qitian Dasheng",
+        "Seiten Taisei",
+        "セイテンタイセイ"
+      ],
       "race": "Tower",
       "raceName": "탑",
       "level": 67,
@@ -9176,6 +9744,11 @@
     {
       "id": "Queen Medb",
       "name": "퀸 메이브",
+      "aliases": [
+        "Queen Mab",
+        "Queen Medb",
+        "クイーンメイブ"
+      ],
       "race": "Lovers",
       "raceName": "연인",
       "level": 28,
@@ -9242,6 +9815,10 @@
     {
       "id": "Quetzalcoatl",
       "name": "케찰코아틀",
+      "aliases": [
+        "Quetzalcoatl",
+        "ケツアルカトル"
+      ],
       "race": "Sun",
       "raceName": "태양",
       "level": 45,
@@ -9308,6 +9885,10 @@
     {
       "id": "Rakshasa",
       "name": "락샤사",
+      "aliases": [
+        "Rakshasa",
+        "ラクシャーサ"
+      ],
       "race": "Strength",
       "raceName": "힘",
       "level": 15,
@@ -9369,6 +9950,10 @@
     {
       "id": "Rangda",
       "name": "랑다",
+      "aliases": [
+        "Rangda",
+        "ランダ"
+      ],
       "race": "Magician",
       "raceName": "마법사",
       "level": 50,
@@ -9435,6 +10020,10 @@
     {
       "id": "Raphael",
       "name": "라파엘",
+      "aliases": [
+        "Raphael",
+        "ラファエル"
+      ],
       "race": "Lovers",
       "raceName": "연인",
       "level": 60,
@@ -9501,6 +10090,10 @@
     {
       "id": "Robin Hood",
       "name": "로빈 후드",
+      "aliases": [
+        "Robin Hood",
+        "ロビンフッド"
+      ],
       "race": "Justice",
       "raceName": "정의",
       "level": 37,
@@ -9567,6 +10160,10 @@
     {
       "id": "Saki Mitama",
       "name": "사키미타마",
+      "aliases": [
+        "Saki Mitama",
+        "サキミタマ"
+      ],
       "race": "Lovers",
       "raceName": "연인",
       "level": 36,
@@ -9633,6 +10230,10 @@
     {
       "id": "Samael",
       "name": "사마엘",
+      "aliases": [
+        "Samael",
+        "サマエル"
+      ],
       "race": "Death",
       "raceName": "사신",
       "level": 41,
@@ -9699,6 +10300,10 @@
     {
       "id": "Sandalphon",
       "name": "산달폰",
+      "aliases": [
+        "Sandalphon",
+        "サンダルフォン"
+      ],
       "race": "Moon",
       "raceName": "달",
       "level": 80,
@@ -9770,6 +10375,10 @@
     {
       "id": "Sandman",
       "name": "샌드맨",
+      "aliases": [
+        "Sandman",
+        "ザントマン"
+      ],
       "race": "Fortune",
       "raceName": "운명",
       "level": 20,
@@ -9831,6 +10440,10 @@
     {
       "id": "Sarasvati",
       "name": "사라스바티",
+      "aliases": [
+        "Sarasvati",
+        "サラスヴァティ"
+      ],
       "race": "Priestess",
       "raceName": "여법황",
       "level": 32,
@@ -9897,6 +10510,10 @@
     {
       "id": "Satan",
       "name": "사탄",
+      "aliases": [
+        "Satan",
+        "サタン"
+      ],
       "race": "Judgement",
       "raceName": "심판",
       "level": 82,
@@ -9973,6 +10590,10 @@
     {
       "id": "Satanael",
       "name": "사타나엘",
+      "aliases": [
+        "Satanael",
+        "サタナエル"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 89,
@@ -10039,6 +10660,10 @@
     {
       "id": "Sati",
       "name": "사티",
+      "aliases": [
+        "Sati",
+        "サティ"
+      ],
       "race": "Magician",
       "raceName": "마법사",
       "level": 29,
@@ -10105,6 +10730,10 @@
     {
       "id": "Saturnus",
       "name": "사투르누스",
+      "aliases": [
+        "Saturnus",
+        "サトゥルヌス"
+      ],
       "race": "Star",
       "raceName": "별",
       "level": 76,
@@ -10176,6 +10805,10 @@
     {
       "id": "Scathach",
       "name": "스카아하",
+      "aliases": [
+        "Scathach",
+        "スカアハ"
+      ],
       "race": "Priestess",
       "raceName": "여법황",
       "level": 75,
@@ -10247,6 +10880,10 @@
     {
       "id": "Seiryu",
       "name": "청룡",
+      "aliases": [
+        "Seiryu",
+        "セイリュウ"
+      ],
       "race": "Temperance",
       "raceName": "절제",
       "level": 38,
@@ -10307,7 +10944,14 @@
     },
     {
       "id": "Seiten Taisei A",
-      "name": "제천대성 A",
+      "name": "제천대성",
+      "aliases": [
+        "Qitian Dasheng",
+        "Seiten Taisei",
+        "Seiten Taisei A",
+        "セイテンタイセイ",
+        "제천대성 A"
+      ],
       "race": "Chariot",
       "raceName": "전차",
       "level": 40,
@@ -10374,6 +11018,10 @@
     {
       "id": "Setanta",
       "name": "세탄타",
+      "aliases": [
+        "Setanta",
+        "セタンタ"
+      ],
       "race": "Star",
       "raceName": "별",
       "level": 29,
@@ -10440,6 +11088,10 @@
     {
       "id": "Seth",
       "name": "세트",
+      "aliases": [
+        "Seth",
+        "セト"
+      ],
       "race": "Moon",
       "raceName": "달",
       "level": 62,
@@ -10506,6 +11158,10 @@
     {
       "id": "Shiisaa",
       "name": "시사",
+      "aliases": [
+        "Shiisaa",
+        "シーサー"
+      ],
       "race": "Hierophant",
       "raceName": "법황",
       "level": 23,
@@ -10567,6 +11223,10 @@
     {
       "id": "Shiki-Ouji",
       "name": "시키오우지",
+      "aliases": [
+        "Shiki-Ouji",
+        "シキオウジ"
+      ],
       "race": "Chariot",
       "raceName": "전차",
       "level": 45,
@@ -10633,6 +11293,10 @@
     {
       "id": "Shiva",
       "name": "시바",
+      "aliases": [
+        "Shiva",
+        "シヴァ"
+      ],
       "race": "Tower",
       "raceName": "탑",
       "level": 82,
@@ -10699,6 +11363,10 @@
     {
       "id": "Siegfried",
       "name": "지크프리트",
+      "aliases": [
+        "Siegfried",
+        "ジークフリード"
+      ],
       "race": "Strength",
       "raceName": "힘",
       "level": 54,
@@ -10770,6 +11438,10 @@
     {
       "id": "Silky",
       "name": "실키",
+      "aliases": [
+        "Silky",
+        "シルキー"
+      ],
       "race": "Lovers",
       "raceName": "연인",
       "level": 5,
@@ -10826,6 +11498,10 @@
     {
       "id": "Skadi",
       "name": "스카디",
+      "aliases": [
+        "Skadi",
+        "スカディ"
+      ],
       "race": "Empress",
       "raceName": "여황제",
       "level": 68,
@@ -10892,6 +11568,10 @@
     {
       "id": "Slime",
       "name": "슬라임",
+      "aliases": [
+        "Slime",
+        "スライム"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 12,
@@ -10953,6 +11633,10 @@
     {
       "id": "Succubus",
       "name": "서큐버스",
+      "aliases": [
+        "Succubus",
+        "サキュバス"
+      ],
       "race": "Devil",
       "raceName": "악마",
       "level": 47,
@@ -11019,6 +11703,10 @@
     {
       "id": "Surt",
       "name": "수르트",
+      "aliases": [
+        "Surt",
+        "スルト"
+      ],
       "race": "Magician",
       "raceName": "마법사",
       "level": 60,
@@ -11090,6 +11778,10 @@
     {
       "id": "Susano-o",
       "name": "스사노오",
+      "aliases": [
+        "Susano-o",
+        "スサノオ"
+      ],
       "race": "Fool",
       "raceName": "광대",
       "level": 77,
@@ -11166,6 +11858,10 @@
     {
       "id": "Suzaku",
       "name": "주작",
+      "aliases": [
+        "Suzaku",
+        "スザク"
+      ],
       "race": "Temperance",
       "raceName": "절제",
       "level": 55,
@@ -11232,6 +11928,10 @@
     {
       "id": "Take-Mikazuchi",
       "name": "타케미카즈치",
+      "aliases": [
+        "Take-Mikazuchi",
+        "タケミカヅチ"
+      ],
       "race": "Emperor",
       "raceName": "황제",
       "level": 23,
@@ -11298,6 +11998,10 @@
     {
       "id": "Take-Minakata",
       "name": "타케미나카타",
+      "aliases": [
+        "Take-Minakata",
+        "タケミナカタ"
+      ],
       "race": "Hanged",
       "raceName": "사형수",
       "level": 20,
@@ -11363,7 +12067,12 @@
     },
     {
       "id": "Tam Lin",
-      "name": "탐 린",
+      "name": "탐린",
+      "aliases": [
+        "Tam Lin",
+        "タムリン",
+        "탐 린"
+      ],
       "race": "Lovers",
       "raceName": "연인",
       "level": 13,
@@ -11425,6 +12134,10 @@
     {
       "id": "Thanatos",
       "name": "타나토스",
+      "aliases": [
+        "Thanatos",
+        "タナトス"
+      ],
       "race": "Death",
       "raceName": "사신",
       "level": 78,
@@ -11496,6 +12209,10 @@
     {
       "id": "Thor",
       "name": "토르",
+      "aliases": [
+        "Thor",
+        "トール"
+      ],
       "race": "Chariot",
       "raceName": "전차",
       "level": 64,
@@ -11562,6 +12279,10 @@
     {
       "id": "Thoth",
       "name": "토트",
+      "aliases": [
+        "Thoth",
+        "トート"
+      ],
       "race": "Hierophant",
       "raceName": "법황",
       "level": 40,
@@ -11633,6 +12354,10 @@
     {
       "id": "Throne",
       "name": "트론",
+      "aliases": [
+        "Throne",
+        "ソロネ"
+      ],
       "race": "Justice",
       "raceName": "정의",
       "level": 52,
@@ -11699,6 +12424,10 @@
     {
       "id": "Thunderbird",
       "name": "선더버드",
+      "aliases": [
+        "Thunderbird",
+        "サンダーバード"
+      ],
       "race": "Sun",
       "raceName": "태양",
       "level": 35,
@@ -11760,6 +12489,10 @@
     {
       "id": "Titania",
       "name": "티타니아",
+      "aliases": [
+        "Titania",
+        "ティターニア"
+      ],
       "race": "Lovers",
       "raceName": "연인",
       "level": 49,
@@ -11821,6 +12554,10 @@
     {
       "id": "Trumpeter",
       "name": "트럼페터",
+      "aliases": [
+        "Trumpeter",
+        "トランペッター"
+      ],
       "race": "Judgement",
       "raceName": "심판",
       "level": 59,
@@ -11887,6 +12624,10 @@
     {
       "id": "Unicorn",
       "name": "유니콘",
+      "aliases": [
+        "Unicorn",
+        "ユニコーン"
+      ],
       "race": "Priestess",
       "raceName": "여법황",
       "level": 11,
@@ -11948,6 +12689,10 @@
     {
       "id": "Uriel",
       "name": "우리엘",
+      "aliases": [
+        "Uriel",
+        "ウリエル"
+      ],
       "race": "Aeon",
       "raceName": "영겁",
       "level": 57,
@@ -12014,6 +12759,10 @@
     {
       "id": "Valkyrie",
       "name": "발키리",
+      "aliases": [
+        "Valkyrie",
+        "ヴァルキリー"
+      ],
       "race": "Strength",
       "raceName": "힘",
       "level": 10,
@@ -12075,6 +12824,10 @@
     {
       "id": "Vanadis",
       "name": "바나디스",
+      "aliases": [
+        "Vanadis",
+        "ヴァナディース"
+      ],
       "race": "Star",
       "raceName": "별",
       "level": 58,
@@ -12141,6 +12894,10 @@
     {
       "id": "Vasuki",
       "name": "바스키",
+      "aliases": [
+        "Vasuki",
+        "ヴァスキ"
+      ],
       "race": "Hanged",
       "raceName": "사형수",
       "level": 38,
@@ -12207,6 +12964,10 @@
     {
       "id": "Virtue",
       "name": "버츄",
+      "aliases": [
+        "Virtue",
+        "ヴァーチャー"
+      ],
       "race": "Justice",
       "raceName": "정의",
       "level": 32,
@@ -12268,6 +13029,10 @@
     {
       "id": "Vishnu",
       "name": "비슈누",
+      "aliases": [
+        "Vishnu",
+        "ヴィシュヌ"
+      ],
       "race": "Sun",
       "raceName": "태양",
       "level": 78,
@@ -12334,6 +13099,10 @@
     {
       "id": "White Rider",
       "name": "화이트 라이더",
+      "aliases": [
+        "White Rider",
+        "ホワイトライダー"
+      ],
       "race": "Strength",
       "raceName": "힘",
       "level": 46,
@@ -12400,6 +13169,11 @@
     {
       "id": "Yakshini",
       "name": "야크시니",
+      "aliases": [
+        "Yakshini",
+        "Yaksini",
+        "ヤクシニー"
+      ],
       "race": "Empress",
       "raceName": "여황제",
       "level": 32,
@@ -12461,6 +13235,10 @@
     {
       "id": "Yamata-no-Orochi",
       "name": "야마타노오로치",
+      "aliases": [
+        "Yamata-no-Orochi",
+        "ヤマタノオロチ"
+      ],
       "race": "Moon",
       "raceName": "달",
       "level": 25,
@@ -12527,6 +13305,10 @@
     {
       "id": "Yatagarasu",
       "name": "야타가라스",
+      "aliases": [
+        "Yatagarasu",
+        "ヤタガラス"
+      ],
       "race": "Sun",
       "raceName": "태양",
       "level": 24,
@@ -12593,6 +13375,10 @@
     {
       "id": "Yurlungur",
       "name": "유룽",
+      "aliases": [
+        "Yurlungur",
+        "ユルング"
+      ],
       "race": "Temperance",
       "raceName": "절제",
       "level": 71,
@@ -12664,6 +13450,10 @@
     {
       "id": "Zorro",
       "name": "조로",
+      "aliases": [
+        "Zorro",
+        "ゾロ"
+      ],
       "race": "Magician",
       "raceName": "마법사",
       "level": 22,
@@ -12730,6 +13520,10 @@
     {
       "id": "Zouchouten",
       "name": "증장천",
+      "aliases": [
+        "Zouchouten",
+        "ゾウチョウテン"
+      ],
       "race": "Chariot",
       "raceName": "전차",
       "level": 14,

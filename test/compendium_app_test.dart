@@ -303,17 +303,66 @@ void main() {
   ) async {
     final s = await fresh();
     await openApp(tester, s);
-    await tester.tap(find.byType(DropdownButtonFormField<String>));
+    await tester.tap(find.byKey(const ValueKey('game-switcher')));
     await settle(tester);
     for (final g in games.values) {
       expect(find.text(g.name), findsWidgets);
     }
     expect(find.textContaining('Persona 6'), findsNothing);
-    await tester.tap(find.text(games['smt5v']!.name).last);
+    await tester.tap(find.byKey(const ValueKey('game-choice-smt5v')));
     await settle(tester);
     expect(s.selected, 'smt5v');
     expect(find.text('악마 전서'), findsOneWidget);
   });
+  test(
+    'all primary names are Korean and aliases retain canonical identity',
+    () {
+      for (final game in games.values) {
+        for (final demon in game.demons) {
+          expect(
+            RegExp('[가-힣]').hasMatch(demon.name),
+            isTrue,
+            reason: '${game.id}/${demon.id}',
+          );
+          expect(demon.matches(demon.id), isTrue);
+        }
+      }
+      expect(games['p3r']!.byId['Mercurius']!.name, '메르쿠리우스');
+      expect(games['p3r']!.byId['Mercurius']!.matches('메리쿠리우스'), isTrue);
+      expect(games['p4g']!.byId['Pyro Jack']!.name, '잭 오 랜턴');
+      expect(
+        games['p4g']!.byId['Pyro Jack']!.matches("Jack-o'-Lantern"),
+        isTrue,
+      );
+      expect(games['smt5v']!.byId['Qing Long']!.name, '청룡');
+      expect(games['smt5v']!.byId['Qing Long']!.matches('Seiryu'), isTrue);
+      expect(games['smt5v']!.byId['Dagda']!.name, '다그다');
+      expect(games['smt5v']!.byId['Eisheth']!.name, '아이셰스');
+    },
+  );
+  testWidgets(
+    'game sheet scrolls at large text and cancel preserves selection',
+    (tester) async {
+      final s = await fresh();
+      await openApp(tester, s, size: const Size(390, 650), scale: 1.6);
+      await tester.tap(find.byKey(const ValueKey('game-switcher')));
+      await settle(tester);
+      expect(tester.takeException(), isNull);
+      await tester.ensureVisible(
+        find.byKey(const ValueKey('game-choice-smt5v')),
+      );
+      await settle(tester);
+      await tester.tap(find.byKey(const ValueKey('game-choice-smt5v')));
+      await settle(tester);
+      expect(s.selected, 'smt5v');
+      await tester.tap(find.byKey(const ValueKey('game-switcher')));
+      await settle(tester);
+      await tester.tap(find.byTooltip('닫기'));
+      await settle(tester);
+      expect(s.selected, 'smt5v');
+      expect(tester.takeException(), isNull);
+    },
+  );
   testWidgets('registration and DLC disabled saved entries remain usable', (
     tester,
   ) async {

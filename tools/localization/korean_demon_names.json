@@ -1,0 +1,8265 @@
+{
+  "schema": 1,
+  "sources": {
+    "p3r_locale": {
+      "repository": "https://github.com/aqiu384/megaten-database",
+      "commit": "8f87f212e206748b71298a52eb1eaec1efed6161",
+      "path": "src/p3r/Content/Xrd777/Blueprints/common/Names/DatPersonaNameDataAsset.tsv",
+      "sha256": "c7569eb612397de2e8cdbf5cf48bc62e41ad01389a6d6be87a8f0ce4d50f37c1"
+    },
+    "smt5v_locale": {
+      "repository": "https://github.com/sisyphusw/smt5v",
+      "commit": "3d2e1a543e2ac486ffbee3f14b31c62d86d9a69c",
+      "path": "locales/character_name.json",
+      "sha256": "40668e19fa82819603306139ae384affefac4d5a392c642c0ed7d78f6917fc94"
+    },
+    "upstream_names": {
+      "repository": "https://github.com/aqiu384/megaten-fusion-tool",
+      "commit": "0b207612f6cdcff092e62af16f5c355271a1d892",
+      "path": "src/app/compendium/data/demon-names.json",
+      "sha256": "398f380980dea9c275a6e030ab9171c9e1a6dffe903b19a2b713e73d2bcc31b1"
+    }
+  },
+  "games": {
+    "p3r": {
+      "Abaddon": {
+        "name": "아바돈",
+        "aliases": [
+          "Abaddon",
+          "アバドン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アバドン"
+      },
+      "Alice": {
+        "name": "앨리스",
+        "aliases": [
+          "Alice",
+          "アリス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アリス"
+      },
+      "Alilat": {
+        "name": "알릴라트",
+        "aliases": [
+          "Alilat",
+          "アリラト"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アリラト"
+      },
+      "Ananta": {
+        "name": "아난타",
+        "aliases": [
+          "Ananta",
+          "アナンタ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アナンタ"
+      },
+      "Anat": {
+        "name": "아나트",
+        "aliases": [
+          "Anat",
+          "アナト"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アナト"
+      },
+      "Angel": {
+        "name": "엔젤",
+        "aliases": [
+          "Angel",
+          "エンジェル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "エンジェル"
+      },
+      "Anubis": {
+        "name": "아누비스",
+        "aliases": [
+          "Anubis",
+          "アヌビス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アヌビス"
+      },
+      "Apsaras": {
+        "name": "아프사라스",
+        "aliases": [
+          "Apsaras",
+          "アプサラス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アプサラス"
+      },
+      "Ara Mitama": {
+        "name": "아라미타마",
+        "aliases": [
+          "Ara Mitama",
+          "アラミタマ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アラミタマ"
+      },
+      "Arahabaki": {
+        "name": "아라하바키",
+        "aliases": [
+          "Arahabaki",
+          "アラハバキ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アラハバキ"
+      },
+      "Archangel": {
+        "name": "아크엔젤",
+        "aliases": [
+          "Archangel",
+          "アークエンジェル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アークエンジェル"
+      },
+      "Arsene": {
+        "name": "아르센",
+        "aliases": [
+          "Arsene",
+          "アルセーヌ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アルセーヌ"
+      },
+      "Astarte": {
+        "name": "아스타르테",
+        "aliases": [
+          "Astarte",
+          "アスタルテ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アスタルテ"
+      },
+      "Asura": {
+        "name": "아수라왕",
+        "aliases": [
+          "Asura",
+          "アスラおう"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アスラおう"
+      },
+      "Atavaka": {
+        "name": "아타바크",
+        "aliases": [
+          "Atavaka",
+          "アタバク"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アタバク"
+      },
+      "Atropos": {
+        "name": "아트로포스",
+        "aliases": [
+          "Atropos",
+          "アトロポス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アトロポス"
+      },
+      "Attis": {
+        "name": "아티스",
+        "aliases": [
+          "Attis",
+          "アティス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "アティス"
+      },
+      "Baal Zebul": {
+        "name": "바알세불",
+        "aliases": [
+          "Baal Zebul",
+          "バアル・ゼブル",
+          "바알제불"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "バアル・ゼブル"
+      },
+      "Baphomet": {
+        "name": "바포멧",
+        "aliases": [
+          "Baphomet",
+          "バフォメット"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "バフォメット"
+      },
+      "Barong": {
+        "name": "바롱",
+        "aliases": [
+          "Barong",
+          "バロン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "バロン"
+      },
+      "Beelzebub": {
+        "name": "베엘제붑",
+        "aliases": [
+          "Beelzebub",
+          "ベルゼブブ",
+          "바알제붑(벨제부브)"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ベルゼブブ"
+      },
+      "Belphegor": {
+        "name": "벨페고르",
+        "aliases": [
+          "Belphegor",
+          "ベルフェゴール"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ベルフェゴール"
+      },
+      "Berith": {
+        "name": "베리스",
+        "aliases": [
+          "Berith",
+          "ベリス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ベリス"
+      },
+      "Bishamonten": {
+        "name": "비사문천",
+        "aliases": [
+          "Bishamonten",
+          "ビシャモンテン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ビシャモンテン"
+      },
+      "Black Frost": {
+        "name": "사악한 프로스트",
+        "aliases": [
+          "Black Frost",
+          "ジャアクフロスト"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ジャアクフロスト"
+      },
+      "Byakko": {
+        "name": "백호",
+        "aliases": [
+          "Byakko",
+          "ビャッコ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ビャッコ"
+      },
+      "Captain Kidd": {
+        "name": "캡틴 키드",
+        "aliases": [
+          "Captain Kidd",
+          "キャプテンキッド"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "キャプテンキッド"
+      },
+      "Carmen": {
+        "name": "카르멘",
+        "aliases": [
+          "Carmen",
+          "カルメン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "カルメン"
+      },
+      "Cendrillon": {
+        "name": "상드리용",
+        "aliases": [
+          "Cendrillon",
+          "サンドリヨン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "サンドリヨン"
+      },
+      "Chernobog": {
+        "name": "체르노보그",
+        "aliases": [
+          "Chernobog",
+          "チェルノボグ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "チェルノボグ"
+      },
+      "Chi You": {
+        "name": "치우",
+        "aliases": [
+          "Chi You",
+          "シュウ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "シュウ"
+      },
+      "Chimera": {
+        "name": "키마이라",
+        "aliases": [
+          "Chimera",
+          "キマイラ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "キマイラ"
+      },
+      "Clotho": {
+        "name": "클로토",
+        "aliases": [
+          "Clotho",
+          "クロト"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "クロト"
+      },
+      "Cu Chulainn": {
+        "name": "쿠 훌린",
+        "aliases": [
+          "Cu Chulainn",
+          "クー・フーリン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "クー・フーリン"
+      },
+      "Cybele": {
+        "name": "키벨레",
+        "aliases": [
+          "Cybele",
+          "キュベレ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "キュベレ"
+      },
+      "Daisoujou": {
+        "name": "대승정",
+        "aliases": [
+          "Daisoujou",
+          "だいそうじょう"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "だいそうじょう"
+      },
+      "Dakini": {
+        "name": "다키니",
+        "aliases": [
+          "Dakini",
+          "ダーキニー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ダーキニー"
+      },
+      "Decarabia": {
+        "name": "데카라비아",
+        "aliases": [
+          "Decarabia",
+          "デカラビア"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "デカラビア"
+      },
+      "Dionysus": {
+        "name": "디오니소스",
+        "aliases": [
+          "Dionysus",
+          "ディオニュソス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ディオニュソス"
+      },
+      "Dominion": {
+        "name": "도미니온",
+        "aliases": [
+          "Dominion",
+          "ドミニオン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ドミニオン"
+      },
+      "Eligor": {
+        "name": "엘리고르",
+        "aliases": [
+          "Eligor",
+          "エリゴール"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "エリゴール"
+      },
+      "Flauros": {
+        "name": "플라로우스",
+        "aliases": [
+          "Flauros",
+          "フラロウス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "フラロウス"
+      },
+      "Forneus": {
+        "name": "포르네우스",
+        "aliases": [
+          "Forneus",
+          "フォルネウス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "フォルネウス"
+      },
+      "Fortuna": {
+        "name": "포르투나",
+        "aliases": [
+          "Fortuna",
+          "フォルトゥナ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "フォルトゥナ"
+      },
+      "Futsunushi": {
+        "name": "후츠누시",
+        "aliases": [
+          "Futsunushi",
+          "フツヌシ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "フツヌシ"
+      },
+      "Gabriel": {
+        "name": "가브리엘",
+        "aliases": [
+          "Gabriel",
+          "ガブリエル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ガブリエル"
+      },
+      "Ganesha": {
+        "name": "가네샤",
+        "aliases": [
+          "Ganesha",
+          "ガネーシャ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ガネーシャ"
+      },
+      "Ganga": {
+        "name": "강가",
+        "aliases": [
+          "Ganga",
+          "ガンガー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ガンガー"
+      },
+      "Garuda": {
+        "name": "가루다",
+        "aliases": [
+          "Garuda",
+          "ガルーダ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ガルーダ"
+      },
+      "Genbu": {
+        "name": "현무",
+        "aliases": [
+          "Genbu",
+          "ゲンブ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ゲンブ"
+      },
+      "Girimekhala": {
+        "name": "기리메칼라",
+        "aliases": [
+          "Girimehkala",
+          "Girimekhala",
+          "ギリメカラ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ギリメカラ"
+      },
+      "Goemon": {
+        "name": "고에몬",
+        "aliases": [
+          "Goemon",
+          "ゴエモン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ゴエモン"
+      },
+      "Gurulu": {
+        "name": "구루루",
+        "aliases": [
+          "Gurulu",
+          "グルル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "グルル"
+      },
+      "Hanuman": {
+        "name": "하누만",
+        "aliases": [
+          "Hanuman",
+          "ハヌマーン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ハヌマーン"
+      },
+      "Hariti": {
+        "name": "하리티",
+        "aliases": [
+          "Hariti",
+          "ハリティー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ハリティー"
+      },
+      "Hecate": {
+        "name": "헤카테",
+        "aliases": [
+          "Hecate",
+          "ヘカーテ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヘカーテ"
+      },
+      "Hecatoncheires": {
+        "name": "헤카톤케일",
+        "aliases": [
+          "Hecatoncheires",
+          "ヘカトンケイル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヘカトンケイル"
+      },
+      "Helel": {
+        "name": "루시펠",
+        "aliases": [
+          "Helel",
+          "ルシフェル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ルシフェル"
+      },
+      "Hell Biker": {
+        "name": "헬즈 엔젤",
+        "aliases": [
+          "Hell Biker",
+          "ヘルズエンジェル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヘルズエンジェル"
+      },
+      "High Pixie": {
+        "name": "하이픽시",
+        "aliases": [
+          "High Pixie",
+          "ハイピクシー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ハイピクシー"
+      },
+      "Horus": {
+        "name": "호루스",
+        "aliases": [
+          "Horus",
+          "ホルス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ホルス"
+      },
+      "Houou": {
+        "name": "봉황",
+        "aliases": [
+          "Houou",
+          "ホウオウ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ホウオウ"
+      },
+      "Hua Po": {
+        "name": "화백",
+        "aliases": [
+          "Hua Po",
+          "カハク"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "カハク"
+      },
+      "Incubus": {
+        "name": "인큐버스",
+        "aliases": [
+          "Incubus",
+          "インキュバス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "インキュバス"
+      },
+      "Inugami": {
+        "name": "이누가미",
+        "aliases": [
+          "Inugami",
+          "イヌガミ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "イヌガミ"
+      },
+      "Izanagi": {
+        "name": "이자나기",
+        "aliases": [
+          "Izanagi",
+          "イザナギ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "イザナギ"
+      },
+      "Jack Frost": {
+        "name": "잭 프로스트",
+        "aliases": [
+          "Jack Frost",
+          "ジャックフロスト"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ジャックフロスト"
+      },
+      "Jack-o'-Lantern": {
+        "name": "잭 오 랜턴",
+        "aliases": [
+          "Jack-o'-Lantern",
+          "ジャックランタン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ジャックランタン"
+      },
+      "Jatayu": {
+        "name": "자타유",
+        "aliases": [
+          "Jatayu",
+          "ジャターユ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ジャターユ"
+      },
+      "Jikokuten": {
+        "name": "지국천",
+        "aliases": [
+          "Jikokuten",
+          "ジコクテン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ジコクテン"
+      },
+      "Johanna": {
+        "name": "요한나",
+        "aliases": [
+          "Johanna",
+          "ヨハンナ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヨハンナ"
+      },
+      "Kaguya": {
+        "name": "카구야",
+        "aliases": [
+          "Kaguya",
+          "カグヤ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "カグヤ"
+      },
+      "Kaiwan": {
+        "name": "케완",
+        "aliases": [
+          "Kaiwan",
+          "キウン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "キウン"
+      },
+      "Kali": {
+        "name": "칼리",
+        "aliases": [
+          "Kali",
+          "カーリー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "カーリー"
+      },
+      "Kamu Susano-o": {
+        "name": "카무스사노오",
+        "aliases": [
+          "Kamu Susano-o",
+          "カムスサノヲ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "カムスサノヲ"
+      },
+      "Kikuri-Hime": {
+        "name": "키쿠리히메",
+        "aliases": [
+          "Kikuri-Hime",
+          "キクリヒメ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "キクリヒメ"
+      },
+      "King Frost": {
+        "name": "킹 프로스트",
+        "aliases": [
+          "King Frost",
+          "キングフロスト"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "キングフロスト"
+      },
+      "Kohryu": {
+        "name": "황룡",
+        "aliases": [
+          "Kohryu",
+          "コウリュウ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "コウリュウ"
+      },
+      "Koumokuten": {
+        "name": "광목천",
+        "aliases": [
+          "Koumokuten",
+          "コウモクテン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "コウモクテン"
+      },
+      "Kumbhanda": {
+        "name": "쿠반다",
+        "aliases": [
+          "Kumbhanda",
+          "クヴァンダ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "クヴァンダ"
+      },
+      "Kurama Tengu": {
+        "name": "쿠라마텐구",
+        "aliases": [
+          "Kurama Tengu",
+          "クラマテング"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "クラマテング"
+      },
+      "Kushi Mitama": {
+        "name": "쿠시미타마",
+        "aliases": [
+          "Kushi Mitama",
+          "クシミタマ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "クシミタマ"
+      },
+      "Lachesis": {
+        "name": "라케시스",
+        "aliases": [
+          "Lachesis",
+          "ラケシス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ラケシス"
+      },
+      "Lakshmi": {
+        "name": "락슈미",
+        "aliases": [
+          "Lakshmi",
+          "ラクシュミ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ラクシュミ"
+      },
+      "Lamia": {
+        "name": "라미아",
+        "aliases": [
+          "Lamia",
+          "ラミア"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ラミア"
+      },
+      "Leanan Sidhe": {
+        "name": "랴난시",
+        "aliases": [
+          "Leanan Sidhe",
+          "リャナンシー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "リャナンシー"
+      },
+      "Legion": {
+        "name": "레기온",
+        "aliases": [
+          "Legion",
+          "レギオン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "レギオン"
+      },
+      "Lilim": {
+        "name": "릴림",
+        "aliases": [
+          "Lilim",
+          "リリム"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "リリム"
+      },
+      "Lilith": {
+        "name": "릴리스",
+        "aliases": [
+          "Lilith",
+          "リリス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "リリス"
+      },
+      "Loa": {
+        "name": "로아",
+        "aliases": [
+          "Loa",
+          "ロア"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ロア"
+      },
+      "Loki": {
+        "name": "로키",
+        "aliases": [
+          "Loki",
+          "ロキ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ロキ"
+      },
+      "Loki A": {
+        "name": "로키 (정의)",
+        "aliases": [
+          "Loki",
+          "Loki A",
+          "ロキ",
+          "로키",
+          "로키 A"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ロキ"
+      },
+      "Lucifer": {
+        "name": "루시퍼",
+        "aliases": [
+          "Lucifer",
+          "ルシファー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ルシファー"
+      },
+      "Mada": {
+        "name": "마다",
+        "aliases": [
+          "Mada",
+          "マダ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "マダ"
+      },
+      "Magatsu-Izanagi": {
+        "name": "마가츠 이자나기",
+        "aliases": [
+          "Magatsu-Izanagi",
+          "マガツイザナギ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "マガツイザナギ"
+      },
+      "Mara": {
+        "name": "마라",
+        "aliases": [
+          "Mara",
+          "マーラ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "マーラ"
+      },
+      "Masakado": {
+        "name": "마사카도",
+        "aliases": [
+          "Masakado",
+          "マサカド"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "マサカド"
+      },
+      "Matador": {
+        "name": "마타도르",
+        "aliases": [
+          "Matador",
+          "マタドール"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "マタドール"
+      },
+      "Melchizedek": {
+        "name": "멜키세덱",
+        "aliases": [
+          "Melchizedek",
+          "メルキセデク"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "メルキセデク"
+      },
+      "Mercurius": {
+        "name": "메르쿠리우스",
+        "aliases": [
+          "Mercurius",
+          "メリクリウス",
+          "메리쿠리우스"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "メリクリウス"
+      },
+      "Messiah": {
+        "name": "메사이어",
+        "aliases": [
+          "Messiah",
+          "メサイア"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "メサイア"
+      },
+      "Metatron": {
+        "name": "메타트론",
+        "aliases": [
+          "Metatron",
+          "メタトロン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "メタトロン"
+      },
+      "Michael": {
+        "name": "미카엘",
+        "aliases": [
+          "Michael",
+          "ミカエル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ミカエル"
+      },
+      "Milady": {
+        "name": "밀라디",
+        "aliases": [
+          "Milady",
+          "ミラディ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ミラディ"
+      },
+      "Mishaguji": {
+        "name": "미샤구지사마",
+        "aliases": [
+          "Mishaguji",
+          "ミシャグジさま",
+          "먀샤구지사마"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ミシャグジさま"
+      },
+      "Mithras": {
+        "name": "미트라스",
+        "aliases": [
+          "Mithras",
+          "ミトラス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ミトラス"
+      },
+      "Mitra": {
+        "name": "미트라",
+        "aliases": [
+          "Mithra",
+          "Mitra",
+          "ミトラ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ミトラ"
+      },
+      "Mokoi": {
+        "name": "모코이",
+        "aliases": [
+          "Mokoi",
+          "モコイ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "モコイ"
+      },
+      "Mot": {
+        "name": "모트",
+        "aliases": [
+          "Mot",
+          "モト"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "モト"
+      },
+      "Mother Harlot": {
+        "name": "마더 할롯",
+        "aliases": [
+          "Mother Harlot",
+          "マザーハーロット"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "マザーハーロット"
+      },
+      "Mothman": {
+        "name": "모스맨",
+        "aliases": [
+          "Mothman",
+          "モスマン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "モスマン"
+      },
+      "Naga": {
+        "name": "나가",
+        "aliases": [
+          "Naga",
+          "ナーガ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ナーガ"
+      },
+      "Naga Raja": {
+        "name": "나가라자",
+        "aliases": [
+          "Naga Raja",
+          "Raja Naga",
+          "ナーガラジャ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ナーガラジャ"
+      },
+      "Narcissus": {
+        "name": "나르키소스",
+        "aliases": [
+          "Narcissus",
+          "ナルキッソス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ナルキッソス"
+      },
+      "Nebiros": {
+        "name": "네비로스",
+        "aliases": [
+          "Nebiros",
+          "ネビロス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ネビロス"
+      },
+      "Neko Shogun": {
+        "name": "네코쇼군",
+        "aliases": [
+          "Neko Shogun",
+          "ネコショウグン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ネコショウグン"
+      },
+      "Nekomata": {
+        "name": "네코마타",
+        "aliases": [
+          "Nekomata",
+          "ネコマタ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ネコマタ"
+      },
+      "Nidhoggr": {
+        "name": "니즈호그",
+        "aliases": [
+          "Nidhoggr",
+          "ニーズホッグ",
+          "니드호그"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ニーズホッグ"
+      },
+      "Nigi Mitama": {
+        "name": "니기미타마",
+        "aliases": [
+          "Nigi Mitama",
+          "ニギミタマ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ニギミタマ"
+      },
+      "Norn": {
+        "name": "노른",
+        "aliases": [
+          "Norn",
+          "ノルン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ノルン"
+      },
+      "Oberon": {
+        "name": "오베론",
+        "aliases": [
+          "Oberon",
+          "オベロン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "オベロン"
+      },
+      "Odin": {
+        "name": "오딘",
+        "aliases": [
+          "Odin",
+          "オーディン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "オーディン"
+      },
+      "Okuninushi": {
+        "name": "오오쿠니누시",
+        "aliases": [
+          "Okuninushi",
+          "オオクニヌシ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "オオクニヌシ"
+      },
+      "Omoikane": {
+        "name": "오모이카네",
+        "aliases": [
+          "Omoikane",
+          "オモイカネ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "オモイカネ"
+      },
+      "Oni": {
+        "name": "오니",
+        "aliases": [
+          "Oni",
+          "オニ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "オニ"
+      },
+      "Onmoraki": {
+        "name": "온모라키",
+        "aliases": [
+          "Onmoraki",
+          "オンモラキ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "オンモラキ"
+      },
+      "Orobas": {
+        "name": "오로바스",
+        "aliases": [
+          "Orobas",
+          "オロバス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "オロバス"
+      },
+      "Orpheus": {
+        "name": "오르페우스",
+        "aliases": [
+          "Orpheus",
+          "オルフェウス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "オルフェウス"
+      },
+      "Orpheus Telos": {
+        "name": "진 오르페우스",
+        "aliases": [
+          "Orpheus Telos",
+          "オルフェウス・改"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "オルフェウス・改"
+      },
+      "Orthrus": {
+        "name": "오르트로스",
+        "aliases": [
+          "Orthrus",
+          "オルトロス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "オルトロス"
+      },
+      "Ose": {
+        "name": "오세",
+        "aliases": [
+          "Ose",
+          "オセ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "オセ"
+      },
+      "Pale Rider": {
+        "name": "페일 라이더",
+        "aliases": [
+          "Pale Rider",
+          "ペイルライダー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ペイルライダー"
+      },
+      "Parvati": {
+        "name": "파르바티",
+        "aliases": [
+          "Parvati",
+          "パールヴァティ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "パールヴァティ"
+      },
+      "Pazuzu": {
+        "name": "파즈스",
+        "aliases": [
+          "Pazuzu",
+          "パズス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "パズス"
+      },
+      "Pisaca": {
+        "name": "피샤차",
+        "aliases": [
+          "Pisaca",
+          "ピシャーチャ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ピシャーチャ"
+      },
+      "Pixie": {
+        "name": "픽시",
+        "aliases": [
+          "Pixie",
+          "ピクシー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ピクシー"
+      },
+      "Power": {
+        "name": "파워",
+        "aliases": [
+          "Power",
+          "パワー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "パワー"
+      },
+      "Principality": {
+        "name": "프린시펄리티",
+        "aliases": [
+          "Principality",
+          "プリンシパリティ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "プリンシパリティ"
+      },
+      "Qitian Dasheng": {
+        "name": "제천대성",
+        "aliases": [
+          "Qitian Dasheng",
+          "Seiten Taisei",
+          "セイテンタイセイ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "セイテンタイセイ"
+      },
+      "Queen Medb": {
+        "name": "퀸 메이브",
+        "aliases": [
+          "Queen Mab",
+          "Queen Medb",
+          "クイーンメイブ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "クイーンメイブ"
+      },
+      "Quetzalcoatl": {
+        "name": "케찰코아틀",
+        "aliases": [
+          "Quetzalcoatl",
+          "ケツアルカトル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ケツアルカトル"
+      },
+      "Rakshasa": {
+        "name": "락샤사",
+        "aliases": [
+          "Rakshasa",
+          "ラクシャーサ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ラクシャーサ"
+      },
+      "Rangda": {
+        "name": "랑다",
+        "aliases": [
+          "Rangda",
+          "ランダ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ランダ"
+      },
+      "Raphael": {
+        "name": "라파엘",
+        "aliases": [
+          "Raphael",
+          "ラファエル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ラファエル"
+      },
+      "Robin Hood": {
+        "name": "로빈 후드",
+        "aliases": [
+          "Robin Hood",
+          "ロビンフッド"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ロビンフッド"
+      },
+      "Saki Mitama": {
+        "name": "사키미타마",
+        "aliases": [
+          "Saki Mitama",
+          "サキミタマ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "サキミタマ"
+      },
+      "Samael": {
+        "name": "사마엘",
+        "aliases": [
+          "Samael",
+          "サマエル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "サマエル"
+      },
+      "Sandalphon": {
+        "name": "산달폰",
+        "aliases": [
+          "Sandalphon",
+          "サンダルフォン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "サンダルフォン"
+      },
+      "Sandman": {
+        "name": "샌드맨",
+        "aliases": [
+          "Sandman",
+          "ザントマン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ザントマン"
+      },
+      "Sarasvati": {
+        "name": "사라스바티",
+        "aliases": [
+          "Sarasvati",
+          "サラスヴァティ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "サラスヴァティ"
+      },
+      "Satan": {
+        "name": "사탄",
+        "aliases": [
+          "Satan",
+          "サタン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "サタン"
+      },
+      "Satanael": {
+        "name": "사타나엘",
+        "aliases": [
+          "Satanael",
+          "サタナエル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "サタナエル"
+      },
+      "Sati": {
+        "name": "사티",
+        "aliases": [
+          "Sati",
+          "サティ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "サティ"
+      },
+      "Saturnus": {
+        "name": "사투르누스",
+        "aliases": [
+          "Saturnus",
+          "サトゥルヌス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "サトゥルヌス"
+      },
+      "Scathach": {
+        "name": "스카아하",
+        "aliases": [
+          "Scathach",
+          "スカアハ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "スカアハ"
+      },
+      "Seiryu": {
+        "name": "청룡",
+        "aliases": [
+          "Seiryu",
+          "セイリュウ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "セイリュウ"
+      },
+      "Seiten Taisei A": {
+        "name": "제천대성",
+        "aliases": [
+          "Qitian Dasheng",
+          "Seiten Taisei",
+          "Seiten Taisei A",
+          "セイテンタイセイ",
+          "제천대성 A"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "セイテンタイセイ"
+      },
+      "Setanta": {
+        "name": "세탄타",
+        "aliases": [
+          "Setanta",
+          "セタンタ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "セタンタ"
+      },
+      "Seth": {
+        "name": "세트",
+        "aliases": [
+          "Seth",
+          "セト"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "セト"
+      },
+      "Shiisaa": {
+        "name": "시사",
+        "aliases": [
+          "Shiisaa",
+          "シーサー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "シーサー"
+      },
+      "Shiki-Ouji": {
+        "name": "시키오우지",
+        "aliases": [
+          "Shiki-Ouji",
+          "シキオウジ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "シキオウジ"
+      },
+      "Shiva": {
+        "name": "시바",
+        "aliases": [
+          "Shiva",
+          "シヴァ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "シヴァ"
+      },
+      "Siegfried": {
+        "name": "지크프리트",
+        "aliases": [
+          "Siegfried",
+          "ジークフリード"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ジークフリード"
+      },
+      "Silky": {
+        "name": "실키",
+        "aliases": [
+          "Silky",
+          "シルキー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "シルキー"
+      },
+      "Skadi": {
+        "name": "스카디",
+        "aliases": [
+          "Skadi",
+          "スカディ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "スカディ"
+      },
+      "Slime": {
+        "name": "슬라임",
+        "aliases": [
+          "Slime",
+          "スライム"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "スライム"
+      },
+      "Succubus": {
+        "name": "서큐버스",
+        "aliases": [
+          "Succubus",
+          "サキュバス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "サキュバス"
+      },
+      "Surt": {
+        "name": "수르트",
+        "aliases": [
+          "Surt",
+          "スルト"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "スルト"
+      },
+      "Susano-o": {
+        "name": "스사노오",
+        "aliases": [
+          "Susano-o",
+          "スサノオ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "スサノオ"
+      },
+      "Suzaku": {
+        "name": "주작",
+        "aliases": [
+          "Suzaku",
+          "スザク"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "スザク"
+      },
+      "Take-Mikazuchi": {
+        "name": "타케미카즈치",
+        "aliases": [
+          "Take-Mikazuchi",
+          "タケミカヅチ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "タケミカヅチ"
+      },
+      "Take-Minakata": {
+        "name": "타케미나카타",
+        "aliases": [
+          "Take-Minakata",
+          "タケミナカタ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "タケミナカタ"
+      },
+      "Tam Lin": {
+        "name": "탐린",
+        "aliases": [
+          "Tam Lin",
+          "タムリン",
+          "탐 린"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "タムリン"
+      },
+      "Thanatos": {
+        "name": "타나토스",
+        "aliases": [
+          "Thanatos",
+          "タナトス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "タナトス"
+      },
+      "Thor": {
+        "name": "토르",
+        "aliases": [
+          "Thor",
+          "トール"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "トール"
+      },
+      "Thoth": {
+        "name": "토트",
+        "aliases": [
+          "Thoth",
+          "トート"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "トート"
+      },
+      "Throne": {
+        "name": "트론",
+        "aliases": [
+          "Throne",
+          "ソロネ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ソロネ"
+      },
+      "Thunderbird": {
+        "name": "선더버드",
+        "aliases": [
+          "Thunderbird",
+          "サンダーバード"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "サンダーバード"
+      },
+      "Titania": {
+        "name": "티타니아",
+        "aliases": [
+          "Titania",
+          "ティターニア"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ティターニア"
+      },
+      "Trumpeter": {
+        "name": "트럼페터",
+        "aliases": [
+          "Trumpeter",
+          "トランペッター"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "トランペッター"
+      },
+      "Unicorn": {
+        "name": "유니콘",
+        "aliases": [
+          "Unicorn",
+          "ユニコーン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ユニコーン"
+      },
+      "Uriel": {
+        "name": "우리엘",
+        "aliases": [
+          "Uriel",
+          "ウリエル"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ウリエル"
+      },
+      "Valkyrie": {
+        "name": "발키리",
+        "aliases": [
+          "Valkyrie",
+          "ヴァルキリー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヴァルキリー"
+      },
+      "Vanadis": {
+        "name": "바나디스",
+        "aliases": [
+          "Vanadis",
+          "ヴァナディース"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヴァナディース"
+      },
+      "Vasuki": {
+        "name": "바스키",
+        "aliases": [
+          "Vasuki",
+          "ヴァスキ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヴァスキ"
+      },
+      "Virtue": {
+        "name": "버츄",
+        "aliases": [
+          "Virtue",
+          "ヴァーチャー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヴァーチャー"
+      },
+      "Vishnu": {
+        "name": "비슈누",
+        "aliases": [
+          "Vishnu",
+          "ヴィシュヌ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヴィシュヌ"
+      },
+      "White Rider": {
+        "name": "화이트 라이더",
+        "aliases": [
+          "White Rider",
+          "ホワイトライダー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ホワイトライダー"
+      },
+      "Yakshini": {
+        "name": "야크시니",
+        "aliases": [
+          "Yakshini",
+          "Yaksini",
+          "ヤクシニー"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヤクシニー"
+      },
+      "Yamata-no-Orochi": {
+        "name": "야마타노오로치",
+        "aliases": [
+          "Yamata-no-Orochi",
+          "ヤマタノオロチ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヤマタノオロチ"
+      },
+      "Yatagarasu": {
+        "name": "야타가라스",
+        "aliases": [
+          "Yatagarasu",
+          "ヤタガラス"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ヤタガラス"
+      },
+      "Yurlungur": {
+        "name": "유룽",
+        "aliases": [
+          "Yurlungur",
+          "ユルング"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ユルング"
+      },
+      "Zorro": {
+        "name": "조로",
+        "aliases": [
+          "Zorro",
+          "ゾロ"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ゾロ"
+      },
+      "Zouchouten": {
+        "name": "증장천",
+        "aliases": [
+          "Zouchouten",
+          "ゾウチョウテン"
+        ],
+        "basis": "p3r_locale",
+        "japanese": "ゾウチョウテン"
+      }
+    },
+    "p4g": {
+      "Abaddon": {
+        "name": "아바돈",
+        "aliases": [
+          "Abaddon",
+          "アバドン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アバドン"
+      },
+      "Alice": {
+        "name": "앨리스",
+        "aliases": [
+          "Alice",
+          "アリス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アリス"
+      },
+      "Alilat": {
+        "name": "알릴라트",
+        "aliases": [
+          "Alilat",
+          "アリラト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アリラト"
+      },
+      "Alraune": {
+        "name": "알라우네",
+        "aliases": [
+          "Alraune",
+          "アルラウネ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "アルラウネ"
+      },
+      "Ananta": {
+        "name": "아난타",
+        "aliases": [
+          "Ananta",
+          "アナンタ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アナンタ"
+      },
+      "Andras": {
+        "name": "안드라스",
+        "aliases": [
+          "Andras",
+          "アンドラス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アンドラス"
+      },
+      "Angel": {
+        "name": "엔젤",
+        "aliases": [
+          "Angel",
+          "エンジェル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "エンジェル"
+      },
+      "Anubis": {
+        "name": "아누비스",
+        "aliases": [
+          "Anubis",
+          "アヌビス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アヌビス"
+      },
+      "Anzu": {
+        "name": "안즈",
+        "aliases": [
+          "Anzu",
+          "アンズー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アンズー"
+      },
+      "Apsaras": {
+        "name": "아프사라스",
+        "aliases": [
+          "Apsaras",
+          "アプサラス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アプサラス"
+      },
+      "Ara Mitama": {
+        "name": "아라미타마",
+        "aliases": [
+          "Ara Mitama",
+          "アラミタマ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アラミタマ"
+      },
+      "Arahabaki": {
+        "name": "아라하바키",
+        "aliases": [
+          "Arahabaki",
+          "アラハバキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アラハバキ"
+      },
+      "Archangel": {
+        "name": "아크엔젤",
+        "aliases": [
+          "Archangel",
+          "アークエンジェル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アークエンジェル"
+      },
+      "Ardha": {
+        "name": "아르다",
+        "aliases": [
+          "Ardha",
+          "アルダー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アルダー"
+      },
+      "Ares": {
+        "name": "아레스",
+        "aliases": [
+          "Ares",
+          "アレス"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "アレス"
+      },
+      "Asura": {
+        "name": "아수라왕",
+        "aliases": [
+          "Asura",
+          "アスラおう"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アスラおう"
+      },
+      "Atavaka": {
+        "name": "아타바크",
+        "aliases": [
+          "Atavaka",
+          "アタバク"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アタバク"
+      },
+      "Atropos": {
+        "name": "아트로포스",
+        "aliases": [
+          "Atropos",
+          "アトロポス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アトロポス"
+      },
+      "Attis": {
+        "name": "아티스",
+        "aliases": [
+          "Attis",
+          "アティス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アティス"
+      },
+      "Baal Zebul": {
+        "name": "바알제불",
+        "aliases": [
+          "Baal Zebul",
+          "バアル・ゼブル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "バアル・ゼブル"
+      },
+      "Barong": {
+        "name": "바롱",
+        "aliases": [
+          "Barong",
+          "バロン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "バロン"
+      },
+      "Beelzebub": {
+        "name": "베엘제붑",
+        "aliases": [
+          "Beelzebub",
+          "ベルゼブブ",
+          "바알제붑(벨제부브)"
+        ],
+        "basis": "shared_p3r_smt_locale",
+        "japanese": "ベルゼブブ"
+      },
+      "Belial": {
+        "name": "벨리알",
+        "aliases": [
+          "Belial",
+          "ベリアル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ベリアル"
+      },
+      "Belphegor": {
+        "name": "벨페고르",
+        "aliases": [
+          "Belphegor",
+          "ベルフェゴール"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ベルフェゴール"
+      },
+      "Berith": {
+        "name": "베리스",
+        "aliases": [
+          "Berith",
+          "ベリス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ベリス"
+      },
+      "Black Frost": {
+        "name": "사악한 프로스트",
+        "aliases": [
+          "Black Frost",
+          "ジャアクフロスト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ジャアクフロスト"
+      },
+      "Byakko": {
+        "name": "백호",
+        "aliases": [
+          "Byakko",
+          "ビャッコ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ビャッコ"
+      },
+      "Cerberus": {
+        "name": "케르베로스",
+        "aliases": [
+          "Cerberus",
+          "ケルベロス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ケルベロス"
+      },
+      "Clotho": {
+        "name": "클로토",
+        "aliases": [
+          "Clotho",
+          "クロト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クロト"
+      },
+      "Cu Chulainn": {
+        "name": "쿠 훌린",
+        "aliases": [
+          "Cu Chulainn",
+          "クー・フーリン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クー・フーリン"
+      },
+      "Cu Sith": {
+        "name": "카시",
+        "aliases": [
+          "Cu Sith",
+          "カーシー",
+          "쿠시"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "カーシー"
+      },
+      "Cybele": {
+        "name": "키벨레",
+        "aliases": [
+          "Cybele",
+          "キュベレ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "キュベレ"
+      },
+      "Daisoujou": {
+        "name": "대승정",
+        "aliases": [
+          "Daisoujou",
+          "だいそうじょう"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "だいそうじょう"
+      },
+      "Decarabia": {
+        "name": "데카라비아",
+        "aliases": [
+          "Decarabia",
+          "デカラビア"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "デカラビア"
+      },
+      "Dis": {
+        "name": "디스",
+        "aliases": [
+          "Dis",
+          "ディース"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ディース"
+      },
+      "Dominion": {
+        "name": "도미니온",
+        "aliases": [
+          "Dominion",
+          "ドミニオン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ドミニオン"
+      },
+      "Eligor": {
+        "name": "엘리고르",
+        "aliases": [
+          "Eligor",
+          "エリゴール"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "エリゴール"
+      },
+      "Flauros": {
+        "name": "플라로우스",
+        "aliases": [
+          "Flauros",
+          "フラロウス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フラロウス"
+      },
+      "Forneus": {
+        "name": "포르네우스",
+        "aliases": [
+          "Forneus",
+          "フォルネウス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フォルネウス"
+      },
+      "Fortuna": {
+        "name": "포르투나",
+        "aliases": [
+          "Fortuna",
+          "フォルトゥナ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フォルトゥナ"
+      },
+      "Futsunushi": {
+        "name": "후츠누시",
+        "aliases": [
+          "Futsunushi",
+          "フツヌシ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フツヌシ"
+      },
+      "Fuu-Ki": {
+        "name": "후우키",
+        "aliases": [
+          "Fuu-Ki",
+          "フウキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フウキ"
+      },
+      "Gabriel": {
+        "name": "가브리엘",
+        "aliases": [
+          "Gabriel",
+          "ガブリエル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ガブリエル"
+      },
+      "Ganesha": {
+        "name": "가네샤",
+        "aliases": [
+          "Ganesha",
+          "ガネーシャ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ガネーシャ"
+      },
+      "Ganga": {
+        "name": "강가",
+        "aliases": [
+          "Ganga",
+          "ガンガー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ガンガー"
+      },
+      "Garuda": {
+        "name": "가루다",
+        "aliases": [
+          "Garuda",
+          "ガルーダ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ガルーダ"
+      },
+      "Gdon": {
+        "name": "둔",
+        "aliases": [
+          "Gdon",
+          "ドゥン"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ドゥン"
+      },
+      "Genbu": {
+        "name": "현무",
+        "aliases": [
+          "Genbu",
+          "ゲンブ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ゲンブ"
+      },
+      "Ghoul": {
+        "name": "구울",
+        "aliases": [
+          "Ghoul",
+          "グール",
+          "굴"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "グール"
+      },
+      "Girimehkala": {
+        "name": "기리메칼라",
+        "aliases": [
+          "Girimehkala",
+          "Girimekhala",
+          "ギリメカラ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ギリメカラ"
+      },
+      "Gorgon": {
+        "name": "고르곤",
+        "aliases": [
+          "Gorgon",
+          "ゴルゴン"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ゴルゴン"
+      },
+      "Hachiman": {
+        "name": "하치만",
+        "aliases": [
+          "Hachiman",
+          "ハチマン"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ハチマン"
+      },
+      "Hanuman": {
+        "name": "하누만",
+        "aliases": [
+          "Hanuman",
+          "ハヌマーン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ハヌマーン"
+      },
+      "Hariti": {
+        "name": "하리티",
+        "aliases": [
+          "Hariti",
+          "ハリティー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ハリティー"
+      },
+      "Helel": {
+        "name": "루시펠",
+        "aliases": [
+          "Helel",
+          "ルシフェル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ルシフェル"
+      },
+      "Hell Biker": {
+        "name": "헬즈 엔젤",
+        "aliases": [
+          "Hell Biker",
+          "ヘルズエンジェル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヘルズエンジェル"
+      },
+      "High Pixie": {
+        "name": "하이픽시",
+        "aliases": [
+          "High Pixie",
+          "ハイピクシー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ハイピクシー"
+      },
+      "Hitokoto-Nushi": {
+        "name": "히토코토누시",
+        "aliases": [
+          "Hitokoto-Nushi",
+          "ヒトコトヌシ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ヒトコトヌシ"
+      },
+      "Hokuto Seikun": {
+        "name": "호쿠토세이쿤",
+        "aliases": [
+          "Hokuto Seikun",
+          "ホクトセイクン",
+          "북두성군"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ホクトセイクン"
+      },
+      "Horus": {
+        "name": "호루스",
+        "aliases": [
+          "Horus",
+          "ホルス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ホルス"
+      },
+      "Hua Po": {
+        "name": "화백",
+        "aliases": [
+          "Hua Po",
+          "カハク"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "カハク"
+      },
+      "Incubus": {
+        "name": "인큐버스",
+        "aliases": [
+          "Incubus",
+          "インキュバス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "インキュバス"
+      },
+      "Ippon-Datara": {
+        "name": "잇폰다타라",
+        "aliases": [
+          "Ippon-Datara",
+          "イッポンダタラ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "イッポンダタラ"
+      },
+      "Ishtar": {
+        "name": "이슈타르",
+        "aliases": [
+          "Ishtar",
+          "イシュタル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "イシュタル"
+      },
+      "Isis": {
+        "name": "이시스",
+        "aliases": [
+          "Isis",
+          "イシス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "イシス"
+      },
+      "Izanagi": {
+        "name": "이자나기",
+        "aliases": [
+          "Izanagi",
+          "イザナギ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "イザナギ"
+      },
+      "Izanagi-no-Okami": {
+        "name": "이자나기 오오카미",
+        "aliases": [
+          "Izanagi-no-Okami",
+          "伊邪那岐大神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "伊邪那岐大神"
+      },
+      "Jack Frost": {
+        "name": "잭 프로스트",
+        "aliases": [
+          "Jack Frost",
+          "ジャックフロスト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ジャックフロスト"
+      },
+      "Jatayu": {
+        "name": "자타유",
+        "aliases": [
+          "Jatayu",
+          "ジャターユ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ジャターユ"
+      },
+      "Jinn": {
+        "name": "진",
+        "aliases": [
+          "Jinn",
+          "ジン",
+          "지니"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ジン"
+      },
+      "Kaiwan": {
+        "name": "케완",
+        "aliases": [
+          "Kaiwan",
+          "キウン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "キウン"
+      },
+      "Kali": {
+        "name": "칼리",
+        "aliases": [
+          "Kali",
+          "カーリー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "カーリー"
+      },
+      "Kartikeya": {
+        "name": "카르티케야",
+        "aliases": [
+          "Kartikeya",
+          "カルティケーヤ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "カルティケーヤ"
+      },
+      "Kikuri-Hime": {
+        "name": "키쿠리히메",
+        "aliases": [
+          "Kikuri-Hime",
+          "キクリヒメ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "キクリヒメ"
+      },
+      "Kin-Ki": {
+        "name": "킨키",
+        "aliases": [
+          "Kin-Ki",
+          "キンキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "キンキ"
+      },
+      "King Frost": {
+        "name": "킹 프로스트",
+        "aliases": [
+          "King Frost",
+          "キングフロスト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "キングフロスト"
+      },
+      "Kohryu": {
+        "name": "황룡",
+        "aliases": [
+          "Kohryu",
+          "コウリュウ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "コウリュウ"
+      },
+      "Kurama Tengu": {
+        "name": "쿠라마텐구",
+        "aliases": [
+          "Kurama Tengu",
+          "クラマテング"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クラマテング"
+      },
+      "Kusi Mitama": {
+        "name": "쿠시미타마",
+        "aliases": [
+          "Kushi Mitama",
+          "Kusi Mitama",
+          "クシミタマ"
+        ],
+        "basis": "same_japanese_alias",
+        "japanese": "クシミタマ"
+      },
+      "Lachesis": {
+        "name": "라케시스",
+        "aliases": [
+          "Lachesis",
+          "ラケシス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ラケシス"
+      },
+      "Lamia": {
+        "name": "라미아",
+        "aliases": [
+          "Lamia",
+          "ラミア"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ラミア"
+      },
+      "Leanan Sidhe": {
+        "name": "랴난시",
+        "aliases": [
+          "Leanan Sidhe",
+          "リャナンシー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "リャナンシー"
+      },
+      "Legion": {
+        "name": "레기온",
+        "aliases": [
+          "Legion",
+          "レギオン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "レギオン"
+      },
+      "Lilim": {
+        "name": "릴림",
+        "aliases": [
+          "Lilim",
+          "リリム"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "リリム"
+      },
+      "Lilith": {
+        "name": "릴리스",
+        "aliases": [
+          "Lilith",
+          "リリス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "リリス"
+      },
+      "Loki": {
+        "name": "로키",
+        "aliases": [
+          "Loki",
+          "ロキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ロキ"
+      },
+      "Lucifer": {
+        "name": "루시퍼",
+        "aliases": [
+          "Lucifer",
+          "ルシファー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ルシファー"
+      },
+      "Mada": {
+        "name": "마다",
+        "aliases": [
+          "Mada",
+          "マダ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マダ"
+      },
+      "Mahakala": {
+        "name": "마하칼라",
+        "aliases": [
+          "Mahakala",
+          "マハカーラ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "マハカーラ"
+      },
+      "Makami": {
+        "name": "마카미",
+        "aliases": [
+          "Makami",
+          "マカミ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マカミ"
+      },
+      "Mara": {
+        "name": "마라",
+        "aliases": [
+          "Mara",
+          "マーラ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マーラ"
+      },
+      "Masakado": {
+        "name": "마사카도",
+        "aliases": [
+          "Masakado",
+          "マサカド"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マサカド"
+      },
+      "Matador": {
+        "name": "마타도르",
+        "aliases": [
+          "Matador",
+          "マタドール"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マタドール"
+      },
+      "Melchizedek": {
+        "name": "멜키세덱",
+        "aliases": [
+          "Melchizedek",
+          "メルキセデク"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "メルキセデク"
+      },
+      "Metatron": {
+        "name": "메타트론",
+        "aliases": [
+          "Metatron",
+          "メタトロン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "メタトロン"
+      },
+      "Michael": {
+        "name": "미카엘",
+        "aliases": [
+          "Michael",
+          "ミカエル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ミカエル"
+      },
+      "Mithra": {
+        "name": "미트라",
+        "aliases": [
+          "Mithra",
+          "Mitra",
+          "ミトラ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ミトラ"
+      },
+      "Mokoi": {
+        "name": "모코이",
+        "aliases": [
+          "Mokoi",
+          "モコイ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "モコイ"
+      },
+      "Mot": {
+        "name": "모트",
+        "aliases": [
+          "Mot",
+          "モト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "モト"
+      },
+      "Mother Harlot": {
+        "name": "마더 할롯",
+        "aliases": [
+          "Mother Harlot",
+          "マザーハーロット"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マザーハーロット"
+      },
+      "Mothman": {
+        "name": "모스맨",
+        "aliases": [
+          "Mothman",
+          "モスマン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "モスマン"
+      },
+      "Narasimha": {
+        "name": "나라싱하",
+        "aliases": [
+          "Narasimha",
+          "ナラシンハ",
+          "나라심하"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ナラシンハ"
+      },
+      "Nata Taishi": {
+        "name": "나타태자",
+        "aliases": [
+          "Nata Taishi",
+          "Nezha Taizi",
+          "ナタタイシ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ナタタイシ"
+      },
+      "Nebiros": {
+        "name": "네비로스",
+        "aliases": [
+          "Nebiros",
+          "ネビロス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ネビロス"
+      },
+      "Neko Shogun": {
+        "name": "네코쇼군",
+        "aliases": [
+          "Neko Shogun",
+          "ネコショウグン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ネコショウグン"
+      },
+      "Niddhoggr": {
+        "name": "니드호그",
+        "aliases": [
+          "Niddhoggr",
+          "Nidhoggr",
+          "ニーズホッグ"
+        ],
+        "basis": "same_japanese_alias",
+        "japanese": "ニーズホッグ"
+      },
+      "Nigi Mitama": {
+        "name": "니기미타마",
+        "aliases": [
+          "Nigi Mitama",
+          "ニギミタマ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ニギミタマ"
+      },
+      "Norn": {
+        "name": "노른",
+        "aliases": [
+          "Norn",
+          "ノルン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ノルン"
+      },
+      "Nozuchi": {
+        "name": "노즈치",
+        "aliases": [
+          "Nozuchi",
+          "ノズチ"
+        ],
+        "basis": "shared_smt_locale",
+        "japanese": "ノズチ"
+      },
+      "Obariyon": {
+        "name": "오바리욘",
+        "aliases": [
+          "Obariyon",
+          "オバリヨン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オバリヨン"
+      },
+      "Oberon": {
+        "name": "오베론",
+        "aliases": [
+          "Oberon",
+          "オベロン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オベロン"
+      },
+      "Odin": {
+        "name": "오딘",
+        "aliases": [
+          "Odin",
+          "オーディン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オーディン"
+      },
+      "Okuninushi": {
+        "name": "오오쿠니누시",
+        "aliases": [
+          "Okuninushi",
+          "オオクニヌシ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オオクニヌシ"
+      },
+      "Omoikane": {
+        "name": "오모이카네",
+        "aliases": [
+          "Omoikane",
+          "オモイカネ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オモイカネ"
+      },
+      "Ongyo-Ki": {
+        "name": "온교우키",
+        "aliases": [
+          "Ongyo-Ki",
+          "オンギョウキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オンギョウキ"
+      },
+      "Oni": {
+        "name": "오니",
+        "aliases": [
+          "Oni",
+          "オニ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オニ"
+      },
+      "Orobas": {
+        "name": "오로바스",
+        "aliases": [
+          "Orobas",
+          "オロバス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オロバス"
+      },
+      "Orthrus": {
+        "name": "오르트로스",
+        "aliases": [
+          "Orthrus",
+          "オルトロス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オルトロス"
+      },
+      "Ose": {
+        "name": "오세",
+        "aliases": [
+          "Ose",
+          "オセ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オセ"
+      },
+      "Pabilsag": {
+        "name": "파빌사그",
+        "aliases": [
+          "Pabilsag",
+          "パピルサグ",
+          "파피르사그"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "パピルサグ"
+      },
+      "Parvati": {
+        "name": "파르바티",
+        "aliases": [
+          "Parvati",
+          "パールヴァティ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "パールヴァティ"
+      },
+      "Pazuzu": {
+        "name": "파즈스",
+        "aliases": [
+          "Pazuzu",
+          "パズス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "パズス"
+      },
+      "Phoenix": {
+        "name": "봉황",
+        "aliases": [
+          "Phoenix",
+          "フェニックス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フェニックス"
+      },
+      "Pixie": {
+        "name": "픽시",
+        "aliases": [
+          "Pixie",
+          "ピクシー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ピクシー"
+      },
+      "Power": {
+        "name": "파워",
+        "aliases": [
+          "Power",
+          "パワー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "パワー"
+      },
+      "Principality": {
+        "name": "프린시펄리티",
+        "aliases": [
+          "Principality",
+          "プリンシパリティ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "プリンシパリティ"
+      },
+      "Pyro Jack": {
+        "name": "잭 오 랜턴",
+        "aliases": [
+          "Jack-o'-Lantern",
+          "Pyro Jack",
+          "ジャックランタン"
+        ],
+        "basis": "same_japanese_alias",
+        "japanese": "ジャックランタン"
+      },
+      "Queen Mab": {
+        "name": "퀸 메이브",
+        "aliases": [
+          "Queen Mab",
+          "Queen Medb",
+          "クイーンメイブ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クイーンメイブ"
+      },
+      "Rakshasa": {
+        "name": "락샤사",
+        "aliases": [
+          "Rakshasa",
+          "ラクシャーサ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ラクシャーサ"
+      },
+      "Rangda": {
+        "name": "랑다",
+        "aliases": [
+          "Rangda",
+          "ランダ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ランダ"
+      },
+      "Raphael": {
+        "name": "라파엘",
+        "aliases": [
+          "Raphael",
+          "ラファエル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ラファエル"
+      },
+      "Saki Mitama": {
+        "name": "사키미타마",
+        "aliases": [
+          "Saki Mitama",
+          "サキミタマ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サキミタマ"
+      },
+      "Samael": {
+        "name": "사마엘",
+        "aliases": [
+          "Samael",
+          "サマエル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サマエル"
+      },
+      "Sandalphon": {
+        "name": "산달폰",
+        "aliases": [
+          "Sandalphon",
+          "サンダルフォン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サンダルフォン"
+      },
+      "Sandman": {
+        "name": "샌드맨",
+        "aliases": [
+          "Sandman",
+          "ザントマン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ザントマン"
+      },
+      "Sarasvati": {
+        "name": "사라스바티",
+        "aliases": [
+          "Sarasvati",
+          "サラスヴァティ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サラスヴァティ"
+      },
+      "Satan": {
+        "name": "사탄",
+        "aliases": [
+          "Satan",
+          "サタン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サタン"
+      },
+      "Saturnus": {
+        "name": "사투르누스",
+        "aliases": [
+          "Saturnus",
+          "サトゥルヌス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サトゥルヌス"
+      },
+      "Scathach": {
+        "name": "스카아하",
+        "aliases": [
+          "Scathach",
+          "スカアハ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スカアハ"
+      },
+      "Seiryu": {
+        "name": "청룡",
+        "aliases": [
+          "Seiryu",
+          "セイリュウ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "セイリュウ"
+      },
+      "Senri": {
+        "name": "선리",
+        "aliases": [
+          "Senri",
+          "センリ"
+        ],
+        "basis": "shared_smt_locale",
+        "japanese": "センリ"
+      },
+      "Setanta": {
+        "name": "세탄타",
+        "aliases": [
+          "Setanta",
+          "セタンタ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "セタンタ"
+      },
+      "Seth": {
+        "name": "세트",
+        "aliases": [
+          "Seth",
+          "セト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "セト"
+      },
+      "Shiisaa": {
+        "name": "시사",
+        "aliases": [
+          "Shiisaa",
+          "シーサー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "シーサー"
+      },
+      "Shiki-Ouji": {
+        "name": "시키오우지",
+        "aliases": [
+          "Shiki-Ouji",
+          "シキオウジ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "シキオウジ"
+      },
+      "Shiva": {
+        "name": "시바",
+        "aliases": [
+          "Shiva",
+          "シヴァ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "シヴァ"
+      },
+      "Siegfried": {
+        "name": "지크프리트",
+        "aliases": [
+          "Siegfried",
+          "ジークフリード"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ジークフリード"
+      },
+      "Skadi": {
+        "name": "스카디",
+        "aliases": [
+          "Skadi",
+          "スカディ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スカディ"
+      },
+      "Slime": {
+        "name": "슬라임",
+        "aliases": [
+          "Slime",
+          "スライム"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スライム"
+      },
+      "Sraosha": {
+        "name": "스라오샤",
+        "aliases": [
+          "Sraosha",
+          "スラオシャ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スラオシャ"
+      },
+      "Succubus": {
+        "name": "서큐버스",
+        "aliases": [
+          "Succubus",
+          "サキュバス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サキュバス"
+      },
+      "Sui-Ki": {
+        "name": "스이키",
+        "aliases": [
+          "Sui-Ki",
+          "スイキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スイキ"
+      },
+      "Suparna": {
+        "name": "수파르나",
+        "aliases": [
+          "Suparna",
+          "スパルナ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "スパルナ"
+      },
+      "Surt": {
+        "name": "수르트",
+        "aliases": [
+          "Surt",
+          "スルト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スルト"
+      },
+      "Suzaku": {
+        "name": "주작",
+        "aliases": [
+          "Suzaku",
+          "スザク"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スザク"
+      },
+      "Sylph": {
+        "name": "실프",
+        "aliases": [
+          "Sylph",
+          "シルフ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "シルフ"
+      },
+      "Tam Lin": {
+        "name": "탐 린",
+        "aliases": [
+          "Tam Lin",
+          "タムリン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "タムリン"
+      },
+      "Taotie": {
+        "name": "도철",
+        "aliases": [
+          "Taotie",
+          "トウテツ",
+          "토우테츠"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "トウテツ"
+      },
+      "Taowu": {
+        "name": "도올",
+        "aliases": [
+          "Taowu",
+          "トウコツ",
+          "토우코츠"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "トウコツ"
+      },
+      "Thor": {
+        "name": "토르",
+        "aliases": [
+          "Thor",
+          "トール"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "トール"
+      },
+      "Thoth": {
+        "name": "토트",
+        "aliases": [
+          "Thoth",
+          "トート"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "トート"
+      },
+      "Throne": {
+        "name": "트론",
+        "aliases": [
+          "Throne",
+          "ソロネ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ソロネ"
+      },
+      "Titan": {
+        "name": "티탄",
+        "aliases": [
+          "Titan",
+          "ティターン"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ティターン"
+      },
+      "Titania": {
+        "name": "티타니아",
+        "aliases": [
+          "Titania",
+          "ティターニア"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ティターニア"
+      },
+      "Triglav": {
+        "name": "트리글라프",
+        "aliases": [
+          "Triglav",
+          "トリグラフ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "トリグラフ"
+      },
+      "Trumpeter": {
+        "name": "트럼페터",
+        "aliases": [
+          "Trumpeter",
+          "トランペッター"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "トランペッター"
+      },
+      "Tzitzimitl": {
+        "name": "치치미틀",
+        "aliases": [
+          "Tzitzimitl",
+          "ツィツィミトル"
+        ],
+        "basis": "shared_smt_locale",
+        "japanese": "ツィツィミトル"
+      },
+      "Ukobach": {
+        "name": "우코바크",
+        "aliases": [
+          "Ukobach",
+          "ウコバク"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ウコバク"
+      },
+      "Undine": {
+        "name": "운디네",
+        "aliases": [
+          "Undine",
+          "ウンディーネ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ウンディーネ"
+      },
+      "Unicorn": {
+        "name": "유니콘",
+        "aliases": [
+          "Unicorn",
+          "ユニコーン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ユニコーン"
+      },
+      "Uriel": {
+        "name": "우리엘",
+        "aliases": [
+          "Uriel",
+          "ウリエル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ウリエル"
+      },
+      "Valkyrie": {
+        "name": "발키리",
+        "aliases": [
+          "Valkyrie",
+          "ヴァルキリー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヴァルキリー"
+      },
+      "Vasuki": {
+        "name": "바스키",
+        "aliases": [
+          "Vasuki",
+          "ヴァスキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヴァスキ"
+      },
+      "Vetala": {
+        "name": "베타라",
+        "aliases": [
+          "Vetala",
+          "ヴェータラ",
+          "베탈라"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ヴェータラ"
+      },
+      "Virtue": {
+        "name": "버츄",
+        "aliases": [
+          "Virtue",
+          "ヴァーチャー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヴァーチャー"
+      },
+      "Vishnu": {
+        "name": "비슈누",
+        "aliases": [
+          "Vishnu",
+          "ヴィシュヌ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヴィシュヌ"
+      },
+      "White Rider": {
+        "name": "화이트 라이더",
+        "aliases": [
+          "White Rider",
+          "ホワイトライダー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ホワイトライダー"
+      },
+      "Xiezhai": {
+        "name": "해치",
+        "aliases": [
+          "Xiezhai",
+          "カイチ"
+        ],
+        "basis": "shared_smt_locale",
+        "japanese": "カイチ"
+      },
+      "Yaksini": {
+        "name": "야크시니",
+        "aliases": [
+          "Yakshini",
+          "Yaksini",
+          "ヤクシニー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヤクシニー"
+      },
+      "Yamata-no-Orochi": {
+        "name": "야마타노오로치",
+        "aliases": [
+          "Yamata-no-Orochi",
+          "ヤマタノオロチ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヤマタノオロチ"
+      },
+      "Yatagarasu": {
+        "name": "야타가라스",
+        "aliases": [
+          "Yatagarasu",
+          "ヤタガラス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヤタガラス"
+      },
+      "Yatsufusa": {
+        "name": "야츠후사",
+        "aliases": [
+          "Yatsufusa",
+          "ヤツフサ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ヤツフサ"
+      },
+      "Yomotsu-Ikusa": {
+        "name": "요모츠이쿠사",
+        "aliases": [
+          "Yomotsu-Ikusa",
+          "ヨモツイクサ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ヨモツイクサ"
+      },
+      "Yomotsu-Shikome": {
+        "name": "요모츠시코메",
+        "aliases": [
+          "Yomotsu-Shikome",
+          "ヨモツシコメ"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ヨモツシコメ"
+      },
+      "Yoshitsune": {
+        "name": "요시츠네",
+        "aliases": [
+          "Yoshitsune",
+          "ヨシツネ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヨシツネ"
+      },
+      "Yurlungur": {
+        "name": "유룽",
+        "aliases": [
+          "Yurlungur",
+          "ユルング"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ユルング"
+      },
+      "Zaou-Gongen": {
+        "name": "자오우곤겐",
+        "aliases": [
+          "Zaou-Gongen",
+          "ザオウゴンゲン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ザオウゴンゲン"
+      },
+      "Ame-no-Uzume": {
+        "name": "아메노우즈메",
+        "aliases": [
+          "Ame-no-Uzume",
+          "アメノウズメ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アメノウズメ"
+      },
+      "Baphomet": {
+        "name": "바포멧",
+        "aliases": [
+          "Baphomet",
+          "バフォメット"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "バフォメット"
+      },
+      "Chernobog": {
+        "name": "체르노보그",
+        "aliases": [
+          "Chernobog",
+          "チェルノボグ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "チェルノボグ"
+      },
+      "Gurr": {
+        "name": "구루루",
+        "aliases": [
+          "Gurr",
+          "Gurulu",
+          "グルル"
+        ],
+        "basis": "same_japanese_alias",
+        "japanese": "グルル"
+      },
+      "Kaguya": {
+        "name": "카구야",
+        "aliases": [
+          "Kaguya",
+          "カグヤ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "カグヤ"
+      },
+      "Kingu": {
+        "name": "킹구",
+        "aliases": [
+          "Kingu",
+          "キングー"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "キングー"
+      },
+      "Kumbhanda": {
+        "name": "쿠반다",
+        "aliases": [
+          "Kumbhanda",
+          "クヴァンダ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クヴァンダ"
+      },
+      "Kushinada-Hime": {
+        "name": "쿠시나다히메",
+        "aliases": [
+          "Kushinada",
+          "Kushinada-Hime",
+          "クシナダヒメ"
+        ],
+        "basis": "shared_smt_locale",
+        "japanese": "クシナダヒメ"
+      },
+      "Lakshmi": {
+        "name": "락슈미",
+        "aliases": [
+          "Lakshmi",
+          "ラクシュミ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ラクシュミ"
+      },
+      "Loa": {
+        "name": "로아",
+        "aliases": [
+          "Loa",
+          "ロア"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ロア"
+      },
+      "Magatsu-Izanagi": {
+        "name": "마가츠 이자나기",
+        "aliases": [
+          "Magatsu-Izanagi",
+          "マガツイザナギ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マガツイザナギ"
+      },
+      "Narcissus": {
+        "name": "나르키소스",
+        "aliases": [
+          "Narcissus",
+          "ナルキッソス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ナルキッソス"
+      },
+      "Pale Rider": {
+        "name": "페일 라이더",
+        "aliases": [
+          "Pale Rider",
+          "ペイルライダー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ペイルライダー"
+      },
+      "Quetzalcoatl": {
+        "name": "케찰코아틀",
+        "aliases": [
+          "Quetzalcoatl",
+          "ケツアルカトル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ケツアルカトル"
+      },
+      "Raja Naga": {
+        "name": "나가라자",
+        "aliases": [
+          "Naga Raja",
+          "Raja Naga",
+          "ナーガラジャ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ナーガラジャ"
+      },
+      "Sati": {
+        "name": "사티",
+        "aliases": [
+          "Sati",
+          "サティ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サティ"
+      },
+      "Seiten Taisei": {
+        "name": "제천대성",
+        "aliases": [
+          "Qitian Dasheng",
+          "Seiten Taisei",
+          "セイテンタイセイ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "セイテンタイセイ"
+      },
+      "Take-Minakata": {
+        "name": "타케미나카타",
+        "aliases": [
+          "Take-Minakata",
+          "タケミナカタ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "タケミナカタ"
+      }
+    },
+    "p5r": {
+      "Abaddon": {
+        "name": "아바돈",
+        "aliases": [
+          "Abaddon",
+          "アバドン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アバドン"
+      },
+      "Agathion": {
+        "name": "아가시온",
+        "aliases": [
+          "Agathion",
+          "アガシオン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アガシオン"
+      },
+      "Alice": {
+        "name": "앨리스",
+        "aliases": [
+          "Alice",
+          "アリス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アリス"
+      },
+      "Alilat": {
+        "name": "알릴라트",
+        "aliases": [
+          "Alilat",
+          "アリラト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アリラト"
+      },
+      "Ame-no-Uzume": {
+        "name": "아메노우즈메",
+        "aliases": [
+          "Ame-no-Uzume",
+          "アメノウズメ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アメノウズメ"
+      },
+      "Ananta": {
+        "name": "아난타",
+        "aliases": [
+          "Ananta",
+          "アナンタ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アナンタ"
+      },
+      "Andras": {
+        "name": "안드라스",
+        "aliases": [
+          "Andras",
+          "アンドラス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アンドラス"
+      },
+      "Angel": {
+        "name": "엔젤",
+        "aliases": [
+          "Angel",
+          "エンジェル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "エンジェル"
+      },
+      "Anubis": {
+        "name": "아누비스",
+        "aliases": [
+          "Anubis",
+          "アヌビス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アヌビス"
+      },
+      "Anzu": {
+        "name": "안즈",
+        "aliases": [
+          "Anzu",
+          "アンズー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アンズー"
+      },
+      "Apsaras": {
+        "name": "아프사라스",
+        "aliases": [
+          "Apsaras",
+          "アプサラス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アプサラス"
+      },
+      "Ara Mitama": {
+        "name": "아라미타마",
+        "aliases": [
+          "Ara Mitama",
+          "アラミタマ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アラミタマ"
+      },
+      "Arahabaki": {
+        "name": "아라하바키",
+        "aliases": [
+          "Arahabaki",
+          "アラハバキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アラハバキ"
+      },
+      "Archangel": {
+        "name": "아크엔젤",
+        "aliases": [
+          "Archangel",
+          "アークエンジェル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アークエンジェル"
+      },
+      "Ardha": {
+        "name": "아르다",
+        "aliases": [
+          "Ardha",
+          "アルダー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アルダー"
+      },
+      "Ariadne": {
+        "name": "아리아드네",
+        "aliases": [
+          "Ariadne",
+          "アリアドネ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アリアドネ"
+      },
+      "Ariadne Picaro": {
+        "name": "아리아드네 피카로",
+        "aliases": [
+          "Ariadne Picaro",
+          "アリアドネ・賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アリアドネ・賊神"
+      },
+      "Arsene": {
+        "name": "아르센",
+        "aliases": [
+          "Arsene",
+          "アルセーヌ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アルセーヌ"
+      },
+      "Asterius": {
+        "name": "아스테리오스",
+        "aliases": [
+          "Asterius",
+          "アステリオス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アステリオス"
+      },
+      "Asterius Picaro": {
+        "name": "아스테리오스 피카로",
+        "aliases": [
+          "Asterius Picaro",
+          "アステリオス・賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アステリオス・賊神"
+      },
+      "Asura": {
+        "name": "아수라왕",
+        "aliases": [
+          "Asura",
+          "アスラおう"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アスラおう"
+      },
+      "Atavaka": {
+        "name": "아타바크",
+        "aliases": [
+          "Atavaka",
+          "アタバク"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アタバク"
+      },
+      "Athena": {
+        "name": "아테나",
+        "aliases": [
+          "Athena",
+          "アテナ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アテナ"
+      },
+      "Athena Picaro": {
+        "name": "아테나 피카로",
+        "aliases": [
+          "Athena Picaro",
+          "アテナ・賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アテナ・賊神"
+      },
+      "Atropos": {
+        "name": "아트로포스",
+        "aliases": [
+          "Atropos",
+          "アトロポス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アトロポス"
+      },
+      "Attis": {
+        "name": "아티스",
+        "aliases": [
+          "Attis",
+          "アティス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "アティス"
+      },
+      "Baal": {
+        "name": "바알",
+        "aliases": [
+          "Baal",
+          "バアル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "バアル"
+      },
+      "Baphomet": {
+        "name": "바포멧",
+        "aliases": [
+          "Baphomet",
+          "バフォメット"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "バフォメット"
+      },
+      "Barong": {
+        "name": "바롱",
+        "aliases": [
+          "Barong",
+          "バロン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "バロン"
+      },
+      "Beelzebub": {
+        "name": "베엘제붑",
+        "aliases": [
+          "Beelzebub",
+          "ベルゼブブ",
+          "바알제붑(벨제부브)"
+        ],
+        "basis": "shared_p3r_smt_locale",
+        "japanese": "ベルゼブブ"
+      },
+      "Belial": {
+        "name": "벨리알",
+        "aliases": [
+          "Belial",
+          "ベリアル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ベリアル"
+      },
+      "Belphegor": {
+        "name": "벨페고르",
+        "aliases": [
+          "Belphegor",
+          "ベルフェゴール"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ベルフェゴール"
+      },
+      "Berith": {
+        "name": "베리스",
+        "aliases": [
+          "Berith",
+          "ベリス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ベリス"
+      },
+      "Bicorn": {
+        "name": "바이콘",
+        "aliases": [
+          "Bicorn",
+          "バイコーン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "バイコーン"
+      },
+      "Bishamonten": {
+        "name": "비사문천",
+        "aliases": [
+          "Bishamonten",
+          "ビシャモンテン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ビシャモンテン"
+      },
+      "Black Frost": {
+        "name": "사악한 프로스트",
+        "aliases": [
+          "Black Frost",
+          "ジャアクフロスト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ジャアクフロスト"
+      },
+      "Black Ooze": {
+        "name": "블랙 우즈",
+        "aliases": [
+          "Black Ooze",
+          "ブラックウーズ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ブラックウーズ"
+      },
+      "Black Rider": {
+        "name": "블랙 라이더",
+        "aliases": [
+          "Black Rider",
+          "ブラックライダー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ブラックライダー"
+      },
+      "Bugs": {
+        "name": "벅스",
+        "aliases": [
+          "Bugs",
+          "バグス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "バグス"
+      },
+      "Byakhee": {
+        "name": "비야키",
+        "aliases": [
+          "Byakhee",
+          "ビヤーキー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ビヤーキー"
+      },
+      "Byakko": {
+        "name": "백호",
+        "aliases": [
+          "Byakko",
+          "ビャッコ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ビャッコ"
+      },
+      "Cait Sith": {
+        "name": "카트시",
+        "aliases": [
+          "Cait Sith",
+          "ケットシー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ケットシー"
+      },
+      "Cerberus": {
+        "name": "케르베로스",
+        "aliases": [
+          "Cerberus",
+          "ケルベロス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ケルベロス"
+      },
+      "Chernobog": {
+        "name": "체르노보그",
+        "aliases": [
+          "Chernobog",
+          "チェルノボグ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "チェルノボグ"
+      },
+      "Chi You": {
+        "name": "치우",
+        "aliases": [
+          "Chi You",
+          "シュウ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "シュウ"
+      },
+      "Chimera": {
+        "name": "키마이라",
+        "aliases": [
+          "Chimera",
+          "キマイラ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "キマイラ"
+      },
+      "Choronzon": {
+        "name": "코론존",
+        "aliases": [
+          "Choronzon",
+          "コロンゾン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "コロンゾン"
+      },
+      "Clotho": {
+        "name": "클로토",
+        "aliases": [
+          "Clotho",
+          "クロト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クロト"
+      },
+      "Crystal Skull": {
+        "name": "수정해골",
+        "aliases": [
+          "Crystal Skull",
+          "水晶髑髏"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "水晶髑髏"
+      },
+      "Cu Chulainn": {
+        "name": "쿠 훌린",
+        "aliases": [
+          "Cu Chulainn",
+          "クー・フーリン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クー・フーリン"
+      },
+      "Cybele": {
+        "name": "키벨레",
+        "aliases": [
+          "Cybele",
+          "キュベレ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "キュベレ"
+      },
+      "Daisoujou": {
+        "name": "대승정",
+        "aliases": [
+          "Daisoujou",
+          "だいそうじょう"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "だいそうじょう"
+      },
+      "Dakini": {
+        "name": "다키니",
+        "aliases": [
+          "Dakini",
+          "ダーキニー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ダーキニー"
+      },
+      "Decarabia": {
+        "name": "데카라비아",
+        "aliases": [
+          "Decarabia",
+          "デカラビア"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "デカラビア"
+      },
+      "Dionysus": {
+        "name": "디오니소스",
+        "aliases": [
+          "Dionysus",
+          "ディオニュソス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ディオニュソス"
+      },
+      "Dominion": {
+        "name": "도미니온",
+        "aliases": [
+          "Dominion",
+          "ドミニオン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ドミニオン"
+      },
+      "Eligor": {
+        "name": "엘리고르",
+        "aliases": [
+          "Eligor",
+          "エリゴール"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "エリゴール"
+      },
+      "Emperor's Amulet": {
+        "name": "대제의 수호부",
+        "aliases": [
+          "Emperor's Amulet",
+          "大帝の護符"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "大帝の護符"
+      },
+      "Fafnir": {
+        "name": "파프니르",
+        "aliases": [
+          "Fafnir",
+          "ファフニール"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ファフニール"
+      },
+      "Flauros": {
+        "name": "플라로우스",
+        "aliases": [
+          "Flauros",
+          "フラロウス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フラロウス"
+      },
+      "Forneus": {
+        "name": "포르네우스",
+        "aliases": [
+          "Forneus",
+          "フォルネウス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フォルネウス"
+      },
+      "Fortuna": {
+        "name": "포르투나",
+        "aliases": [
+          "Fortuna",
+          "フォルトゥナ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フォルトゥナ"
+      },
+      "Futsunushi": {
+        "name": "후츠누시",
+        "aliases": [
+          "Futsunushi",
+          "フツヌシ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フツヌシ"
+      },
+      "Fuu-Ki": {
+        "name": "후우키",
+        "aliases": [
+          "Fuu-Ki",
+          "フウキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フウキ"
+      },
+      "Gabriel": {
+        "name": "가브리엘",
+        "aliases": [
+          "Gabriel",
+          "ガブリエル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ガブリエル"
+      },
+      "Ganesha": {
+        "name": "가네샤",
+        "aliases": [
+          "Ganesha",
+          "ガネーシャ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ガネーシャ"
+      },
+      "Garuda": {
+        "name": "가루다",
+        "aliases": [
+          "Garuda",
+          "ガルーダ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ガルーダ"
+      },
+      "Genbu": {
+        "name": "현무",
+        "aliases": [
+          "Genbu",
+          "ゲンブ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ゲンブ"
+      },
+      "Girimehkala": {
+        "name": "기리메칼라",
+        "aliases": [
+          "Girimehkala",
+          "Girimekhala",
+          "ギリメカラ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ギリメカラ"
+      },
+      "Hanuman": {
+        "name": "하누만",
+        "aliases": [
+          "Hanuman",
+          "ハヌマーン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ハヌマーン"
+      },
+      "Hariti": {
+        "name": "하리티",
+        "aliases": [
+          "Hariti",
+          "ハリティー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ハリティー"
+      },
+      "Hastur": {
+        "name": "하스터",
+        "aliases": [
+          "Hastur",
+          "ハスター"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ハスター"
+      },
+      "Hecatoncheires": {
+        "name": "헤카톤케일",
+        "aliases": [
+          "Hecatoncheires",
+          "ヘカトンケイル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヘカトンケイル"
+      },
+      "Hell Biker": {
+        "name": "헬즈 엔젤",
+        "aliases": [
+          "Hell Biker",
+          "ヘルズエンジェル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヘルズエンジェル"
+      },
+      "High Pixie": {
+        "name": "하이픽시",
+        "aliases": [
+          "High Pixie",
+          "ハイピクシー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ハイピクシー"
+      },
+      "Hope Diamond": {
+        "name": "호프 다이아",
+        "aliases": [
+          "Hope Diamond",
+          "ホープダイヤ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ホープダイヤ"
+      },
+      "Horus": {
+        "name": "호루스",
+        "aliases": [
+          "Horus",
+          "ホルス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ホルス"
+      },
+      "Hua Po": {
+        "name": "화백",
+        "aliases": [
+          "Hua Po",
+          "カハク"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "カハク"
+      },
+      "Incubus": {
+        "name": "인큐버스",
+        "aliases": [
+          "Incubus",
+          "インキュバス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "インキュバス"
+      },
+      "Inugami": {
+        "name": "이누가미",
+        "aliases": [
+          "Inugami",
+          "イヌガミ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "イヌガミ"
+      },
+      "Ippon-Datara": {
+        "name": "잇폰다타라",
+        "aliases": [
+          "Ippon-Datara",
+          "イッポンダタラ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "イッポンダタラ"
+      },
+      "Ishtar": {
+        "name": "이슈타르",
+        "aliases": [
+          "Ishtar",
+          "イシュタル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "イシュタル"
+      },
+      "Isis": {
+        "name": "이시스",
+        "aliases": [
+          "Isis",
+          "イシス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "イシス"
+      },
+      "Izanagi": {
+        "name": "이자나기",
+        "aliases": [
+          "Izanagi",
+          "イザナギ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "イザナギ"
+      },
+      "Izanagi Picaro": {
+        "name": "이자나기 피카로",
+        "aliases": [
+          "Izanagi Picaro",
+          "イザナギ・賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "イザナギ・賊神"
+      },
+      "Izanagi-no-Okami": {
+        "name": "이자나기 오오카미",
+        "aliases": [
+          "Izanagi-no-Okami",
+          "伊邪那岐大神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "伊邪那岐大神"
+      },
+      "Izanagi-no-Okami Picaro": {
+        "name": "이자나기 오오카미 피카로",
+        "aliases": [
+          "Izanagi-no-Okami Picaro",
+          "伊邪那岐大神・賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "伊邪那岐大神・賊神"
+      },
+      "Jack Frost": {
+        "name": "잭 프로스트",
+        "aliases": [
+          "Jack Frost",
+          "ジャックフロスト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ジャックフロスト"
+      },
+      "Jack-o'-Lantern": {
+        "name": "잭 오 랜턴",
+        "aliases": [
+          "Jack-o'-Lantern",
+          "ジャックランタン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ジャックランタン"
+      },
+      "Jatayu": {
+        "name": "자타유",
+        "aliases": [
+          "Jatayu",
+          "ジャターユ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ジャターユ"
+      },
+      "Jikokuten": {
+        "name": "지국천",
+        "aliases": [
+          "Jikokuten",
+          "ジコクテン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ジコクテン"
+      },
+      "Kaguya": {
+        "name": "카구야",
+        "aliases": [
+          "Kaguya",
+          "カグヤ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "カグヤ"
+      },
+      "Kaguya Picaro": {
+        "name": "카구야 피카로",
+        "aliases": [
+          "Kaguya Picaro",
+          "カグヤ・賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "カグヤ・賊神"
+      },
+      "Kaiwan": {
+        "name": "케완",
+        "aliases": [
+          "Kaiwan",
+          "キウン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "キウン"
+      },
+      "Kali": {
+        "name": "칼리",
+        "aliases": [
+          "Kali",
+          "カーリー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "カーリー"
+      },
+      "Kelpie": {
+        "name": "켈피",
+        "aliases": [
+          "Kelpie",
+          "ケルピー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ケルピー"
+      },
+      "Kikuri-Hime": {
+        "name": "키쿠리히메",
+        "aliases": [
+          "Kikuri-Hime",
+          "キクリヒメ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "キクリヒメ"
+      },
+      "Kin-Ki": {
+        "name": "킨키",
+        "aliases": [
+          "Kin-Ki",
+          "キンキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "キンキ"
+      },
+      "King Frost": {
+        "name": "킹 프로스트",
+        "aliases": [
+          "King Frost",
+          "キングフロスト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "キングフロスト"
+      },
+      "Kodama": {
+        "name": "코다마",
+        "aliases": [
+          "Kodama",
+          "コダマ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "コダマ"
+      },
+      "Koh-i-Noor": {
+        "name": "코이누르",
+        "aliases": [
+          "Koh-i-Noor",
+          "コ・イ・ヌール"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "コ・イ・ヌール"
+      },
+      "Kohryu": {
+        "name": "황룡",
+        "aliases": [
+          "Kohryu",
+          "コウリュウ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "コウリュウ"
+      },
+      "Koppa Tengu": {
+        "name": "콧파텐구",
+        "aliases": [
+          "Koppa Tengu",
+          "コッパテング"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "コッパテング"
+      },
+      "Koropokkuru": {
+        "name": "코로포클",
+        "aliases": [
+          "Koropokkur",
+          "Koropokkuru",
+          "コロポックル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "コロポックル"
+      },
+      "Koumokuten": {
+        "name": "광목천",
+        "aliases": [
+          "Koumokuten",
+          "コウモクテン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "コウモクテン"
+      },
+      "Kumbhanda": {
+        "name": "쿠반다",
+        "aliases": [
+          "Kumbhanda",
+          "クヴァンダ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クヴァンダ"
+      },
+      "Kurama Tengu": {
+        "name": "쿠라마텐구",
+        "aliases": [
+          "Kurama Tengu",
+          "クラマテング"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クラマテング"
+      },
+      "Kushi Mitama": {
+        "name": "쿠시미타마",
+        "aliases": [
+          "Kushi Mitama",
+          "クシミタマ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クシミタマ"
+      },
+      "Kushinada": {
+        "name": "쿠시나다히메",
+        "aliases": [
+          "Kushinada",
+          "クシナダヒメ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クシナダヒメ"
+      },
+      "Lachesis": {
+        "name": "라케시스",
+        "aliases": [
+          "Lachesis",
+          "ラケシス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ラケシス"
+      },
+      "Lakshmi": {
+        "name": "락슈미",
+        "aliases": [
+          "Lakshmi",
+          "ラクシュミ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ラクシュミ"
+      },
+      "Lamia": {
+        "name": "라미아",
+        "aliases": [
+          "Lamia",
+          "ラミア"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ラミア"
+      },
+      "Leanan Sidhe": {
+        "name": "랴난시",
+        "aliases": [
+          "Leanan Sidhe",
+          "リャナンシー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "リャナンシー"
+      },
+      "Legion": {
+        "name": "레기온",
+        "aliases": [
+          "Legion",
+          "レギオン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "レギオン"
+      },
+      "Lilim": {
+        "name": "릴림",
+        "aliases": [
+          "Lilim",
+          "リリム"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "リリム"
+      },
+      "Lilith": {
+        "name": "릴리스",
+        "aliases": [
+          "Lilith",
+          "リリス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "リリス"
+      },
+      "Loa": {
+        "name": "로아",
+        "aliases": [
+          "Loa",
+          "ロア"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ロア"
+      },
+      "Lucifer": {
+        "name": "루시퍼",
+        "aliases": [
+          "Lucifer",
+          "ルシファー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ルシファー"
+      },
+      "Macabre": {
+        "name": "마카브르",
+        "aliases": [
+          "Macabre",
+          "マカーブル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マカーブル"
+      },
+      "Mada": {
+        "name": "마다",
+        "aliases": [
+          "Mada",
+          "マダ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マダ"
+      },
+      "Magatsu-Izanagi": {
+        "name": "마가츠 이자나기",
+        "aliases": [
+          "Magatsu-Izanagi",
+          "マガツイザナギ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マガツイザナギ"
+      },
+      "Magatsu-Izanagi Picaro": {
+        "name": "마가츠 이자나기 피카로",
+        "aliases": [
+          "Magatsu-Izanagi Picaro",
+          "マガツイザナギ賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マガツイザナギ賊神"
+      },
+      "Makami": {
+        "name": "마카미",
+        "aliases": [
+          "Makami",
+          "マカミ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マカミ"
+      },
+      "Mandrake": {
+        "name": "맨드레이크",
+        "aliases": [
+          "Mandrake",
+          "マンドレイク"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マンドレイク"
+      },
+      "Mara": {
+        "name": "마라",
+        "aliases": [
+          "Mara",
+          "マーラ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マーラ"
+      },
+      "Maria": {
+        "name": "마리아",
+        "aliases": [
+          "Maria",
+          "マリア"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マリア"
+      },
+      "Matador": {
+        "name": "마타도르",
+        "aliases": [
+          "Matador",
+          "マタドール"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マタドール"
+      },
+      "Melchizedek": {
+        "name": "멜키세덱",
+        "aliases": [
+          "Melchizedek",
+          "メルキセデク"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "メルキセデク"
+      },
+      "Messiah": {
+        "name": "메사이어",
+        "aliases": [
+          "Messiah",
+          "メサイア"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "メサイア"
+      },
+      "Messiah Picaro": {
+        "name": "메사이어 피카로",
+        "aliases": [
+          "Messiah Picaro",
+          "メサイア・賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "メサイア・賊神"
+      },
+      "Metatron": {
+        "name": "메타트론",
+        "aliases": [
+          "Metatron",
+          "メタトロン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "メタトロン"
+      },
+      "Michael": {
+        "name": "미카엘",
+        "aliases": [
+          "Michael",
+          "ミカエル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ミカエル"
+      },
+      "Mishaguji": {
+        "name": "미샤구지사마",
+        "aliases": [
+          "Mishaguji",
+          "ミシャグジさま",
+          "먀샤구지사마"
+        ],
+        "basis": "shared_p3r_smt_locale",
+        "japanese": "ミシャグジさま"
+      },
+      "Mitra": {
+        "name": "미트라",
+        "aliases": [
+          "Mithra",
+          "Mitra",
+          "ミトラ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ミトラ"
+      },
+      "Mithras": {
+        "name": "미트라스",
+        "aliases": [
+          "Mithras",
+          "ミトラス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ミトラス"
+      },
+      "Mokoi": {
+        "name": "모코이",
+        "aliases": [
+          "Mokoi",
+          "モコイ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "モコイ"
+      },
+      "Moloch": {
+        "name": "몰록",
+        "aliases": [
+          "Moloch",
+          "モロク"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "モロク"
+      },
+      "Mot": {
+        "name": "모트",
+        "aliases": [
+          "Mot",
+          "モト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "モト"
+      },
+      "Mother Harlot": {
+        "name": "마더 할롯",
+        "aliases": [
+          "Mother Harlot",
+          "マザーハーロット"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "マザーハーロット"
+      },
+      "Mothman": {
+        "name": "모스맨",
+        "aliases": [
+          "Mothman",
+          "モスマン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "モスマン"
+      },
+      "Naga": {
+        "name": "나가",
+        "aliases": [
+          "Naga",
+          "ナーガ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ナーガ"
+      },
+      "Narcissus": {
+        "name": "나르키소스",
+        "aliases": [
+          "Narcissus",
+          "ナルキッソス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ナルキッソス"
+      },
+      "Nebiros": {
+        "name": "네비로스",
+        "aliases": [
+          "Nebiros",
+          "ネビロス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ネビロス"
+      },
+      "Neko Shogun": {
+        "name": "네코쇼군",
+        "aliases": [
+          "Neko Shogun",
+          "ネコショウグン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ネコショウグン"
+      },
+      "Nekomata": {
+        "name": "네코마타",
+        "aliases": [
+          "Nekomata",
+          "ネコマタ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ネコマタ"
+      },
+      "Nigi Mitama": {
+        "name": "니기미타마",
+        "aliases": [
+          "Nigi Mitama",
+          "ニギミタマ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ニギミタマ"
+      },
+      "Norn": {
+        "name": "노른",
+        "aliases": [
+          "Norn",
+          "ノルン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ノルン"
+      },
+      "Nue": {
+        "name": "누에",
+        "aliases": [
+          "Nue",
+          "ヌエ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヌエ"
+      },
+      "Obariyon": {
+        "name": "오바리욘",
+        "aliases": [
+          "Obariyon",
+          "オバリヨン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オバリヨン"
+      },
+      "Oberon": {
+        "name": "오베론",
+        "aliases": [
+          "Oberon",
+          "オベロン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オベロン"
+      },
+      "Odin": {
+        "name": "오딘",
+        "aliases": [
+          "Odin",
+          "オーディン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オーディン"
+      },
+      "Okuninushi": {
+        "name": "오오쿠니누시",
+        "aliases": [
+          "Okuninushi",
+          "オオクニヌシ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オオクニヌシ"
+      },
+      "Ongyo-Ki": {
+        "name": "온교우키",
+        "aliases": [
+          "Ongyo-Ki",
+          "オンギョウキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オンギョウキ"
+      },
+      "Oni": {
+        "name": "오니",
+        "aliases": [
+          "Oni",
+          "オニ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オニ"
+      },
+      "Onmoraki": {
+        "name": "온모라키",
+        "aliases": [
+          "Onmoraki",
+          "オンモラキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オンモラキ"
+      },
+      "Orichalcum": {
+        "name": "오리할콘",
+        "aliases": [
+          "Orichalcum",
+          "オリハルコン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オリハルコン"
+      },
+      "Orlov": {
+        "name": "오를로프",
+        "aliases": [
+          "Orlov",
+          "オルロフ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オルロフ"
+      },
+      "Orobas": {
+        "name": "오로바스",
+        "aliases": [
+          "Orobas",
+          "オロバス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オロバス"
+      },
+      "Orpheus": {
+        "name": "오르페우스",
+        "aliases": [
+          "Orpheus",
+          "オルフェウス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オルフェウス"
+      },
+      "Orpheus F": {
+        "name": "오르페우스 F (광대)",
+        "aliases": [
+          "Orpheus",
+          "Orpheus F",
+          "オルフェウス",
+          "오르페우스 F"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オルフェウス"
+      },
+      "Orpheus F Picaro": {
+        "name": "오르페우스 F 피카로",
+        "aliases": [
+          "Orpheus F Picaro",
+          "オルフェウス F・賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オルフェウス F・賊神"
+      },
+      "Orpheus Picaro": {
+        "name": "오르페우스 피카로",
+        "aliases": [
+          "Orpheus Picaro",
+          "オルフェウス・賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オルフェウス・賊神"
+      },
+      "Orthrus": {
+        "name": "오르트로스",
+        "aliases": [
+          "Orthrus",
+          "オルトロス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オルトロス"
+      },
+      "Ose": {
+        "name": "오세",
+        "aliases": [
+          "Ose",
+          "オセ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "オセ"
+      },
+      "Pale Rider": {
+        "name": "페일 라이더",
+        "aliases": [
+          "Pale Rider",
+          "ペイルライダー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ペイルライダー"
+      },
+      "Parvati": {
+        "name": "파르바티",
+        "aliases": [
+          "Parvati",
+          "パールヴァティ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "パールヴァティ"
+      },
+      "Pazuzu": {
+        "name": "파즈스",
+        "aliases": [
+          "Pazuzu",
+          "パズス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "パズス"
+      },
+      "Phoenix": {
+        "name": "봉황",
+        "aliases": [
+          "Phoenix",
+          "フェニックス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "フェニックス"
+      },
+      "Pisaca": {
+        "name": "피샤차",
+        "aliases": [
+          "Pisaca",
+          "ピシャーチャ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ピシャーチャ"
+      },
+      "Pixie": {
+        "name": "픽시",
+        "aliases": [
+          "Pixie",
+          "ピクシー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ピクシー"
+      },
+      "Power": {
+        "name": "파워",
+        "aliases": [
+          "Power",
+          "パワー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "パワー"
+      },
+      "Principality": {
+        "name": "프린시펄리티",
+        "aliases": [
+          "Principality",
+          "プリンシパリティ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "プリンシパリティ"
+      },
+      "Queen Mab": {
+        "name": "퀸 메이브",
+        "aliases": [
+          "Queen Mab",
+          "Queen Medb",
+          "クイーンメイブ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "クイーンメイブ"
+      },
+      "Queen's Necklace": {
+        "name": "여왕의 목걸이",
+        "aliases": [
+          "Queen's Necklace",
+          "女王の首飾り"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "女王の首飾り"
+      },
+      "Quetzalcoatl": {
+        "name": "케찰코아틀",
+        "aliases": [
+          "Quetzalcoatl",
+          "ケツアルカトル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ケツアルカトル"
+      },
+      "Raja Naga": {
+        "name": "나가라자",
+        "aliases": [
+          "Naga Raja",
+          "Raja Naga",
+          "ナーガラジャ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ナーガラジャ"
+      },
+      "Rakshasa": {
+        "name": "락샤사",
+        "aliases": [
+          "Rakshasa",
+          "ラクシャーサ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ラクシャーサ"
+      },
+      "Rangda": {
+        "name": "랑다",
+        "aliases": [
+          "Rangda",
+          "ランダ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ランダ"
+      },
+      "Raoul": {
+        "name": "라울",
+        "aliases": [
+          "Raoul",
+          "ラウール"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ラウール"
+      },
+      "Raphael": {
+        "name": "라파엘",
+        "aliases": [
+          "Raphael",
+          "ラファエル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ラファエル"
+      },
+      "Red Rider": {
+        "name": "레드 라이더",
+        "aliases": [
+          "Red Rider",
+          "レッドライダー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "レッドライダー"
+      },
+      "Regent": {
+        "name": "리젠트",
+        "aliases": [
+          "Regent",
+          "リージェント"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "リージェント"
+      },
+      "Saki Mitama": {
+        "name": "사키미타마",
+        "aliases": [
+          "Saki Mitama",
+          "サキミタマ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サキミタマ"
+      },
+      "Sandalphon": {
+        "name": "산달폰",
+        "aliases": [
+          "Sandalphon",
+          "サンダルフォン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サンダルフォン"
+      },
+      "Sandman": {
+        "name": "샌드맨",
+        "aliases": [
+          "Sandman",
+          "ザントマン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ザントマン"
+      },
+      "Sarasvati": {
+        "name": "사라스바티",
+        "aliases": [
+          "Sarasvati",
+          "サラスヴァティ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サラスヴァティ"
+      },
+      "Satan": {
+        "name": "사탄",
+        "aliases": [
+          "Satan",
+          "サタン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サタン"
+      },
+      "Satanael": {
+        "name": "사타나엘",
+        "aliases": [
+          "Satanael",
+          "サタナエル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サタナエル"
+      },
+      "Scathach": {
+        "name": "스카아하",
+        "aliases": [
+          "Scathach",
+          "スカアハ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スカアハ"
+      },
+      "Seiryu": {
+        "name": "청룡",
+        "aliases": [
+          "Seiryu",
+          "セイリュウ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "セイリュウ"
+      },
+      "Setanta": {
+        "name": "세탄타",
+        "aliases": [
+          "Setanta",
+          "セタンタ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "セタンタ"
+      },
+      "Seth": {
+        "name": "세트",
+        "aliases": [
+          "Seth",
+          "セト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "セト"
+      },
+      "Shiisaa": {
+        "name": "시사",
+        "aliases": [
+          "Shiisaa",
+          "シーサー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "シーサー"
+      },
+      "Shiki-Ouji": {
+        "name": "시키오우지",
+        "aliases": [
+          "Shiki-Ouji",
+          "シキオウジ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "シキオウジ"
+      },
+      "Shiva": {
+        "name": "시바",
+        "aliases": [
+          "Shiva",
+          "シヴァ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "シヴァ"
+      },
+      "Siegfried": {
+        "name": "지크프리트",
+        "aliases": [
+          "Siegfried",
+          "ジークフリード"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ジークフリード"
+      },
+      "Silky": {
+        "name": "실키",
+        "aliases": [
+          "Silky",
+          "シルキー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "シルキー"
+      },
+      "Skadi": {
+        "name": "스카디",
+        "aliases": [
+          "Skadi",
+          "スカディ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スカディ"
+      },
+      "Slime": {
+        "name": "슬라임",
+        "aliases": [
+          "Slime",
+          "スライム"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スライム"
+      },
+      "Sraosha": {
+        "name": "스라오샤",
+        "aliases": [
+          "Sraosha",
+          "スラオシャ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スラオシャ"
+      },
+      "Stone of Scone": {
+        "name": "스콘의 돌",
+        "aliases": [
+          "Stone of Scone",
+          "スクーンの石"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スクーンの石"
+      },
+      "Succubus": {
+        "name": "서큐버스",
+        "aliases": [
+          "Succubus",
+          "サキュバス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サキュバス"
+      },
+      "Sudama": {
+        "name": "스다마",
+        "aliases": [
+          "Sudama",
+          "スダマ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スダマ"
+      },
+      "Sui-Ki": {
+        "name": "스이키",
+        "aliases": [
+          "Sui-Ki",
+          "スイキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スイキ"
+      },
+      "Surt": {
+        "name": "수르트",
+        "aliases": [
+          "Surt",
+          "スルト"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スルト"
+      },
+      "Suzaku": {
+        "name": "주작",
+        "aliases": [
+          "Suzaku",
+          "スザク"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "スザク"
+      },
+      "Take-Minakata": {
+        "name": "타케미나카타",
+        "aliases": [
+          "Take-Minakata",
+          "タケミナカタ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "タケミナカタ"
+      },
+      "Tam Lin": {
+        "name": "탐 린",
+        "aliases": [
+          "Tam Lin",
+          "タムリン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "タムリン"
+      },
+      "Thanatos": {
+        "name": "타나토스",
+        "aliases": [
+          "Thanatos",
+          "タナトス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "タナトス"
+      },
+      "Thanatos Picaro": {
+        "name": "타나토스 피카로",
+        "aliases": [
+          "Thanatos Picaro",
+          "タナトス・賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "タナトス・賊神"
+      },
+      "Thor": {
+        "name": "토르",
+        "aliases": [
+          "Thor",
+          "トール"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "トール"
+      },
+      "Thoth": {
+        "name": "토트",
+        "aliases": [
+          "Thoth",
+          "トート"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "トート"
+      },
+      "Throne": {
+        "name": "트론",
+        "aliases": [
+          "Throne",
+          "ソロネ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ソロネ"
+      },
+      "Thunderbird": {
+        "name": "선더버드",
+        "aliases": [
+          "Thunderbird",
+          "サンダーバード"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "サンダーバード"
+      },
+      "Titania": {
+        "name": "티타니아",
+        "aliases": [
+          "Titania",
+          "ティターニア"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ティターニア"
+      },
+      "Trumpeter": {
+        "name": "트럼페터",
+        "aliases": [
+          "Trumpeter",
+          "トランペッター"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "トランペッター"
+      },
+      "Tsukiyomi": {
+        "name": "츠키요미",
+        "aliases": [
+          "Tsukiyomi",
+          "ツキヨミ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ツキヨミ"
+      },
+      "Tsukiyomi Picaro": {
+        "name": "츠키요미 피카로",
+        "aliases": [
+          "Tsukiyomi Picaro",
+          "ツキヨミ・賊神"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ツキヨミ・賊神"
+      },
+      "Unicorn": {
+        "name": "유니콘",
+        "aliases": [
+          "Unicorn",
+          "ユニコーン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ユニコーン"
+      },
+      "Uriel": {
+        "name": "우리엘",
+        "aliases": [
+          "Uriel",
+          "ウリエル"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ウリエル"
+      },
+      "Valkyrie": {
+        "name": "발키리",
+        "aliases": [
+          "Valkyrie",
+          "ヴァルキリー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヴァルキリー"
+      },
+      "Vasuki": {
+        "name": "바스키",
+        "aliases": [
+          "Vasuki",
+          "ヴァスキ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヴァスキ"
+      },
+      "Vishnu": {
+        "name": "비슈누",
+        "aliases": [
+          "Vishnu",
+          "ヴィシュヌ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヴィシュヌ"
+      },
+      "Vohu Manah": {
+        "name": "보후 마나흐",
+        "aliases": [
+          "Vohu Manah",
+          "ウォフマナフ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ウォフマナフ"
+      },
+      "White Rider": {
+        "name": "화이트 라이더",
+        "aliases": [
+          "White Rider",
+          "ホワイトライダー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ホワイトライダー"
+      },
+      "Yaksini": {
+        "name": "야크시니",
+        "aliases": [
+          "Yakshini",
+          "Yaksini",
+          "ヤクシニー"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヤクシニー"
+      },
+      "Yamata-no-Orochi": {
+        "name": "야마타노오로치",
+        "aliases": [
+          "Yamata-no-Orochi",
+          "ヤマタノオロチ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヤマタノオロチ"
+      },
+      "Yatagarasu": {
+        "name": "야타가라스",
+        "aliases": [
+          "Yatagarasu",
+          "ヤタガラス"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヤタガラス"
+      },
+      "Yoshitsune": {
+        "name": "요시츠네",
+        "aliases": [
+          "Yoshitsune",
+          "ヨシツネ"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ヨシツネ"
+      },
+      "Yurlungur": {
+        "name": "유룽",
+        "aliases": [
+          "Yurlungur",
+          "ユルング"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ユルング"
+      },
+      "Zaou-Gongen": {
+        "name": "자오우곤겐",
+        "aliases": [
+          "Zaou-Gongen",
+          "ザオウゴンゲン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ザオウゴンゲン"
+      },
+      "Zouchouten": {
+        "name": "증장천",
+        "aliases": [
+          "Zouchouten",
+          "ゾウチョウテン"
+        ],
+        "basis": "upstream_korean",
+        "japanese": "ゾウチョウテン"
+      }
+    },
+    "smt5v": {
+      "Abaddon": {
+        "name": "아바돈",
+        "aliases": [
+          "Abaddon",
+          "アバドン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アバドン"
+      },
+      "Abdiel": {
+        "name": "아브디엘",
+        "aliases": [
+          "Abdiel",
+          "アブディエル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アブディエル"
+      },
+      "Abdiel A": {
+        "name": "아브디엘 (타천사)",
+        "aliases": [
+          "Abdiel A",
+          "アブディエル",
+          "아브디엘"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アブディエル"
+      },
+      "Adramelech": {
+        "name": "아드라멜렉",
+        "aliases": [
+          "Adramelech",
+          "アドラメレク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アドラメレク"
+      },
+      "Aeros": {
+        "name": "에어로스",
+        "aliases": [
+          "Aeros",
+          "エアロス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "エアロス"
+      },
+      "Agathion": {
+        "name": "아가시온",
+        "aliases": [
+          "Agathion",
+          "アガシオン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アガシオン"
+      },
+      "Aitvaras": {
+        "name": "아이트바라스",
+        "aliases": [
+          "Aitvaras",
+          "アイトワラス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アイトワラス"
+      },
+      "Alice": {
+        "name": "앨리스",
+        "aliases": [
+          "Alice",
+          "アリス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アリス"
+      },
+      "Alilat": {
+        "name": "알릴라트",
+        "aliases": [
+          "Alilat",
+          "アリラト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アリラト"
+      },
+      "Amanozako": {
+        "name": "아마노자코",
+        "aliases": [
+          "Amanozako",
+          "アマノザコ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アマノザコ"
+      },
+      "Ame-no-Uzume": {
+        "name": "아메노우즈메",
+        "aliases": [
+          "Ame-no-Uzume",
+          "アメノウズメ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アメノウズメ"
+      },
+      "Amon": {
+        "name": "아몬",
+        "aliases": [
+          "Amon",
+          "アモン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アモン"
+      },
+      "Anahita": {
+        "name": "아나히타",
+        "aliases": [
+          "Anahita",
+          "アナーヒター"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アナーヒター"
+      },
+      "Ananta": {
+        "name": "아난타",
+        "aliases": [
+          "Ananta",
+          "アナンタ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アナンタ"
+      },
+      "Andras": {
+        "name": "안드라스",
+        "aliases": [
+          "Andras",
+          "アンドラス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アンドラス"
+      },
+      "Angel": {
+        "name": "엔젤",
+        "aliases": [
+          "Angel",
+          "エンジェル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "エンジェル"
+      },
+      "Anubis": {
+        "name": "아누비스",
+        "aliases": [
+          "Anubis",
+          "アヌビス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アヌビス"
+      },
+      "Anzu": {
+        "name": "안즈",
+        "aliases": [
+          "Anzu",
+          "アンズー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アンズー"
+      },
+      "Apsaras": {
+        "name": "아프사라스",
+        "aliases": [
+          "Apsaras",
+          "アプサラス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アプサラス"
+      },
+      "Aquans": {
+        "name": "아쿠안즈",
+        "aliases": [
+          "Aquans",
+          "アクアンズ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アクアンズ"
+      },
+      "Arahabaki": {
+        "name": "아라하바키",
+        "aliases": [
+          "Arahabaki",
+          "アラハバキ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アラハバキ"
+      },
+      "Archangel": {
+        "name": "아크엔젤",
+        "aliases": [
+          "Archangel",
+          "アークエンジェル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アークエンジェル"
+      },
+      "Arioch": {
+        "name": "아리오크",
+        "aliases": [
+          "Arioch",
+          "アリオク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アリオク"
+      },
+      "Artemis": {
+        "name": "아르테미스",
+        "aliases": [
+          "Artemis",
+          "アルテミス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アルテミス"
+      },
+      "Asura": {
+        "name": "아수라왕",
+        "aliases": [
+          "Asura",
+          "アスラおう"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アスラおう"
+      },
+      "Atavaka": {
+        "name": "아타바크",
+        "aliases": [
+          "Atavaka",
+          "アタバク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アタバク"
+      },
+      "Atropos": {
+        "name": "아트로포스",
+        "aliases": [
+          "Atropos",
+          "アトロポス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アトロポス"
+      },
+      "Attis": {
+        "name": "아티스",
+        "aliases": [
+          "Attis",
+          "アティス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アティス"
+      },
+      "Azumi": {
+        "name": "아즈미",
+        "aliases": [
+          "Azumi",
+          "アズミ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アズミ"
+      },
+      "Baal": {
+        "name": "바알",
+        "aliases": [
+          "Baal",
+          "バアル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "バアル"
+      },
+      "Baihu": {
+        "name": "백호",
+        "aliases": [
+          "Baihu",
+          "Byakko",
+          "ビャッコ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ビャッコ"
+      },
+      "Baphomet": {
+        "name": "바포멧",
+        "aliases": [
+          "Baphomet",
+          "バフォメット"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "バフォメット"
+      },
+      "Barong": {
+        "name": "바롱",
+        "aliases": [
+          "Barong",
+          "バロン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "バロン"
+      },
+      "Basilisk": {
+        "name": "바실리스크",
+        "aliases": [
+          "Basilisk",
+          "バジリスク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "バジリスク"
+      },
+      "Beelzebub": {
+        "name": "베엘제붑",
+        "aliases": [
+          "Beelzebub",
+          "ベルゼブブ",
+          "바알제붑(벨제부브)"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ベルゼブブ"
+      },
+      "Belial": {
+        "name": "벨리알",
+        "aliases": [
+          "Belial",
+          "ベリアル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ベリアル"
+      },
+      "Belphegor": {
+        "name": "벨페고르",
+        "aliases": [
+          "Belphegor",
+          "ベルフェゴール"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ベルフェゴール"
+      },
+      "Berith": {
+        "name": "베리스",
+        "aliases": [
+          "Berith",
+          "ベリス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ベリス"
+      },
+      "Bicorn": {
+        "name": "바이콘",
+        "aliases": [
+          "Bicorn",
+          "バイコーン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "バイコーン"
+      },
+      "Bishamonten": {
+        "name": "비사문천",
+        "aliases": [
+          "Bishamonten",
+          "ビシャモンテン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ビシャモンテン"
+      },
+      "Black Frost": {
+        "name": "사악한 프로스트",
+        "aliases": [
+          "Black Frost",
+          "ジャアクフロスト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ジャアクフロスト"
+      },
+      "Black Ooze": {
+        "name": "블랙 우즈",
+        "aliases": [
+          "Black Ooze",
+          "ブラックウーズ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ブラックウーズ"
+      },
+      "Black Rider": {
+        "name": "블랙 라이더",
+        "aliases": [
+          "Black Rider",
+          "ブラックライダー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ブラックライダー"
+      },
+      "Bugs": {
+        "name": "벅스",
+        "aliases": [
+          "Bugs",
+          "バグス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "バグス"
+      },
+      "Cait Sith": {
+        "name": "카트시",
+        "aliases": [
+          "Cait Sith",
+          "ケットシー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ケットシー"
+      },
+      "Camael": {
+        "name": "카마엘",
+        "aliases": [
+          "Camael",
+          "カマエル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "カマエル"
+      },
+      "Cerberus": {
+        "name": "케르베로스",
+        "aliases": [
+          "Cerberus",
+          "ケルベロス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ケルベロス"
+      },
+      "Chernobog": {
+        "name": "체르노보그",
+        "aliases": [
+          "Chernobog",
+          "チェルノボグ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "チェルノボグ"
+      },
+      "Chi You": {
+        "name": "치우",
+        "aliases": [
+          "Chi You",
+          "シュウ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "シュウ"
+      },
+      "Chimera": {
+        "name": "키마이라",
+        "aliases": [
+          "Chimera",
+          "キマイラ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "キマイラ"
+      },
+      "Cironnup": {
+        "name": "치론누프",
+        "aliases": [
+          "Cironnup",
+          "チロンヌプ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "チロンヌプ"
+      },
+      "Cleopatra": {
+        "name": "클레오파트라",
+        "aliases": [
+          "Cleopatra",
+          "クレオパトラ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "クレオパトラ"
+      },
+      "Clotho": {
+        "name": "클로토",
+        "aliases": [
+          "Clotho",
+          "クロト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "クロト"
+      },
+      "Cu Chulainn": {
+        "name": "쿠 훌린",
+        "aliases": [
+          "Cu Chulainn",
+          "クー・フーリン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "クー・フーリン"
+      },
+      "Cybele": {
+        "name": "키벨레",
+        "aliases": [
+          "Cybele",
+          "キュベレ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "キュベレ"
+      },
+      "Daemon": {
+        "name": "다이몬",
+        "aliases": [
+          "Daemon",
+          "ダイモーン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ダイモーン"
+      },
+      "Daisoujou": {
+        "name": "대승정",
+        "aliases": [
+          "Daisoujou",
+          "だいそうじょう"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "だいそうじょう"
+      },
+      "Dakini": {
+        "name": "다키니",
+        "aliases": [
+          "Dakini",
+          "ダーキニー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ダーキニー"
+      },
+      "Danu": {
+        "name": "다누",
+        "aliases": [
+          "Danu",
+          "ダヌー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ダヌー"
+      },
+      "Decarabia": {
+        "name": "데카라비아",
+        "aliases": [
+          "Decarabia",
+          "デカラビア"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "デカラビア"
+      },
+      "Demeter": {
+        "name": "데메테르",
+        "aliases": [
+          "Demeter",
+          "デメテル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "デメテル"
+      },
+      "Dionysus": {
+        "name": "디오니소스",
+        "aliases": [
+          "Dionysus",
+          "ディオニュソス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ディオニュソス"
+      },
+      "Dominion": {
+        "name": "도미니온",
+        "aliases": [
+          "Dominion",
+          "ドミニオン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ドミニオン"
+      },
+      "Eligor": {
+        "name": "엘리고르",
+        "aliases": [
+          "Eligor",
+          "エリゴール"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "エリゴール"
+      },
+      "Erthys": {
+        "name": "어시즈",
+        "aliases": [
+          "Erthys",
+          "アーシーズ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アーシーズ"
+      },
+      "Fafnir": {
+        "name": "파프니르",
+        "aliases": [
+          "Fafnir",
+          "ファフニール"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ファフニール"
+      },
+      "Feng Huang": {
+        "name": "봉황",
+        "aliases": [
+          "Feng Huang",
+          "Houou",
+          "ホウオウ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ホウオウ"
+      },
+      "Fionn mac Cumhaill": {
+        "name": "핀 막 쿨",
+        "aliases": [
+          "Fionn mac Cumhaill",
+          "フィン・マックール"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "フィン・マックール"
+      },
+      "Flaemis": {
+        "name": "플레이미즈",
+        "aliases": [
+          "Flaemis",
+          "フレイミーズ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "フレイミーズ"
+      },
+      "Flauros": {
+        "name": "플라로우스",
+        "aliases": [
+          "Flauros",
+          "フラロウス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "フラロウス"
+      },
+      "Forneus": {
+        "name": "포르네우스",
+        "aliases": [
+          "Forneus",
+          "フォルネウス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "フォルネウス"
+      },
+      "Fortuna": {
+        "name": "포르투나",
+        "aliases": [
+          "Fortuna",
+          "フォルトゥナ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "フォルトゥナ"
+      },
+      "Futsunushi": {
+        "name": "후츠누시",
+        "aliases": [
+          "Futsunushi",
+          "フツヌシ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "フツヌシ"
+      },
+      "Fuu-Ki": {
+        "name": "후우키",
+        "aliases": [
+          "Fuu-Ki",
+          "フウキ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "フウキ"
+      },
+      "Gabriel": {
+        "name": "가브리엘",
+        "aliases": [
+          "Gabriel",
+          "ガブリエル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ガブリエル"
+      },
+      "Ganesha": {
+        "name": "가네샤",
+        "aliases": [
+          "Ganesha",
+          "ガネーシャ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ガネーシャ"
+      },
+      "Garuda": {
+        "name": "가루다",
+        "aliases": [
+          "Garuda",
+          "ガルーダ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ガルーダ"
+      },
+      "Girimekhala": {
+        "name": "기리메칼라",
+        "aliases": [
+          "Girimehkala",
+          "Girimekhala",
+          "ギリメカラ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ギリメカラ"
+      },
+      "Hanuman": {
+        "name": "하누만",
+        "aliases": [
+          "Hanuman",
+          "ハヌマーン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ハヌマーン"
+      },
+      "Hariti": {
+        "name": "하리티",
+        "aliases": [
+          "Hariti",
+          "ハリティー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ハリティー"
+      },
+      "Hayataro": {
+        "name": "하야타로",
+        "aliases": [
+          "Hayataro",
+          "ハヤタロウ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ハヤタロウ"
+      },
+      "Hecatoncheires": {
+        "name": "헤카톤케일",
+        "aliases": [
+          "Hecatoncheires",
+          "ヘカトンケイル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヘカトンケイル"
+      },
+      "Hell Biker": {
+        "name": "헬즈 엔젤",
+        "aliases": [
+          "Hell Biker",
+          "ヘルズエンジェル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヘルズエンジェル"
+      },
+      "High Pixie": {
+        "name": "하이픽시",
+        "aliases": [
+          "High Pixie",
+          "ハイピクシー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ハイピクシー"
+      },
+      "Horus": {
+        "name": "호루스",
+        "aliases": [
+          "Horus",
+          "ホルス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ホルス"
+      },
+      "Hua Po": {
+        "name": "화백",
+        "aliases": [
+          "Hua Po",
+          "カハク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "カハク"
+      },
+      "Huang Long": {
+        "name": "황룡",
+        "aliases": [
+          "Huang Long",
+          "Kohryu",
+          "コウリュウ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "コウリュウ"
+      },
+      "Hydra": {
+        "name": "히드라",
+        "aliases": [
+          "Hydra",
+          "ヒュドラ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヒュドラ"
+      },
+      "Idun": {
+        "name": "이둔",
+        "aliases": [
+          "Idun",
+          "イズン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "イズン"
+      },
+      "Inanna": {
+        "name": "인안나",
+        "aliases": [
+          "Inanna",
+          "イナンナ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "イナンナ"
+      },
+      "Incubus": {
+        "name": "인큐버스",
+        "aliases": [
+          "Incubus",
+          "インキュバス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "インキュバス"
+      },
+      "Inugami": {
+        "name": "이누가미",
+        "aliases": [
+          "Inugami",
+          "イヌガミ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "イヌガミ"
+      },
+      "Ippon-Datara": {
+        "name": "잇폰다타라",
+        "aliases": [
+          "Ippon-Datara",
+          "イッポンダタラ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "イッポンダタラ"
+      },
+      "Ishtar": {
+        "name": "이슈타르",
+        "aliases": [
+          "Ishtar",
+          "イシュタル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "イシュタル"
+      },
+      "Isis": {
+        "name": "이시스",
+        "aliases": [
+          "Isis",
+          "イシス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "イシス"
+      },
+      "Jack Frost": {
+        "name": "잭 프로스트",
+        "aliases": [
+          "Jack Frost",
+          "ジャックフロスト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ジャックフロスト"
+      },
+      "Jack-o'-Lantern": {
+        "name": "잭 오 랜턴",
+        "aliases": [
+          "Jack-o'-Lantern",
+          "ジャックランタン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ジャックランタン"
+      },
+      "Jatayu": {
+        "name": "자타유",
+        "aliases": [
+          "Jatayu",
+          "ジャターユ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ジャターユ"
+      },
+      "Jikokuten": {
+        "name": "지국천",
+        "aliases": [
+          "Jikokuten",
+          "ジコクテン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ジコクテン"
+      },
+      "Kaiwan": {
+        "name": "케완",
+        "aliases": [
+          "Kaiwan",
+          "キウン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "キウン"
+      },
+      "Kali": {
+        "name": "칼리",
+        "aliases": [
+          "Kali",
+          "カーリー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "カーリー"
+      },
+      "Kaya-no-Hime": {
+        "name": "카야노히메",
+        "aliases": [
+          "Kaya-no-Hime",
+          "カヤノヒメ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "カヤノヒメ"
+      },
+      "Kelpie": {
+        "name": "켈피",
+        "aliases": [
+          "Kelpie",
+          "ケルピー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ケルピー"
+      },
+      "Khonsu": {
+        "name": "콘스",
+        "aliases": [
+          "Khonsu",
+          "コンス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "コンス"
+      },
+      "Khonsu Ra": {
+        "name": "콘스 라",
+        "aliases": [
+          "Khonsu Ra",
+          "コンス・ラー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "コンス・ラー"
+      },
+      "Kikuri-Hime": {
+        "name": "키쿠리히메",
+        "aliases": [
+          "Kikuri-Hime",
+          "キクリヒメ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "キクリヒメ"
+      },
+      "Kin-Ki": {
+        "name": "킨키",
+        "aliases": [
+          "Kin-Ki",
+          "キンキ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "キンキ"
+      },
+      "King Frost": {
+        "name": "킹 프로스트",
+        "aliases": [
+          "King Frost",
+          "キングフロスト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "キングフロスト"
+      },
+      "Kodama": {
+        "name": "코다마",
+        "aliases": [
+          "Kodama",
+          "コダマ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "コダマ"
+      },
+      "Koppa Tengu": {
+        "name": "콧파텐구",
+        "aliases": [
+          "Koppa Tengu",
+          "コッパテング"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "コッパテング"
+      },
+      "Koropokkur": {
+        "name": "코로포클",
+        "aliases": [
+          "Koropokkur",
+          "Koropokkuru",
+          "コロポックル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "コロポックル"
+      },
+      "Koumokuten": {
+        "name": "광목천",
+        "aliases": [
+          "Koumokuten",
+          "コウモクテン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "コウモクテン"
+      },
+      "Kumbhanda": {
+        "name": "쿠반다",
+        "aliases": [
+          "Kumbhanda",
+          "クヴァンダ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "クヴァンダ"
+      },
+      "Kurama Tengu": {
+        "name": "쿠라마텐구",
+        "aliases": [
+          "Kurama Tengu",
+          "クラマテング"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "クラマテング"
+      },
+      "Kushinada-Hime": {
+        "name": "쿠시나다히메",
+        "aliases": [
+          "Kushinada",
+          "Kushinada-Hime",
+          "クシナダヒメ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "クシナダヒメ"
+      },
+      "Lachesis": {
+        "name": "라케시스",
+        "aliases": [
+          "Lachesis",
+          "ラケシス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ラケシス"
+      },
+      "Lahmu": {
+        "name": "라흐무",
+        "aliases": [
+          "Lahmu",
+          "ラフム"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ラフム"
+      },
+      "Lakshmi": {
+        "name": "락슈미",
+        "aliases": [
+          "Lakshmi",
+          "ラクシュミ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ラクシュミ"
+      },
+      "Lamia": {
+        "name": "라미아",
+        "aliases": [
+          "Lamia",
+          "ラミア"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ラミア"
+      },
+      "Leanan Sidhe": {
+        "name": "랴난시",
+        "aliases": [
+          "Leanan Sidhe",
+          "リャナンシー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "リャナンシー"
+      },
+      "Legion": {
+        "name": "레기온",
+        "aliases": [
+          "Legion",
+          "レギオン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "レギオン"
+      },
+      "Lilim": {
+        "name": "릴림",
+        "aliases": [
+          "Lilim",
+          "リリム"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "リリム"
+      },
+      "Lilith": {
+        "name": "릴리스",
+        "aliases": [
+          "Lilith",
+          "リリス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "リリス"
+      },
+      "Loa": {
+        "name": "로아",
+        "aliases": [
+          "Loa",
+          "ロア"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ロア"
+      },
+      "Loki": {
+        "name": "로키",
+        "aliases": [
+          "Loki",
+          "ロキ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ロキ"
+      },
+      "Loup-garou": {
+        "name": "루가루",
+        "aliases": [
+          "Loup-garou",
+          "ルー・ガルー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ルー・ガルー"
+      },
+      "Macabre": {
+        "name": "마카브르",
+        "aliases": [
+          "Macabre",
+          "マカーブル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マカーブル"
+      },
+      "Mada": {
+        "name": "마다",
+        "aliases": [
+          "Mada",
+          "マダ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マダ"
+      },
+      "Makami": {
+        "name": "마카미",
+        "aliases": [
+          "Makami",
+          "マカミ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マカミ"
+      },
+      "Manananggal": {
+        "name": "마나낭갈",
+        "aliases": [
+          "Manananggal",
+          "マナナンガル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マナナンガル"
+      },
+      "Mandrake": {
+        "name": "맨드레이크",
+        "aliases": [
+          "Mandrake",
+          "マンドレイク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マンドレイク"
+      },
+      "Mara": {
+        "name": "마라",
+        "aliases": [
+          "Mara",
+          "マーラ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マーラ"
+      },
+      "Maria": {
+        "name": "마리아",
+        "aliases": [
+          "Maria",
+          "マリア"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マリア"
+      },
+      "Matador": {
+        "name": "마타도르",
+        "aliases": [
+          "Matador",
+          "マタドール"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マタドール"
+      },
+      "Melchizedek": {
+        "name": "멜키세덱",
+        "aliases": [
+          "Melchizedek",
+          "メルキセデク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "メルキセデク"
+      },
+      "Mephisto": {
+        "name": "메피스토",
+        "aliases": [
+          "Mephisto",
+          "メフィスト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "メフィスト"
+      },
+      "Mermaid": {
+        "name": "머메이드",
+        "aliases": [
+          "Mermaid",
+          "マーメイド"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マーメイド"
+      },
+      "Metatron": {
+        "name": "메타트론",
+        "aliases": [
+          "Metatron",
+          "メタトロン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "メタトロン"
+      },
+      "Michael": {
+        "name": "미카엘",
+        "aliases": [
+          "Michael",
+          "ミカエル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ミカエル"
+      },
+      "Mishaguji": {
+        "name": "미샤구지사마",
+        "aliases": [
+          "Mishaguji",
+          "ミシャグジさま",
+          "먀샤구지사마"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ミシャグジさま"
+      },
+      "Mithras": {
+        "name": "미트라스",
+        "aliases": [
+          "Mithras",
+          "ミトラス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ミトラス"
+      },
+      "Mitra": {
+        "name": "미트라",
+        "aliases": [
+          "Mithra",
+          "Mitra",
+          "ミトラ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ミトラ"
+      },
+      "Mokoi": {
+        "name": "모코이",
+        "aliases": [
+          "Mokoi",
+          "モコイ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "モコイ"
+      },
+      "Moloch": {
+        "name": "몰록",
+        "aliases": [
+          "Moloch",
+          "モロク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "モロク"
+      },
+      "Mot": {
+        "name": "모트",
+        "aliases": [
+          "Mot",
+          "モト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "モト"
+      },
+      "Mother Harlot": {
+        "name": "마더 할롯",
+        "aliases": [
+          "Mother Harlot",
+          "マザーハーロット"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マザーハーロット"
+      },
+      "Mothman": {
+        "name": "모스맨",
+        "aliases": [
+          "Mothman",
+          "モスマン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "モスマン"
+      },
+      "Muu Shuwuu": {
+        "name": "모쇼보",
+        "aliases": [
+          "Muu Shuwuu",
+          "モー・ショボー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "モー・ショボー"
+      },
+      "Naga": {
+        "name": "나가",
+        "aliases": [
+          "Naga",
+          "ナーガ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ナーガ"
+      },
+      "Naga Raja": {
+        "name": "나가라자",
+        "aliases": [
+          "Naga Raja",
+          "Raja Naga",
+          "ナーガラジャ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ナーガラジャ"
+      },
+      "Narcissus": {
+        "name": "나르키소스",
+        "aliases": [
+          "Narcissus",
+          "ナルキッソス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ナルキッソス"
+      },
+      "Nebiros": {
+        "name": "네비로스",
+        "aliases": [
+          "Nebiros",
+          "ネビロス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ネビロス"
+      },
+      "Neko Shogun": {
+        "name": "네코쇼군",
+        "aliases": [
+          "Neko Shogun",
+          "ネコショウグン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ネコショウグン"
+      },
+      "Nekomata": {
+        "name": "네코마타",
+        "aliases": [
+          "Nekomata",
+          "ネコマタ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ネコマタ"
+      },
+      "Norn": {
+        "name": "노른",
+        "aliases": [
+          "Norn",
+          "ノルン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ノルン"
+      },
+      "Nue": {
+        "name": "누에",
+        "aliases": [
+          "Nue",
+          "ヌエ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヌエ"
+      },
+      "Nuwa": {
+        "name": "여와",
+        "aliases": [
+          "Nuwa",
+          "ジョカ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ジョカ"
+      },
+      "Nuwa A": {
+        "name": "여와 (지모신)",
+        "aliases": [
+          "Nuwa A",
+          "ジョカ",
+          "여와"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ジョカ"
+      },
+      "Obariyon": {
+        "name": "오바리욘",
+        "aliases": [
+          "Obariyon",
+          "オバリヨン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オバリヨン"
+      },
+      "Oberon": {
+        "name": "오베론",
+        "aliases": [
+          "Oberon",
+          "オベロン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オベロン"
+      },
+      "Odin": {
+        "name": "오딘",
+        "aliases": [
+          "Odin",
+          "オーディン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オーディン"
+      },
+      "Okuninushi": {
+        "name": "오오쿠니누시",
+        "aliases": [
+          "Okuninushi",
+          "オオクニヌシ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オオクニヌシ"
+      },
+      "Ongyo-Ki": {
+        "name": "온교우키",
+        "aliases": [
+          "Ongyo-Ki",
+          "オンギョウキ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オンギョウキ"
+      },
+      "Oni": {
+        "name": "오니",
+        "aliases": [
+          "Oni",
+          "オニ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オニ"
+      },
+      "Onmoraki": {
+        "name": "온모라키",
+        "aliases": [
+          "Onmoraki",
+          "オンモラキ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オンモラキ"
+      },
+      "Orobas": {
+        "name": "오로바스",
+        "aliases": [
+          "Orobas",
+          "オロバス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オロバス"
+      },
+      "Orthrus": {
+        "name": "오르트로스",
+        "aliases": [
+          "Orthrus",
+          "オルトロス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オルトロス"
+      },
+      "Ose": {
+        "name": "오세",
+        "aliases": [
+          "Ose",
+          "オセ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オセ"
+      },
+      "Oyamatsumi": {
+        "name": "오오야마츠미",
+        "aliases": [
+          "Oyamatsumi",
+          "オオヤマツミ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オオヤマツミ"
+      },
+      "Pale Rider": {
+        "name": "페일 라이더",
+        "aliases": [
+          "Pale Rider",
+          "ペイルライダー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ペイルライダー"
+      },
+      "Parvati": {
+        "name": "파르바티",
+        "aliases": [
+          "Parvati",
+          "パールヴァティ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "パールヴァティ"
+      },
+      "Pazuzu": {
+        "name": "파즈스",
+        "aliases": [
+          "Pazuzu",
+          "パズス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "パズス"
+      },
+      "Pisaca": {
+        "name": "피샤차",
+        "aliases": [
+          "Pisaca",
+          "ピシャーチャ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ピシャーチャ"
+      },
+      "Pixie": {
+        "name": "픽시",
+        "aliases": [
+          "Pixie",
+          "ピクシー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ピクシー"
+      },
+      "Poltergeist": {
+        "name": "폴터가이스트",
+        "aliases": [
+          "Poltergeist",
+          "ポルターガイスト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ポルターガイスト"
+      },
+      "Power": {
+        "name": "파워",
+        "aliases": [
+          "Power",
+          "パワー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "パワー"
+      },
+      "Preta": {
+        "name": "아귀",
+        "aliases": [
+          "Preta",
+          "ガキ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ガキ"
+      },
+      "Principality": {
+        "name": "프린시펄리티",
+        "aliases": [
+          "Principality",
+          "プリンシパリティ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "プリンシパリティ"
+      },
+      "Qing Long": {
+        "name": "청룡",
+        "aliases": [
+          "Qing Long",
+          "Seiryu",
+          "セイリュウ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "セイリュウ"
+      },
+      "Queen Medb": {
+        "name": "퀸 메이브",
+        "aliases": [
+          "Queen Mab",
+          "Queen Medb",
+          "クイーンメイブ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "クイーンメイブ"
+      },
+      "Quetzalcoatl": {
+        "name": "케찰코아틀",
+        "aliases": [
+          "Quetzalcoatl",
+          "ケツアルカトル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ケツアルカトル"
+      },
+      "Rakshasa": {
+        "name": "락샤사",
+        "aliases": [
+          "Rakshasa",
+          "ラクシャーサ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ラクシャーサ"
+      },
+      "Rangda": {
+        "name": "랑다",
+        "aliases": [
+          "Rangda",
+          "ランダ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ランダ"
+      },
+      "Raphael": {
+        "name": "라파엘",
+        "aliases": [
+          "Raphael",
+          "ラファエル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ラファエル"
+      },
+      "Red Rider": {
+        "name": "레드 라이더",
+        "aliases": [
+          "Red Rider",
+          "レッドライダー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "レッドライダー"
+      },
+      "Sandalphon": {
+        "name": "산달폰",
+        "aliases": [
+          "Sandalphon",
+          "サンダルフォン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "サンダルフォン"
+      },
+      "Sandman": {
+        "name": "샌드맨",
+        "aliases": [
+          "Sandman",
+          "ザントマン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ザントマン"
+      },
+      "Sarasvati": {
+        "name": "사라스바티",
+        "aliases": [
+          "Sarasvati",
+          "サラスヴァティ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "サラスヴァティ"
+      },
+      "Scathach": {
+        "name": "스카아하",
+        "aliases": [
+          "Scathach",
+          "スカアハ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "スカアハ"
+      },
+      "Setanta": {
+        "name": "세탄타",
+        "aliases": [
+          "Setanta",
+          "セタンタ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "セタンタ"
+      },
+      "Seth": {
+        "name": "세트",
+        "aliases": [
+          "Seth",
+          "セト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "セト"
+      },
+      "Shiisaa": {
+        "name": "시사",
+        "aliases": [
+          "Shiisaa",
+          "シーサー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "シーサー"
+      },
+      "Shiki-Ouji": {
+        "name": "시키오우지",
+        "aliases": [
+          "Shiki-Ouji",
+          "シキオウジ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "シキオウジ"
+      },
+      "Shiva": {
+        "name": "시바",
+        "aliases": [
+          "Shiva",
+          "シヴァ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "シヴァ"
+      },
+      "Siegfried": {
+        "name": "지크프리트",
+        "aliases": [
+          "Siegfried",
+          "ジークフリード"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ジークフリード"
+      },
+      "Silky": {
+        "name": "실키",
+        "aliases": [
+          "Silky",
+          "シルキー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "シルキー"
+      },
+      "Skadi": {
+        "name": "스카디",
+        "aliases": [
+          "Skadi",
+          "スカディ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "スカディ"
+      },
+      "Slime": {
+        "name": "슬라임",
+        "aliases": [
+          "Slime",
+          "スライム"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "スライム"
+      },
+      "Sraosha": {
+        "name": "스라오샤",
+        "aliases": [
+          "Sraosha",
+          "スラオシャ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "スラオシャ"
+      },
+      "Succubus": {
+        "name": "서큐버스",
+        "aliases": [
+          "Succubus",
+          "サキュバス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "サキュバス"
+      },
+      "Sudama": {
+        "name": "스다마",
+        "aliases": [
+          "Sudama",
+          "スダマ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "スダマ"
+      },
+      "Sui-Ki": {
+        "name": "스이키",
+        "aliases": [
+          "Sui-Ki",
+          "スイキ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "スイキ"
+      },
+      "Sukuna-Hikona": {
+        "name": "스쿠나히코나",
+        "aliases": [
+          "Sukuna-Hikona",
+          "スクナヒコナ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "スクナヒコナ"
+      },
+      "Surt": {
+        "name": "수르트",
+        "aliases": [
+          "Surt",
+          "スルト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "スルト"
+      },
+      "Take-Minakata": {
+        "name": "타케미나카타",
+        "aliases": [
+          "Take-Minakata",
+          "タケミナカタ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "タケミナカタ"
+      },
+      "Thor": {
+        "name": "토르",
+        "aliases": [
+          "Thor",
+          "トール"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "トール"
+      },
+      "Thoth": {
+        "name": "토트",
+        "aliases": [
+          "Thoth",
+          "トート"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "トート"
+      },
+      "Throne": {
+        "name": "트론",
+        "aliases": [
+          "Throne",
+          "ソロネ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ソロネ"
+      },
+      "Thunderbird": {
+        "name": "선더버드",
+        "aliases": [
+          "Thunderbird",
+          "サンダーバード"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "サンダーバード"
+      },
+      "Titania": {
+        "name": "티타니아",
+        "aliases": [
+          "Titania",
+          "ティターニア"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ティターニア"
+      },
+      "Trumpeter": {
+        "name": "트럼페터",
+        "aliases": [
+          "Trumpeter",
+          "トランペッター"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "トランペッター"
+      },
+      "Tsuchigumo": {
+        "name": "츠치구모",
+        "aliases": [
+          "Tsuchigumo",
+          "ツチグモ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ツチグモ"
+      },
+      "Turdak": {
+        "name": "투르다크",
+        "aliases": [
+          "Turdak",
+          "トゥルダク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "トゥルダク"
+      },
+      "Uriel": {
+        "name": "우리엘",
+        "aliases": [
+          "Uriel",
+          "ウリエル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ウリエル"
+      },
+      "Valkyrie": {
+        "name": "발키리",
+        "aliases": [
+          "Valkyrie",
+          "ヴァルキリー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヴァルキリー"
+      },
+      "Vasuki": {
+        "name": "바스키",
+        "aliases": [
+          "Vasuki",
+          "ヴァスキ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヴァスキ"
+      },
+      "Vishnu": {
+        "name": "비슈누",
+        "aliases": [
+          "Vishnu",
+          "ヴィシュヌ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヴィシュヌ"
+      },
+      "White Rider": {
+        "name": "화이트 라이더",
+        "aliases": [
+          "White Rider",
+          "ホワイトライダー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ホワイトライダー"
+      },
+      "Xuanwu": {
+        "name": "현무",
+        "aliases": [
+          "Genbu",
+          "Xuanwu",
+          "ゲンブ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ゲンブ"
+      },
+      "Yakshini": {
+        "name": "야크시니",
+        "aliases": [
+          "Yakshini",
+          "Yaksini",
+          "ヤクシニー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヤクシニー"
+      },
+      "Yamata-no-Orochi": {
+        "name": "야마타노오로치",
+        "aliases": [
+          "Yamata-no-Orochi",
+          "ヤマタノオロチ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヤマタノオロチ"
+      },
+      "Yatagarasu": {
+        "name": "야타가라스",
+        "aliases": [
+          "Yatagarasu",
+          "ヤタガラス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヤタガラス"
+      },
+      "Yoshitsune": {
+        "name": "요시츠네",
+        "aliases": [
+          "Yoshitsune",
+          "ヨシツネ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヨシツネ"
+      },
+      "Yurlungur": {
+        "name": "유룽",
+        "aliases": [
+          "Yurlungur",
+          "ユルング"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ユルング"
+      },
+      "Zaou-Gongen": {
+        "name": "자오우곤겐",
+        "aliases": [
+          "Zaou-Gongen",
+          "ザオウゴンゲン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ザオウゴンゲン"
+      },
+      "Zeus": {
+        "name": "제우스",
+        "aliases": [
+          "Zeus",
+          "ゼウス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ゼウス"
+      },
+      "Zhen": {
+        "name": "젠",
+        "aliases": [
+          "Zhen",
+          "チン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "チン"
+      },
+      "Zhuque": {
+        "name": "주작",
+        "aliases": [
+          "Suzaku",
+          "Zhuque",
+          "スザク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "スザク"
+      },
+      "Zouchouten": {
+        "name": "증장천",
+        "aliases": [
+          "Zouchouten",
+          "ゾウチョウテン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ゾウチョウテン"
+      },
+      "Agrat": {
+        "name": "아그라트",
+        "aliases": [
+          "Agrat",
+          "アグラト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アグラト"
+      },
+      "Amabie": {
+        "name": "아마비에",
+        "aliases": [
+          "Amabie",
+          "アマビエ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アマビエ"
+      },
+      "Anansi": {
+        "name": "아난시",
+        "aliases": [
+          "Anansi",
+          "アナンシ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アナンシ"
+      },
+      "Armaiti": {
+        "name": "아르마이티",
+        "aliases": [
+          "Armaiti",
+          "アールマティ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アールマティ"
+      },
+      "Azazel": {
+        "name": "아자젤",
+        "aliases": [
+          "Azazel",
+          "アザゼル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "アザゼル"
+      },
+      "Cherub": {
+        "name": "케룹",
+        "aliases": [
+          "Cherub",
+          "ケルプ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ケルプ"
+      },
+      "Dagda": {
+        "name": "다그다",
+        "aliases": [
+          "Dagda",
+          "ダグザ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ダグザ"
+      },
+      "Dis": {
+        "name": "디스",
+        "aliases": [
+          "Dis",
+          "Dís",
+          "ディース"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "ディース"
+      },
+      "Dormarth": {
+        "name": "도어마스",
+        "aliases": [
+          "Dormarth",
+          "ドアマース"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ドアマース"
+      },
+      "Efreet": {
+        "name": "이프리트",
+        "aliases": [
+          "Efreet",
+          "イフリート"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "イフリート"
+      },
+      "Eisheth": {
+        "name": "아이셰스",
+        "aliases": [
+          "Eisheth",
+          "エイシェト"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "エイシェト"
+      },
+      "Fenrir": {
+        "name": "펜리르",
+        "aliases": [
+          "Fenrir",
+          "フェンリル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "フェンリル"
+      },
+      "Glasya-Labolas": {
+        "name": "글라샬라볼라스",
+        "aliases": [
+          "Glasya-Labolas",
+          "グラシャラボラス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "グラシャラボラス"
+      },
+      "Gogmagog": {
+        "name": "고그마고그",
+        "aliases": [
+          "Gogmagog",
+          "ゴグマゴグ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ゴグマゴグ"
+      },
+      "Gremlin": {
+        "name": "그렘린",
+        "aliases": [
+          "Gremlin",
+          "グレムリン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "グレムリン"
+      },
+      "Gurulu": {
+        "name": "구루루",
+        "aliases": [
+          "Gurulu",
+          "グルル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "グルル"
+      },
+      "Halphas": {
+        "name": "할파스",
+        "aliases": [
+          "Halphas",
+          "ハルパス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ハルパス"
+      },
+      "Hare of Inaba": {
+        "name": "이나바의 흰토끼",
+        "aliases": [
+          "Hare of Inaba",
+          "イナバシロウサギ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "イナバシロウサギ"
+      },
+      "Karasu Tengu": {
+        "name": "카라스텐구",
+        "aliases": [
+          "Karasu Tengu",
+          "カラステング"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "カラステング"
+      },
+      "Kinmamon": {
+        "name": "킨마몬",
+        "aliases": [
+          "Kinmamon",
+          "キンマモン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "キンマモン"
+      },
+      "Konohana Sakuya": {
+        "name": "코노하나사쿠야",
+        "aliases": [
+          "Konohana Sakuya",
+          "コノハナサクヤ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "コノハナサクヤ"
+      },
+      "Kresnik": {
+        "name": "크레스니크",
+        "aliases": [
+          "Kresnik",
+          "クルースニク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "クルースニク"
+      },
+      "Kudlak": {
+        "name": "쿠드라크",
+        "aliases": [
+          "Kudlak",
+          "クドラク"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "クドラク"
+      },
+      "Lucifer": {
+        "name": "루시퍼",
+        "aliases": [
+          "Lucifer",
+          "ルシファー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ルシファー"
+      },
+      "Mad Gasser": {
+        "name": "매드가서",
+        "aliases": [
+          "Mad Gasser",
+          "マッドガッサー"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マッドガッサー"
+      },
+      "Marici": {
+        "name": "마리시텐",
+        "aliases": [
+          "Marici",
+          "Marishiten",
+          "マリシテン"
+        ],
+        "basis": "editorial_ko",
+        "japanese": "マリシテン"
+      },
+      "Masakado": {
+        "name": "마사카도",
+        "aliases": [
+          "Masakado",
+          "マサカド"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マサカド"
+      },
+      "Mastema": {
+        "name": "만세마트",
+        "aliases": [
+          "Mastema",
+          "マンセマット"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "マンセマット"
+      },
+      "Naamah": {
+        "name": "나아마",
+        "aliases": [
+          "Naamah",
+          "ナアマ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ナアマ"
+      },
+      "Nahobeeho": {
+        "name": "나호비호",
+        "aliases": [
+          "Nahobeeho",
+          "ナホビホ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ナホビホ"
+      },
+      "Nezha Taizi": {
+        "name": "나타태자",
+        "aliases": [
+          "Nezha Taizi",
+          "ナタタイシ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ナタタイシ"
+      },
+      "Nozuchi": {
+        "name": "노즈치",
+        "aliases": [
+          "Nozuchi",
+          "ノズチ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ノズチ"
+      },
+      "Nyami Nyami": {
+        "name": "냐미냐미",
+        "aliases": [
+          "Nyami Nyami",
+          "ニャミニャミ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ニャミニャミ"
+      },
+      "Onyankopon": {
+        "name": "오냥코폰",
+        "aliases": [
+          "Onyankopon",
+          "オニャンコポン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "オニャンコポン"
+      },
+      "Peallaidh": {
+        "name": "피얼라이",
+        "aliases": [
+          "Peallaidh",
+          "ピアレイ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ピアレイ"
+      },
+      "Samael": {
+        "name": "사마엘",
+        "aliases": [
+          "Samael",
+          "サマエル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "サマエル"
+      },
+      "Satan": {
+        "name": "사탄",
+        "aliases": [
+          "Satan",
+          "サタン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "サタン"
+      },
+      "Saturnus": {
+        "name": "사투르누스",
+        "aliases": [
+          "Saturnus",
+          "サトゥルヌス"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "サトゥルヌス"
+      },
+      "Senri": {
+        "name": "선리",
+        "aliases": [
+          "Senri",
+          "センリ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "センリ"
+      },
+      "Turbo Granny": {
+        "name": "터보 할머니",
+        "aliases": [
+          "Turbo Granny",
+          "ターボばあちゃん"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ターボばあちゃん"
+      },
+      "Tzitzimitl": {
+        "name": "치치미틀",
+        "aliases": [
+          "Tzitzimitl",
+          "ツィツィミトル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ツィツィミトル"
+      },
+      "Unicorn": {
+        "name": "유니콘",
+        "aliases": [
+          "Unicorn",
+          "ユニコーン"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ユニコーン"
+      },
+      "Vouivre": {
+        "name": "비브르",
+        "aliases": [
+          "Vouivre",
+          "ヴィーヴル"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヴィーヴル"
+      },
+      "Vritra": {
+        "name": "브리트라",
+        "aliases": [
+          "Vritra",
+          "ヴリトラ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "ヴリトラ"
+      },
+      "Xiezhai": {
+        "name": "해치",
+        "aliases": [
+          "Xiezhai",
+          "カイチ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "カイチ"
+      },
+      "Zhu Tun She": {
+        "name": "저돈사",
+        "aliases": [
+          "Zhu Tun She",
+          "チョトンダ"
+        ],
+        "basis": "smt5v_locale",
+        "japanese": "チョトンダ"
+      }
+    }
+  },
+  "basis_counts": {
+    "p3r_locale": 194,
+    "upstream_korean": 396,
+    "editorial_ko": 31,
+    "shared_p3r_smt_locale": 3,
+    "same_japanese_alias": 4,
+    "shared_smt_locale": 5,
+    "smt5v_locale": 273
+  }
+}
