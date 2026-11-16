@@ -18,12 +18,23 @@ jobs:
       - run: flutter pub get
       - run: dart format --output=none --set-exit-if-changed lib test
       - name: Run flutter analyze
+        id: analyze
+        continue-on-error: true
         run: |
           set +e
           flutter analyze 2>&1 | tee analyze.log
           analyze_status=${PIPESTATUS[0]}
           cat analyze.log >> "$GITHUB_STEP_SUMMARY"
           exit "$analyze_status"
+      - name: Upload analyzer diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: analyzer-${{ github.run_id }}
+          path: analyze.log
+      - name: Require clean analysis
+        if: steps.analyze.outcome != 'success'
+        run: exit 1
       - run: flutter test
       - uses: actions/setup-java@v4
         with:
