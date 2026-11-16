@@ -17,7 +17,11 @@ jobs:
           cache: true
       - run: flutter pub get
       - run: dart format --output=none --set-exit-if-changed lib test
-      - run: flutter analyze
+      - name: Run flutter analyze
+        run: |
+          flutter analyze 2>&1 | tee analyze.log
+          cat analyze.log >> "$GITHUB_STEP_SUMMARY"
+          test ${PIPESTATUS[0]} -eq 0
       - run: flutter test
       - uses: actions/setup-java@v4
         with:
