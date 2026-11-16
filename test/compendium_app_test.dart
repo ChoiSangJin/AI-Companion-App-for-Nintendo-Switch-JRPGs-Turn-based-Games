@@ -347,16 +347,10 @@ void main() {
     await settle(tester);
     await tester.tap(find.text('해금 조건'));
     await settle(tester);
-    await tester.enterText(
-      find.byKey(const ValueKey('guide-search')),
-      '알릴라트',
-    );
+    await tester.enterText(find.byKey(const ValueKey('guide-search')), '알릴라트');
     await settle(tester);
     expect(find.textContaining('커뮤'), findsWidgets);
-    await tester.enterText(
-      find.byKey(const ValueKey('guide-search')),
-      '데카라비아',
-    );
+    await tester.enterText(find.byKey(const ValueKey('guide-search')), '데카라비아');
     await settle(tester);
     expect(find.textContaining('스토리'), findsWidgets);
   });

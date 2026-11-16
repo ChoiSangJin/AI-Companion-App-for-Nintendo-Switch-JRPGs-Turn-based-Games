@@ -4,11 +4,7 @@ import '../models/compendium.dart';
 import '../services/compendium_store.dart';
 
 class GuidePanel extends StatefulWidget {
-  const GuidePanel({
-    super.key,
-    required this.store,
-    required this.onOpen,
-  });
+  const GuidePanel({super.key, required this.store, required this.onOpen});
 
   final CompendiumStore store;
   final void Function(Demon) onOpen;
@@ -33,7 +29,9 @@ class _GuidePanelState extends State<GuidePanel> {
 
     var entries = available.where((demon) => demon.matches(query)).toList();
     if (unlocks) {
-      entries = entries.where((demon) => demon.requirements.isNotEmpty).toList();
+      entries = entries
+          .where((demon) => demon.requirements.isNotEmpty)
+          .toList();
     } else {
       entries = entries.where((demon) {
         if (element.isNotEmpty) return demon.resists[element] == '약점';
@@ -137,9 +135,7 @@ class _GuidePanelState extends State<GuidePanel> {
               child: Padding(
                 padding: const EdgeInsets.all(24),
                 child: Text(
-                  unlocks
-                      ? '조건에 맞는 해금 정보가 없습니다.'
-                      : '선택한 속성이 약점인 항목이 없습니다.',
+                  unlocks ? '조건에 맞는 해금 정보가 없습니다.' : '선택한 속성이 약점인 항목이 없습니다.',
                   textAlign: TextAlign.center,
                 ),
               ),
