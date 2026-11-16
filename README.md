@@ -62,7 +62,7 @@ node tools/reference_fusions.cjs /path/to/megaten-fusion-tool
 
 [최신 APK](https://github.com/ChoiSangJin/AI-Companion-App-for-Nintendo-Switch-JRPGs-Turn-based-Games/releases/latest)의 `app-arm64-v8a-release.apk`를 설치합니다. Android 7.0 이상 ARM64 기기용입니다.
 
-기존 앱과 같은 application ID(`com.choisangjin.switchcompanion`)·서명을 유지하는 **3.1.0+10 / versionCode 2010** 업데이트입니다. 기존 앱 위에 설치하며 삭제할 필요가 없습니다.
+기존 앱과 같은 application ID(`com.choisangjin.switchcompanion`)·서명을 유지하는 **3.2.0+11 / versionCode 2011** 업데이트입니다. 기존 앱 위에 설치하며 삭제할 필요가 없습니다.
 
 - 새 기록은 `fusion.compendium.v1`에 작품별 전서 등록·합체 목표·DLC 상태로 저장합니다.
 - 기존 `paldea.planner.v1`과 `companion.v1`은 읽기만 하고 수정·삭제하지 않습니다. 보관함의 기존 포켓몬 이름표에는 PokéAPI 라이선스를 함께 보존합니다. 설정의 이전 버전 보관함에서 읽거나 원본 백업을 복사할 수 있습니다.
@@ -87,7 +87,7 @@ flutter build apk --release --target-platform android-arm64 --split-per-abi
 
 CI는 포맷·분석·테스트·Android 빌드를 확인합니다. 테스트에는 원본 계산 대조, 잘못된 추가 결과 방지, 특수·DLC·등록 필터, 현재 레벨, 작품별 저장, 동시 작업과 저장 실패, 백업 복원, 이전 기록 보존, 작은 화면·큰 글씨·키보드와 실제 UI 흐름이 포함됩니다.
 
-서명 자료가 Actions에 바인딩된 환경에서는 `release.yml`을 사용합니다. 현재 배포는 로컬에서 서명한 공개 APK만 임시 `deploy-artifacts/v3.1.0` 브랜치에 올리고 `publish-signed-apk.yml`으로 서명·패키지·버전·이름·아이콘·ARM64·인터넷 권한 부재·체크섬을 재검증해 게시합니다. 배포된 파일을 다시 내려받아 원본과 비교한 뒤 임시 브랜치를 정리합니다. 비밀 키는 브랜치나 저장소에 넣지 않습니다.
+서명 자료가 Actions에 바인딩된 환경에서는 `release.yml`을 사용합니다. 대체 배포는 로컬에서 서명한 APK만 임시 `deploy-artifacts/<tag>` 브랜치에 올리고 `publish-signed-apk.yml`으로 서명·패키지·버전·이름·아이콘·ARM64·인터넷 권한 부재·체크섬을 재검증해 게시합니다. 배포된 파일을 다시 내려받아 원본과 비교한 뒤 임시 브랜치를 정리합니다. 비밀 키는 브랜치나 저장소에 넣지 않습니다.
 
 독립 제작 비공식 도구이며 ATLUS·SEGA와 제휴하지 않았습니다. 게임명과 캐릭터 이름의 권리는 각 권리자에게 있습니다.
 
