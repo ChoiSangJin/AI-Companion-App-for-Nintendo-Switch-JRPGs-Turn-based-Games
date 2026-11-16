@@ -17,27 +17,10 @@ jobs:
           cache: true
       - run: flutter pub get
       - run: dart format --output=none --set-exit-if-changed lib test
-      - name: Run flutter analyze
-        run: |
-          set +e
-          flutter analyze 2>&1 | tee analyze.log
-          analyze_status=${PIPESTATUS[0]}
-          if [ "$analyze_status" -ne 0 ]; then
-            message=$(tail -n 30 analyze.log)
-            message=${message//'%'/'%25'}
-            message=${message//$'\r'/'%0D'}
-            message=${message//$'\n'/'%0A'}
-            echo "::error title=Flutter analyzer::$message"
-          fi
-          exit "$analyze_status"
+      - run: flutter analyze
       - run: flutter test
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-      - name: Build Android debug APK
-        run: |
-          flutter build apk --debug --target-platform android-arm64 2>&1 | tee build.log
-          build_status=${PIPESTATUS[0]}
-          cat build.log >> "$GITHUB_STEP_SUMMARY"
-          exit "$build_status"
+      - run: flutter build apk --debug --target-platform android-arm64
