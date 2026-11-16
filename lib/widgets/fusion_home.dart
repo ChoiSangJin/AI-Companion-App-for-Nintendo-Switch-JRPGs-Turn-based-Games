@@ -3,6 +3,7 @@ import '../models/compendium.dart';
 import '../services/compendium_store.dart';
 import 'fusion_components.dart';
 import 'fusion_pages.dart';
+import 'guide_panel.dart';
 
 typedef StoreAction = Future<void> Function(Future<void> Function());
 Color gameColor(String id) => switch (id) {
@@ -166,12 +167,18 @@ class _FusionHomeState extends State<FusionHome> {
                 ),
                 Expanded(
                   child: tab == 1
+                      ? GuidePanel(
+                          key: ValueKey('guide-${game.id}'),
+                          store: store,
+                          onOpen: open,
+                        )
+                      : tab == 2
                       ? ForwardPanel(
                           key: ValueKey('forward-${game.id}'),
                           store: store,
                           onOpen: open,
                         )
-                      : tab == 2
+                      : tab == 3
                       ? Column(
                           children: [
                             Padding(
@@ -230,7 +237,12 @@ class _FusionHomeState extends State<FusionHome> {
           NavigationDestination(
             icon: Icon(Icons.auto_stories_outlined),
             selectedIcon: Icon(Icons.auto_stories),
-            label: '악마전서',
+            label: '전서',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.travel_explore_outlined),
+            selectedIcon: Icon(Icons.travel_explore),
+            label: '빠른 공략',
           ),
           NavigationDestination(icon: Icon(Icons.merge_type), label: '합체 계산'),
           NavigationDestination(

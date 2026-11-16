@@ -314,6 +314,46 @@ void main() {
     expect(s.selected, 'smt5v');
     expect(find.text('악마 전서'), findsOneWidget);
   });
+  testWidgets('quick guide filters weaknesses and opens the compendium entry', (
+    tester,
+  ) async {
+    final s = await fresh();
+    await openApp(tester, s);
+    await tester.tap(find.text('빠른 공략'));
+    await settle(tester);
+    expect(find.text('약점 검색'), findsOneWidget);
+
+    await tester.enterText(
+      find.byKey(const ValueKey('guide-search')),
+      '잭 프로스트',
+    );
+    await settle(tester);
+    expect(find.byKey(const ValueKey('guide-Jack Frost')), findsOneWidget);
+
+    await tester.tap(find.byKey(const ValueKey('weakness-화염')));
+    await settle(tester);
+    expect(find.byKey(const ValueKey('guide-Jack Frost')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('guide-Jack Frost')));
+    await settle(tester);
+    expect(find.text('잭 프로스트'), findsWidgets);
+    expect(find.text('능력·스킬'), findsOneWidget);
+  });
+  testWidgets('quick guide exposes normalized unlock requirements', (
+    tester,
+  ) async {
+    final s = await fresh();
+    await openApp(tester, s);
+    await tester.tap(find.text('빠른 공략'));
+    await settle(tester);
+    await tester.tap(find.text('해금 조건'));
+    await settle(tester);
+    await tester.enterText(find.byKey(const ValueKey('guide-search')), '알릴라트');
+    await settle(tester);
+    expect(find.textContaining('커뮤'), findsWidgets);
+    await tester.enterText(find.byKey(const ValueKey('guide-search')), '데카라비아');
+    await settle(tester);
+    expect(find.textContaining('스토리'), findsWidgets);
+  });
   test(
     'all primary names are Korean and aliases retain canonical identity',
     () {
