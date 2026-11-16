@@ -23,4 +23,16 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - run: flutter build apk --debug --target-platform android-arm64
+      - name: Build Android debug APK
+        run: |
+          set +e
+          flutter build apk --debug --target-platform android-arm64 2>&1 | tee build.log
+          build_status=${PIPESTATUS[0]}
+          if [ "$build_status" -ne 0 ]; then
+            message=$(tail -n 40 build.log)
+            message=${message//'%'/'%25'}
+            message=${message//$'\r'/'%0D'}
+            message=${message//$'\n'/'%0A'}
+            echo "::error title=Android build::$message"
+          fi
+          exit "$build_status"
