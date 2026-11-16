@@ -1,1 +1,7 @@
 include: package:flutter_lints/flutter.yaml
+
+# Flutter 3.47 split Material widgets into a new package. Keep supporting the
+# older stable SDK range until the app can raise its minimum Flutter version.
+analyzer:
+  errors:
+    deprecated_member_use: ignore
